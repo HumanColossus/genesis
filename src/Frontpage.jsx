@@ -165,26 +165,30 @@ export default function Home() {
             .fill(0)
             .map((_, i) => <ScrollText key={i}>Plagiarism.fyi</ScrollText>)}
       </Marquee>
-      <Marquee style={{ backgroundColor: "#EE0000" }} gradient={false} direction="right">
-        {true &&
-          Array(10)
-            .fill(0)
-            .map((_, i) => (
-              <ScrollText key={i}>
-                🚨 We don’t share with schools... but! <u>Read more.</u>
-              </ScrollText>
-            ))}
-      </Marquee>
-      <Marquee style={{ backgroundColor: "#009D23" }} gradient={false}>
-        {true &&
-          Array(10)
-            .fill(0)
-            .map((_, i) => (
-              <ScrollText key={i}>
-                How do I use this tool? <u>A guide to beating MOSS.</u>
-              </ScrollText>
-            ))}
-      </Marquee>
+      <Link href="/about_us">
+        <Marquee style={{ backgroundColor: "#EE0000" }} gradient={false} direction="right">
+          {true &&
+            Array(10)
+              .fill(0)
+              .map((_, i) => (
+                <ScrollText key={i}>
+                  🚨 We don’t share with schools... but! <u>Read more.</u>
+                </ScrollText>
+              ))}
+        </Marquee>
+      </Link>
+      <Link href="/guide">
+        <Marquee style={{ backgroundColor: "#009D23" }} gradient={false}>
+          {true &&
+            Array(10)
+              .fill(0)
+              .map((_, i) => (
+                <ScrollText key={i}>
+                  How do I use this tool? <u>A guide to beating MOSS.</u>
+                </ScrollText>
+              ))}
+        </Marquee>
+      </Link>
       <Main>
         <Flex justifyContent="space-between">
           {starter && (
@@ -322,9 +326,9 @@ export default function Home() {
       </Main>
       <WhiteBox code footer width="100%" flex="1">
         <Text>Who built this?</Text>
-        <LinkFooter>@willdepue</LinkFooter>
+        <LinkFooter href="https://twitter.com/willdepue">@willdepue</LinkFooter>
         <Text>Why?</Text>
-        <LinkFooter>Article on why I built this.</LinkFooter>
+        <LinkFooter href="article">Article on why I built this.</LinkFooter>
         <Text>How can I follow your work?</Text>
         <LinkFooter>Text WILL to 000 000 0000 for release updates.</LinkFooter>
       </WhiteBox>
