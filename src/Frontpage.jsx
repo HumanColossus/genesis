@@ -165,7 +165,7 @@ export default function Home() {
             .fill(0)
             .map((_, i) => <ScrollText key={i}>Plagiarism.fyi</ScrollText>)}
       </Marquee>
-      <Link href="/about_us">
+      <Link href="#" onClick={() => window.location.replace("https://depue.notion.site/About-Us-0c17b0f2ffea45b89be4af8bf5d99929")}>
         <Marquee style={{ backgroundColor: "#EE0000" }} gradient={false} direction="right">
           {true &&
             Array(10)
@@ -177,7 +177,7 @@ export default function Home() {
               ))}
         </Marquee>
       </Link>
-      <Link href="/guide">
+      <Link href="#" onClick={() => window.location.replace("https://depue.notion.site/How-to-beat-MOSS-d2b6d3803c9f4bedbff26e1c9637b0dd")}>
         <Marquee style={{ backgroundColor: "#009D23" }} gradient={false}>
           {true &&
             Array(10)
@@ -319,7 +319,9 @@ export default function Home() {
         <Text>Who built this?</Text>
         <LinkFooter href="https://twitter.com/willdepue">@willdepue</LinkFooter>
         <Text>Why?</Text>
-        <LinkFooter href="article">Article on why I built this.</LinkFooter>
+        <LinkFooter href="https://depue.notion.site/How-code-plagiarism-checking-works-and-how-to-beat-it-c7f64ef288b348c0ba352f654516d430">
+          Article on why I built this.
+        </LinkFooter>
         <Text>How can I follow your work?</Text>
         <LinkFooter>Text WILL to 000 000 0000 for release updates.</LinkFooter>
       </WhiteBox>
