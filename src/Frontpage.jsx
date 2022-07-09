@@ -122,16 +122,16 @@ export default function Home() {
     bodyFormData.append("engine", "MOSS");
     let done = await axios.post("https://plagiarism-backend.herokuapp.com/check", bodyFormData);
     // let done = { data: { line_numbers: [{ file_1: [1, 89], file_2: [1, 89] }], similarity_score: 99 }, status: "Data ready!", success: true };
-    console.log(done.data);
+    // console.log(done.data);
 
     if (done.data.success) {
       let lines = done.data.data.line_numbers;
-      console.log(lines);
+      // console.log(lines);
       let lines_with_color = lines.map((line, i) => {
         line.color = colors[i];
         return line;
       });
-      console.log(lines_with_color);
+      // console.log(lines_with_color);
       setScore(done.data.data.similarity_score);
       setLines(lines_with_color);
       // iterate through comparison and join together the lines, seperated by the line numbers
@@ -146,7 +146,7 @@ export default function Home() {
         }
         temp.push(color);
       }
-      console.log(temp, lines);
+      // console.log(temp, lines);
       setLineColors(temp);
     }
   }
@@ -255,7 +255,7 @@ export default function Home() {
           </Flex>
           <Link
             onClick={() => {
-              console.log("click");
+              // console.log("click");
               check();
             }}
             href="#"
@@ -292,16 +292,7 @@ export default function Home() {
               <Text>Submission Code</Text>
             </WhiteBox>
             <WhiteBox code vertical flex="1">
-              <Textarea
-                contenteditable="true"
-                id="submissionField"
-                onChange={(c) => {
-                  console.log(JSON.stringify(c.target.value));
-                  // console.log(c.target.value);
-                  // console.log(c.target.value.split("\n"));
-                }}
-                defaultValue={demoCodeSubmission}
-              ></Textarea>
+              <Textarea contenteditable="true" id="submissionField" defaultValue={demoCodeSubmission}></Textarea>
             </WhiteBox>
           </Flex>
           <Flex flexDirection="column" flex="1">
