@@ -1,0 +1,89 @@
+import mosspy
+import ast
+from ast2json import ast2json
+import json
+import astor
+
+sensitivity = 4
+offset = 0
+
+input_location = "release/main.py"
+output_location = "release/cheat.py"
+dump_location = "release/dump.json"
+
+# MOSSAD: An anti-MOSS system for Python.
+# Takes an input main.py file
+# Outputs a cheat.py file
+#
+
+def obfuscate(input_location, output_location="cheat.py", dump_location="dump.json"):
+    # parse submission/main.py into ast
+    with open(input_location, 'r') as f:
+        tree = ast.parse(f.read())
+        to_json = ast2json(tree)
+
+    # recusively add obfuscation lines
+    tree_edited = recurse_tree(tree)
+
+    # fix obfuscations not having line / identation numbers
+    tree_fixed = ast.fix_missing_locations(tree_edited)
+
+    # convert the tree to json, save to dump.json
+    with open(dump_location, 'w') as f:
+        json.dump(ast2json(tree_fixed), f, indent=4)
+
+    # convert ast to source code, save to cheat.py
+    sourcecode = astor.to_source(tree_fixed)
+    with open(output_location, 'w') as f:
+        f.write(sourcecode)
+
+    # compile and execute the tree to check for errors
+    exec(compile(tree_fixed, '', 'exec'))
+
+
+# recurse through ast while respecting hierarchies
+def recurse_tree(node, whitespace=0):
+    indent = "  " * whitespace
+    print(f"{indent}tree:", node)
+    if hasattr(node, "body"):
+        print(f"{indent}body length: ", len(node.body))
+        children = []
+        for i, child in enumerate(node.body):
+            if i % sensitivity == offset:
+                children.append(ast.Pass())
+            children.append(recurse_tree(child, whitespace + 1))
+        node.body = children
+    if hasattr(node, "handlers"):
+        print(f"{indent}handler length: ", len(node.handlers))
+        children = []
+        for i, child in enumerate(node.handlers):
+            children.append(recurse_tree(child, whitespace + 1))
+        node.handlers = children
+    if hasattr(node, "orelse"):
+        print(f"{indent}else/elif body length: ", len(node.orelse))
+        # print(f"{indent}tree body:", tree.body)
+        children = []
+        for i, child in enumerate(node.orelse):
+            children.append(recurse_tree(child, whitespace + 1))
+            if i % sensitivity == offset:
+                children.append(ast.Pass())
+        node.orelse = children
+    return node
+
+
+obfuscate(input_location, output_location, dump_location)
+
+userid = 597633694  # add your userid here
+m = mosspy.Moss(userid, "cc")
+m.addFile(input_location)
+m.addFile(output_location)
+
+# progress function optional, run on every file uploaded
+# result is submission URL
+url = m.send(lambda file_path, display_name: print('*', end='', flush=True))
+print()
+
+print("Report URL: " + url)
+
+# Save report file
+m.saveWebPage(url, "submission/report.html")
