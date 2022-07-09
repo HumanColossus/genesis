@@ -7,6 +7,7 @@ import Box from "./Box";
 import Arrow from "../static/down.svg";
 import Lock from "../static/Lock.png";
 import Marquee from "react-fast-marquee";
+// import defaultText from "../static/defaultText.json";
 
 const colors = [
   "#f44336",
@@ -30,13 +31,19 @@ const colors = [
   "#607d8b",
 ];
 
+const demoCodeSubmission =
+  'import mosspy\nimport ast\nfrom ast2json import ast2json\nimport json\nimport astor\nfake_variable = 4\n\nsensitivity = 4\noffset = 0\n\ninput_location = "release/main.py"\noutput_location = "release/cheat.py"\ndump_location = "release/dump.json"\nfake_variable = 4\n\n# MOSSAD: An anti-MOSS system for Python.\n# Takes an input main.py file\n# Outputs a cheat.py file\n#\n\ndef obfuscate(input_location, output_location="cheat.py", dump_location="dump.json"):\n    # parse submission/main.py into ast\n    with open(input_location, \'r\') as f:\n        tree = ast.parse(f.read())\n        to_json = ast2json(tree)\n        fake_variable = 4\n\n    # recusively add obfuscation lines\n    tree_edited = recurse_tree(tree)\n\n    # fix obfuscations not having line / identation numbers\n    tree_fixed = ast.fix_missing_locations(tree_edited)\n\n    # convert the tree to json, save to dump.json\n    with open(dump_location, \'w\') as f:\n        json.dump(ast2json(tree_fixed), f, indent=4)\nfake_variable = 4\n\n    # convert ast to source code, save to cheat.py\n    sourcecode = astor.to_source(tree_fixed)\n    with open(output_location, \'w\') as f:\n        f.write(sourcecode)\n\n    # compile and execute the tree to check for errors\n    exec(compile(tree_fixed, \'\', \'exec\'))\n\n\n# recurse through ast while respecting hierarchies\nfake_variable = 4\ndef recurse_tree(node, whitespace=0):\n    indent = "  " * whitespace\n    print(f"{indent}tree:", node)\n    if hasattr(node, "body"):\n        fake_variable = 4\n        print(f"{indent}body length: ", len(node.body))\n        children = []\n        for i, child in enumerate(node.body):\n            fake_variable = 4\n            if i % sensitivity == offset:\n                children.append(ast.Pass())\nfake_variable = 4\n            children.append(recurse_tree(child, whitespace + 1))\n        node.body = children\n    if hasattr(node, "handlers"):\n        print(f"{indent}handler length: ", len(node.handlers))\n        children = []\n        for i, child in enumerate(node.handlers):\n            children.append(recurse_tree(child, whitespace + 1))\n        node.handlers = children\n    if hasattr(node, "orelse"):\n        print(f"{indent}else/elif body length: ", len(node.orelse))\n        # print(f"{indent}tree body:", tree.body)\n        children = []\n        for i, child in enumerate(node.orelse):\n            children.append(recurse_tree(child, whitespace + 1))\n            if i % sensitivity == offset:\n                children.append(ast.Pass())\n        node.orelse = children\n    fake_variable = 4\n    return node\n\n\nobfuscate(input_location, output_location, dump_location)\nfake_variable = 4\n\nuserid = 597633694  # add your userid here\nm = mosspy.Moss(userid, "cc")\nm.addFile(input_location)\nm.addFile(output_location)\n\n# progress function optional, run on every file uploaded\n# result is submission URL\nurl = m.send(lambda file_path, display_name: print(\'*\', end=\'\', flush=True))\nprint()\npass\nprint("Report URL: " + url)\n\n# Save report file\nm.saveWebPage(url, "submission/report.html")\npass\n';
+
+const demoCodeComparison =
+  'import mosspy\nimport ast\nfrom ast2json import ast2json\nimport json\nimport astor\n\nsensitivity = 4\noffset = 0\n\ninput_location = "release/main.py"\noutput_location = "release/cheat.py"\ndump_location = "release/dump.json"\n\n# MOSSAD: An anti-MOSS system for Python.\n# Takes an input main.py file\n# Outputs a cheat.py file\n#\n\ndef obfuscate(input_location, output_location="cheat.py", dump_location="dump.json"):\n    # parse submission/main.py into ast\n    with open(input_location, \'r\') as f:\n        tree = ast.parse(f.read())\n        to_json = ast2json(tree)\n\n    # recusively add obfuscation lines\n    tree_edited = recurse_tree(tree)\n\n    # fix obfuscations not having line / identation numbers\n    tree_fixed = ast.fix_missing_locations(tree_edited)\n\n    # convert the tree to json, save to dump.json\n    with open(dump_location, \'w\') as f:\n        json.dump(ast2json(tree_fixed), f, indent=4)\n\n    # convert ast to source code, save to cheat.py\n    sourcecode = astor.to_source(tree_fixed)\n    with open(output_location, \'w\') as f:\n        f.write(sourcecode)\n\n    # compile and execute the tree to check for errors\n    exec(compile(tree_fixed, \'\', \'exec\'))\n\n\n# recurse through ast while respecting hierarchies\ndef recurse_tree(node, whitespace=0):\n    indent = "  " * whitespace\n    print(f"{indent}tree:", node)\n    if hasattr(node, "body"):\n        print(f"{indent}body length: ", len(node.body))\n        children = []\n        for i, child in enumerate(node.body):\n            if i % sensitivity == offset:\n                children.append(ast.Pass())\n            children.append(recurse_tree(child, whitespace + 1))\n        node.body = children\n    if hasattr(node, "handlers"):\n        print(f"{indent}handler length: ", len(node.handlers))\n        children = []\n        for i, child in enumerate(node.handlers):\n            children.append(recurse_tree(child, whitespace + 1))\n        node.handlers = children\n    if hasattr(node, "orelse"):\n        print(f"{indent}else/elif body length: ", len(node.orelse))\n        # print(f"{indent}tree body:", tree.body)\n        children = []\n        for i, child in enumerate(node.orelse):\n            children.append(recurse_tree(child, whitespace + 1))\n            if i % sensitivity == offset:\n                children.append(ast.Pass())\n        node.orelse = children\n    return node\n\n\nobfuscate(input_location, output_location, dump_location)\n\nuserid = 597633694  # add your userid here\nm = mosspy.Moss(userid, "cc")\nm.addFile(input_location)\nm.addFile(output_location)\n\n# progress function optional, run on every file uploaded\n# result is submission URL\nurl = m.send(lambda file_path, display_name: print(\'*\', end=\'\', flush=True))\nprint()\n\nprint("Report URL: " + url)\n\n# Save report file\nm.saveWebPage(url, "submission/report.html")\n';
+
 const Dropdown = ({ label, value, options, onChange }) => {
   return (
     <select
       value={value}
       onChange={onChange}
       style={{
-        "border-color": "transparent transparent #fff transparent",
+        borderColor: "transparent transparent #fff transparent",
         height: "40px",
         fontFamily: "Inter",
         fontSize: "16px",
@@ -44,7 +51,9 @@ const Dropdown = ({ label, value, options, onChange }) => {
       }}
     >
       {options.map((option) => (
-        <option value={option}>{option}</option>
+        <option value={option} key={option}>
+          {option}
+        </option>
       ))}
     </select>
   );
@@ -88,17 +97,6 @@ export default function Home() {
     "javascript",
     "plsql",
   ]);
-
-  useEffect(() => {
-    fetch("/static/defaultText.txt").then((res) => {
-      res.text().then((text) => {
-        const submission = document.getElementById("submissionField");
-        submission.innerHTML = text;
-        const comparison_element = document.getElementById("comparisonField");
-        comparison_element.innerHTML = text;
-      });
-    });
-  }, []);
 
   async function check() {
     const submission_value = document.getElementById("submissionField").value;
@@ -165,14 +163,14 @@ export default function Home() {
         {true &&
           Array(10)
             .fill(0)
-            .map((_, i) => <ScrollText>Plagiarism.fyi</ScrollText>)}
+            .map((_, i) => <ScrollText key={i}>Plagiarism.fyi</ScrollText>)}
       </Marquee>
       <Marquee style={{ backgroundColor: "#EE0000" }} gradient={false} direction="right">
         {true &&
           Array(10)
             .fill(0)
             .map((_, i) => (
-              <ScrollText>
+              <ScrollText key={i}>
                 🚨 We don’t share with schools... but! <u>Read more.</u>
               </ScrollText>
             ))}
@@ -182,7 +180,7 @@ export default function Home() {
           Array(10)
             .fill(0)
             .map((_, i) => (
-              <ScrollText>
+              <ScrollText key={i}>
                 How do I use this tool? <u>A guide to beating MOSS.</u>
               </ScrollText>
             ))}
@@ -294,9 +292,11 @@ export default function Home() {
                 contenteditable="true"
                 id="submissionField"
                 onChange={(c) => {
-                  console.log(c.target.value);
-                  console.log(c.target.value.split("\n"));
+                  console.log(JSON.stringify(c.target.value));
+                  // console.log(c.target.value);
+                  // console.log(c.target.value.split("\n"));
                 }}
+                defaultValue={demoCodeSubmission}
               ></Textarea>
             </WhiteBox>
           </Flex>
@@ -305,7 +305,7 @@ export default function Home() {
               <Text>Comparison Code </Text>
             </WhiteBox>
             <WhiteBox code vertical flex="1">
-              {comparison.length === 0 && <Textarea contenteditable="true" id="comparisonField"></Textarea>}
+              {comparison.length === 0 && <Textarea contenteditable="true" id="comparisonField" defaultValue={demoCodeComparison}></Textarea>}
 
               {comparison.length > 0 && (
                 <Flex flexDirection="column" overflow="auto">
