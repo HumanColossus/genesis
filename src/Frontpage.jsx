@@ -323,7 +323,9 @@ export default function Home() {
           Article on why I built this.
         </LinkFooter>
         <Text>How can I follow your work?</Text>
-        <LinkFooter>Text WILL to 000 000 0000 for release updates.</LinkFooter>
+        <LinkFooter>Text WILL to +1 833-225-6887 for release updates.</LinkFooter>
+        <Text>How do I help out?</Text>
+        <LinkFooter href="https://discord.com/invite/3e7RakFVV6">Join the Discord.</LinkFooter>
       </WhiteBox>
     </>
   );
