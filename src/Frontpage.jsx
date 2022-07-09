@@ -120,7 +120,7 @@ export default function Home() {
     }
     bodyFormData.append("language", dropdownValue);
     bodyFormData.append("engine", "MOSS");
-    let done = await axios.post("http://localhost:5000/check", bodyFormData);
+    let done = await axios.post("https://plagiarism-backend.herokuapp.com/check", bodyFormData);
     // let done = { data: { line_numbers: [{ file_1: [1, 89], file_2: [1, 89] }], similarity_score: 99 }, status: "Data ready!", success: true };
     console.log(done.data);
 
