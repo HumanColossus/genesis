@@ -267,8 +267,8 @@ export default function Home() {
         </Flex>
         {score !== null && (
           <Flex flexDirection="row" mt="20px" width="100%" flex="1">
-            <Flex flexDirection="column" flex="1" maxWidth="270px">
-              <WhiteBox code width="100%" flex="1">
+            <Flex flexDirection="column" flex="1" maxWidth="280px" paddingRight="0px">
+              <WhiteBox code width="100%" flex="1" paddingRight="0px">
                 <Text bold>🚨 Report:</Text>
                 <Text>{score}% similarity score</Text>
               </WhiteBox>
