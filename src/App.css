@@ -1,17 +1,52 @@
-main {
-  /*   text-align: center;
-  vertical-align: center; */
-  padding: 50px 50px 0px 50px;
-
-  color: black;
-}
-
-body,
 html {
-  height: 100%;
+  height: 100vh;
+  padding: 0px 20px 50px 20px;
+
   /* background: url("/static/groovepaper.png"), #ffffff; */
-  background: url("/static/Rectangle\ 1.png"), rgba(255, 255, 255, 1);
+  background: #00001c;
+  font-family: "Body";
 }
-form {
-  font-family: monospace;
+
+body {
+  padding: 0px 20px 50px 20px;
+}
+
+hr {
+  border: solid 0.1px #747485;
+}
+
+@font-face {
+  font-family: "Mono";
+  src: url("static/fonts/ABCFavoritEduMono-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Body";
+  src: url("static/fonts/ABCSocialEdu-Regular.woff2") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Body";
+  src: url("static/fonts/ABCSocialEdu-Bold.woff2") format("opentype");
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: "Body";
+  src: url("static/fonts/ABCSocialEdu-BoldItalic.woff2") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Body";
+  src: url("static/fonts/ABCSocialEdu-Book.woff2") format("opentype");
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: "Body";
+  src: url("static/fonts/ABCSocialEdu-Medium.woff2") format("opentype");
+  font-weight: bold;
 }
