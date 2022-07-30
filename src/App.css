@@ -20,48 +20,48 @@ hr {
 
 @font-face {
   font-family: "Mono";
-  src: url("static/fonts/ABCFavoritEduMono-Regular.otf") format("opentype");
+  src: url("../static/fonts/ABCFavoritEduMono-Regular.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Body";
-  src: url("static/fonts/ABCSocialEdu-Regular.woff2") format("opentype");
+  src: url("../static/fonts/ABCSocialEdu-Regular.woff2") format("woff2");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Body";
-  src: url("static/fonts/ABCSocialEdu-RegularItalic.woff2") format("opentype");
+  src: url("../static/fonts/ABCSocialEdu-RegularItalic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Body";
-  src: url("static/fonts/ABCSocialEdu-Bold.woff2") format("opentype");
+  src: url("../static/fonts/ABCSocialEdu-Bold.woff2") format("woff2");
   font-weight: bolder;
 }
 
 @font-face {
   font-family: "Body";
-  src: url("static/fonts/ABCSocialEdu-BoldItalic.woff2") format("opentype");
+  src: url("../static/fonts/ABCSocialEdu-BoldItalic.woff2") format("woff2");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: "Body";
-  src: url("static/fonts/ABCSocialEdu-Book.woff2") format("opentype");
+  src: url("../static/fonts/ABCSocialEdu-Book.woff2") format("woff2");
   font-weight: lighter;
 }
 
 @font-face {
   font-family: "Body";
-  src: url("static/fonts/ABCSocialEdu-Medium.woff2") format("opentype");
+  src: url("../static/fonts/ABCSocialEdu-Medium.woff2") format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Button";
-  src: url("static/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+  src: url("../static/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
 }
