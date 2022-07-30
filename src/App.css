@@ -5,14 +5,17 @@ html {
   /* background: url("/static/groovepaper.png"), #ffffff; */
   background: #00001c;
   font-family: "Body";
+  overflow: visible;
 }
 
 body {
   padding: 0px 20px 50px 20px;
+  overflow: visible;
 }
 
 hr {
   border: solid 0.1px #747485;
+  margin: 10px 0px;
 }
 
 @font-face {
@@ -24,6 +27,13 @@ hr {
   font-family: "Body";
   src: url("static/fonts/ABCSocialEdu-Regular.woff2") format("opentype");
   font-weight: normal;
+}
+
+@font-face {
+  font-family: "Body";
+  src: url("static/fonts/ABCSocialEdu-RegularItalic.woff2") format("opentype");
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
@@ -49,4 +59,9 @@ hr {
   font-family: "Body";
   src: url("static/fonts/ABCSocialEdu-Medium.woff2") format("opentype");
   font-weight: bold;
+}
+
+@font-face {
+  font-family: "Button";
+  src: url("static/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
 }
