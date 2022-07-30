@@ -34,6 +34,12 @@ export const Flex = styled(Box)`
     css`
       justify-content: space-between;
     `}
+
+    ${({ gap }) =>
+    gap &&
+    css`
+      gap: 25px;
+    `}
 `;
 
 export function ScrollContainer({ height, children }) {

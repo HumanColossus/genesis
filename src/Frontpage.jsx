@@ -190,15 +190,12 @@ export default function Home() {
       <br />
       <Signatures />
       <BlockContainer title="Get involved!">
-        <Flex space>
-          <Button dark small>
+        <Flex gap>
+          <Button dark small onClick={() => window.open("https://twitter.com/jointhecolossus")}>
             Follow on Twitter
           </Button>
           <Button dark small>
-            Get launch updates
-          </Button>
-          <Button dark small>
-            Copy link
+            Text COLOSSUS to 1 833 553 2012
           </Button>
         </Flex>
       </BlockContainer>
@@ -214,6 +211,7 @@ export default function Home() {
   );
 }
 
+// test
 const Main = styled.body`
   max-width: 550px;
   margin: 0 auto;
