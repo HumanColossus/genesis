@@ -40,21 +40,19 @@ export default function Home() {
           underserved and unguided — self-teaching is difficult. It’s time to treat self-paced, self-motivated education as the true alternative it is, and
           build the infrastructure students need.
         </Paragraph>
-        <Paragraph>
-          The Human Colossus is a global collective of builders set on building a better educational system for young people, and get them competing for,
-          contributing to, and founding the future.
-        </Paragraph>
+        <QuoteBox>
+          <VerticalLine />
+          <Paragraph marginless>
+            The Human Colossus is a global collective of builders set on building a better educational system for young people, and get them competing for,
+            contributing to, and founding the future.
+          </Paragraph>
+        </QuoteBox>
         <Paragraph>
           Our founding members have all been a part of the first wave, as members of early builder communities, Twitter groups, and online accelerators. We’re
           inspired by our experiences on platforms like Pioneer, communities like the Gen Z Mafia, and the young builder networks on Twitter, to build something
           better.
         </Paragraph>
         <hr />
-        <Paragraph>
-          Our founding members have all been a part of the first wave, as members of early builder communities, Twitter groups, and online accelerators. We’re
-          inspired by our experiences on platforms like Pioneer, communities like the Gen Z Mafia, and the young builder networks on Twitter, to build something
-          better.
-        </Paragraph>
         <Paragraph>To understand our approach, we must answer: </Paragraph>
         <Flex>
           <VerticalLine />
@@ -65,13 +63,9 @@ export default function Home() {
           people have struggle gaining momentum:
         </Paragraph>
         <Heading>Guidance</Heading>
-        <Paragraph>
-          It’s hard to know where/how to start
-          <br />
-          It’s hard to not get stuck or lost along the way
-          <br />
-          It’s hard to stay on track and maintain long-term vision for what you’re doing.
-        </Paragraph>
+        <Paragraph>🚨 It’s hard to know where/how to start</Paragraph>
+        <Paragraph>🚨 It’s hard to not get stuck or lost along the way</Paragraph>
+        <Paragraph>🚨 It’s hard to stay on track and maintain long-term vision for what you’re doing.</Paragraph>
         <Paragraph>
           It’s easy to forget how easy it is to get stuck when you’re young; knowing where to find answers to questions, finding alternatives, or overcoming
           obstacles is a skill that develops with age.
@@ -88,31 +82,31 @@ export default function Home() {
           The minority of content produced by Colossus members will be what they would have created already, in the form project releases and articles, modified
           to fit the platform (steps for replication, learning pre-requisites, etc.).
         </Paragraph>
-        <Paragraph>We’re providing guides that truly go from 0 → 1, from “hello world” to compiler, written by successful builders in the space.</Paragraph>
         <Paragraph>
-          We’re providing guidance by connecting those just starting with older, more tenured builders, creating role models and mentors in the process.
+          👉 &nbsp; We’re providing guides that truly go from 0 → 1, from “hello world” to compiler, written by successful builders in the space.
         </Paragraph>
         <Paragraph>
-          We’re re-formatting projects and organizations built by Colossus members into replicable projects, with stepped guides to replicate whatever one finds
-          exciting.
+          👉 &nbsp; We’re providing guidance by connecting those just starting with older, more tenured builders, creating role models and mentors in the
+          process.
+        </Paragraph>
+        <Paragraph>
+          👉 &nbsp; We’re re-formatting projects and organizations built by Colossus members into replicable projects, with stepped guides to replicate whatever
+          one finds exciting.
         </Paragraph>
         <ImageBlock>
           <Image large src={Guidance}></Image>
         </ImageBlock>
         <Heading>Tangibility</Heading>
-        <Paragraph>
-          It’s hard if learning only has long-term payoff (climbing a cliff vs walking up stairs).
-          <br />
-          It’s hard if learning has no short-term application and result.{" "}
-        </Paragraph>
+        <Paragraph>🚨 It’s hard if contribution .</Paragraph>
+        <Paragraph>🚨 It’s hard if learning has little or infrequent real-world, hands-on application. </Paragraph>
         <Paragraph>
           It’s counterintuitive that resources, like KhanAcademy, MIT OpenCourseware, or Libgen, are not often cited by builders as paths for self-learning,
           given that they provide limitless, free, world-class education.
         </Paragraph>
         <Paragraph>Why is this? Tangibility. </Paragraph>
         <Paragraph>
-          This is easy to see if we take a look at non-digital, advanced subjects. Naturally, payoff in high-depth subjects is very discrete: there is little
-          contribution that a high schooler can progressively create in the field of mathematics.
+          This is easy to see if we take a look at non-digital, advanced subjects. Naturally, contribution and acknowledgement in high-depth subjects is very
+          discrete: there is little contribution that a high schooler can progressively create in the field of mathematics.
         </Paragraph>
         <Paragraph>
           As a result, studying high-depth topics can be incredibly difficult, as progress can feel useless and intangible. Most people aren’t capable of
@@ -130,22 +124,23 @@ export default function Home() {
           intermediate steps, allow students to compete relative to peers at the same level, and encouraging students to follow the learn/teach method.
         </Paragraph>
         <Paragraph>
-          We’re building a global “point system” that allows us to reward intermediate progress (see KhanAcademy), paired with social incentives.
-          <br />
-          We’re rewarding users who follow the two-week learn, teach, publish pattern, where writing out learnings to teach others allows a form of direct
-          application + tangible value to the world. <br />
-          We’re deeply integrating users with a community of peers, allowing them to compete and progress relatively in their community, without justifying to
-          the greater world.
+          👉 &nbsp; We’re building a leveling system that allows us to reward intermediate progress (see KhanAcademy), paired with social incentives.
+        </Paragraph>
+        <Paragraph>
+          👉 &nbsp; We’re rewarding users who follow the two-week learn, teach, publish pattern, where writing out learnings to teach others allows a form of
+          direct application + tangible value to the world.{" "}
+        </Paragraph>
+        <Paragraph>
+          👉 &nbsp; We’re deeply integrating users with a community of peers, allowing them to compete and progress relatively in their community, without
+          justifying to the greater world.
         </Paragraph>
         <ImageBlock>
           <Image large src={Tangibility}></Image>
         </ImageBlock>
         <Heading>Community</Heading>
-        <Paragraph>
-          It’s hard if you don’t have any assistance in your learning.
-          <br /> It’s hard when you’re only competing against yourself and working alone. <br />
-          It’s hard if you can’t share your work with others.
-        </Paragraph>
+        <Paragraph>🚨 It’s hard if you don’t have any assistance in your learning.</Paragraph>{" "}
+        <Paragraph>🚨 It’s hard when you’re only competing against yourself and working alone. </Paragraph>
+        <Paragraph>🚨 It’s hard if you can’t share your work with others.</Paragraph>
         <Paragraph>
           Communities can be a place for support and guidance, where students can find role models to aspire to and for peers to collaborate with. Every great
           builder cites a certain community that helped them along their way.
@@ -161,16 +156,16 @@ export default function Home() {
         </Paragraph>
         <Paragraph>
           Our community structure looks far more like a forum, like Reddit or StackOverflow, with clustering users into sub-communities and progression-gated
-          social spaces. We are still conducting research in this area. Feel free to leave feedback by Tweeting at @jointhecolossus.
+          social spaces. <NoteInline>We are still conducting research in this area. Feel free to give feedback by tweeting at @jointhecolossus.</NoteInline>
         </Paragraph>
-        <Paragraph>We’re building a network of builders, from just starting to just raised a Series C, worldwide.</Paragraph>
+        <Paragraph>👉 &nbsp; We’re building a network of builders, from just starting to just raised a Series C, worldwide.</Paragraph>
         <Paragraph>
-          We’re automatically grouping similar users, allowing for collaboration, inter-competition, and sharing, without needing to directly compete with the
-          world at large.
+          👉 &nbsp; We’re automatically grouping similar users, allowing for collaboration, inter-competition, and sharing, without needing to directly compete
+          with the world at large.
         </Paragraph>
         <Paragraph>
-          We’re constantly showcasing the incredible accomplishments of our members, reminding users of their potential and how similar they are to successful
-          builders.
+          👉 &nbsp; We’re constantly showcasing the incredible accomplishments of our members, reminding users of their potential and how similar they are to
+          successful builders.
         </Paragraph>
         <ImageBlock>
           <Image large src={Community}></Image>
@@ -181,14 +176,15 @@ export default function Home() {
         </Paragraph>
         <Paragraph>
           We’re still finalizing design and beginning development mid-August. Following testing and a trial period with founding members, we’ll be releasing to
-          builders on the waitlist. You can sign up for the waitlist below.
+          builders on the waitlist. <NoteInline>You can sign up for the waitlist below.</NoteInline>
         </Paragraph>
         <Paragraph>
           We’re also actively recruiting founding members that can function as advisors, advocates, and early users. If you’d like to nominate someone, you can
           do so below.{" "}
-          <i>(We temporarily bias towards recruiting founding members who have already built high-impact projects and with existing reach in the space.) </i>
+          <NoteInline>
+            We temporarily bias towards recruiting founding members who have already built high-impact projects or with existing reach in the space.
+          </NoteInline>
         </Paragraph>
-        <Paragraph></Paragraph>
         <Flex space mb="20px">
           <Button
             onClick={() =>
@@ -218,7 +214,6 @@ export default function Home() {
             </Button>
           </Flex>
         </BlockContainer>
-
         <Paragraph note style={{ marginTop: "80px" }}>
           <b>Diversity, Equity, and Inclusion: </b>
           <br />
@@ -236,6 +231,11 @@ export default function Home() {
     </>
   );
 }
+
+const NoteInline = styled.span`
+  color: #747485;
+  font-style: italic;
+`;
 
 // test
 const Main = styled.body`
@@ -318,6 +318,12 @@ const Paragraph = styled.p`
       font-style: italic;
       padding: 10px;
     `}
+
+  ${({ marginless }) =>
+    marginless &&
+    css`
+      margin: 0px;
+    `}
 `;
 
 const Mono = styled.p`
@@ -336,6 +342,10 @@ const Mono = styled.p`
 const Heading = styled.h2`
   font-family: "Body";
   color: #e9e9ec;
+`;
+
+const QuoteBox = styled(Flex)`
+  gap: 15px;
 `;
 
 const Quote = styled.h3`
