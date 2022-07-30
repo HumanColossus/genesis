@@ -1,6 +1,5 @@
 html {
   height: 100vh;
-  padding: 0px 20px 50px 20px;
 
   /* background: url("/static/groovepaper.png"), #ffffff; */
   background: #00001c;
@@ -9,7 +8,7 @@ html {
 }
 
 body {
-  padding: 0px 20px 50px 20px;
+  padding: 0px 20px 0px 20px;
   overflow: visible;
 }
 
