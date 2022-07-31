@@ -22,6 +22,12 @@ import AriPicture from "../../static/profile-pictures/Ari.jpg";
 import RahulPicture from "../../static/profile-pictures/Rahul.jpg";
 import KirillPicture from "../../static/profile-pictures/Kirill.jpg";
 import ByeongjunPicture from "../../static/profile-pictures/Byeongjun.jpg";
+import SagePicture from "../../static/profile-pictures/Sage.jpg";
+import LucasPicture from "../../static/profile-pictures/Lucas.jpg";
+import VirajPicture from "../../static/profile-pictures/Viraj.jpg";
+import MaxPicture from "../../static/profile-pictures/Max.jpeg";
+import ParkerPicture from "../../static/profile-pictures/Parker.jpg";
+import BenPicture from "../../static/profile-pictures/Ben.jpg";
 
 export default function Signatures({ children }) {
   return (
@@ -30,23 +36,23 @@ export default function Signatures({ children }) {
         {SignatureBlock(RhodosPicture, "Rhodos", "Building Colossus", "??", "Nowhere 🇦🇶", RhodosSignature)}
         {SignatureBlock(MiguelPicture, "Miguel Piedrafita", "Web3 & Crypto", "20", "Nowhere 🇦🇶", Unsigned)}
         {SignatureBlock(AviPicture, "Avi Schiffman", "Internet Activism", "19", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(JuanDavidPicture, "Juan David Campelargo", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(JuanDavidPicture, "Juan David Campelargo", "Learning & Flight", "??", "Nowhere 🇦🇶", Unsigned)}
         {SignatureBlock(WillPicture, "Will DePue", "Community Analytics", "19", "Los Angeles 🇺🇸", WillSignature)}
-        {SignatureBlock(KevalinPicture, "Kevalin Ketcham", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(ByeongjunPicture, "Byeongjun Moon", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(NoPicture, "Lucas Chu", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(KirillPicture, "Kirill Avery", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(NoPicture, "Sage Khanuja", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(NoPicture, "Max Keenan", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(NoPicture, "Parker Henderson", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(SuryaPicture, "Surya Dantuluri", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(AriPicture, "Ari Dutilh", "Unset", "17", "Connecticut 🇺🇸", Unsigned)}
-        {SignatureBlock(NoPicture, "Benjamin Lim", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(RahulPicture, "Rahul Nandakumar", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(KevalinPicture, "Kevalin Ketcham", "Crypto", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(ByeongjunPicture, "Byeongjun Moon", "DAOs & Governance", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(LucasPicture, "Lucas Chu", "DAO Finance", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(KirillPicture, "Kirill Avery", "Dec. Identity", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(SagePicture, "Sage Khanuja", "Health", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(MaxPicture, "Max Keenan", "Productivity", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(ParkerPicture, "Parker Henderson", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(SuryaPicture, "Surya Dantuluri", "On-Chain Chaos", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(AriPicture, "Ari Dutilh", "Community", "17", "Connecticut 🇺🇸", Unsigned)}
+        {SignatureBlock(AryanPicture, "Aryan Sharma", "Web3 Data", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(VirajPicture, "Viraj Chhajed", "On-Chain Bot Detection", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(StevenPicture, "Steven Lu", "Next-gen Accelerators", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(RahulPicture, "Rahul Nandakumar", "DAOs & Community", "??", "Nowhere 🇦🇶", Unsigned)}
+        {SignatureBlock(BenPicture, "Benjamin Lim", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
         {SignatureBlock(ChristianPicture, "Christian Glassiognon", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(StevenPicture, "Steven Lu", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(NoPicture, "Viraj Chhajed", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(AryanPicture, "Aryan Sharma", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
         {children}
       </ScrollContainer>
     </BlockContainer>
