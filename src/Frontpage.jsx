@@ -24,13 +24,17 @@ export default function Home() {
       </Description>
       <hr />
       <Paragraph>
-        The next generation of builders is self-taught and building the future, right now. Most began online, watching Youtube videos, building web apps,
-        reading articles, joining professional communities, shipping products, while underserved by institutional education.
+        <Highlight>The next generation of builders is self-taught, and already building the future, right now.</Highlight> Most began online, watching Youtube
+        videos, building web apps, reading articles, joining professional communities, shipping products, while underserved by institutional education.
       </Paragraph>
       <Paragraph>
-        We’re about to see the number of incredible young builders exponentially increasing over the next decade. But the vast majority will continue to be
-        underserved and unguided — self-teaching is difficult. It’s time to treat self-paced, self-motivated education as the true alternative it is, and build
-        the infrastructure students need.
+        The paradigm of building companies in garages is over, replaced by founding companies remotely, coordinating global teams, watching Youtube videos to
+        learn on the fly, and building products at light-speed, all while still in high school.
+      </Paragraph>
+      <Paragraph>
+        We’re about to see the number of incredible <Highlight>young builders exponentially increasing over the next decade</Highlight>. But the vast majority
+        will continue to be underserved and unguided — self-teaching is difficult. It’s time to treat self-paced, self-motivated education as the true
+        alternative it is, and build the infrastructure students need.
       </Paragraph>
       <QuoteBox>
         <VerticalLine />
@@ -40,9 +44,9 @@ export default function Home() {
         </Paragraph>
       </QuoteBox>
       <Paragraph>
-        Our founding members have all been a part of the first wave, as members of early builder communities, Twitter groups, and online accelerators. We’re
-        inspired by our experiences on platforms like Pioneer, communities like the Gen Z Mafia, and the young builder networks on Twitter, to build something
-        better.
+        <Highlight>Our founding members have all been a part of the first wave</Highlight>, as members of early Discord communities, Twitter groups, and online
+        accelerators. We’re inspired by our experiences on platforms like Pioneer, communities like the Gen Z Mafia, and the young builder networks on Twitter,
+        to build something better.
       </Paragraph>
       <hr />
       <Paragraph>To understand our approach, we must answer: </Paragraph>
@@ -59,16 +63,16 @@ export default function Home() {
       <Paragraph>🚨 It’s hard to not get stuck or lost along the way</Paragraph>
       <Paragraph>🚨 It’s hard to stay on track and maintain long-term vision for what you’re doing.</Paragraph>
       <Paragraph>
-        It’s easy to forget how easy it is to get stuck when you’re young; knowing where to find answers to questions, finding alternatives, or overcoming
-        obstacles is a skill that develops with age.
+        It’s easy to forget <Highlight>how easy it is to get stuck when you’re young</Highlight>; knowing where to find answers to questions, finding
+        alternatives, or overcoming obstacles is a skill that develops with age.
       </Paragraph>
       <Paragraph>
         Young people need a lot of help, which we can provide in broken-down guides, direction from mentors, and the space to continuously expand into
         increasingly ambitious endeavors.
       </Paragraph>
       <Paragraph>
-        Most importantly, we don’t need to create new content, just direction on where to find existing resources. We don’t need to supplement the countless
-        courses, videos, textbooks, and articles already out there.
+        Most importantly, <Highlight>we don’t need to create new educational content</Highlight>, just direction on where to find existing resources. We don’t
+        need to supplement the countless courses, videos, textbooks, and articles already out there, for free!
       </Paragraph>
       <Paragraph>
         The minority of content produced by Colossus members will be what they would have created already, in the form project releases and articles, modified
@@ -91,8 +95,8 @@ export default function Home() {
       <Paragraph>🚨 It’s hard if contribution .</Paragraph>
       <Paragraph>🚨 It’s hard if learning has little or infrequent real-world, hands-on application. </Paragraph>
       <Paragraph>
-        It’s counterintuitive that resources, like KhanAcademy, MIT OpenCourseware, or Libgen, are not often cited by builders as paths for self-learning, given
-        that they provide limitless, free, world-class education.
+        It’s counterintuitive that resources, like KhanAcademy, MIT OpenCourseware, or Libgen, are{" "}
+        <Highlight>not often cited by builders as paths for self-learning</Highlight>, given that they provide limitless, free, world-class education.
       </Paragraph>
       <Paragraph>Why is this? Tangibility. </Paragraph>
       <Paragraph>
@@ -100,20 +104,19 @@ export default function Home() {
         discrete: there is little contribution that a high schooler can progressively create in the field of mathematics.
       </Paragraph>
       <Paragraph>
-        As a result, studying high-depth topics can be incredibly difficult, as progress can feel useless and intangible. Most people aren’t capable of
-        self-studying math for years in hope of a distant payoff, especially since institutional education will not recognize it.
+        As a result, studying high-depth topics can be incredibly difficult, as progress can feel useless and intangible.{" "}
+        <Highlight>Most people aren’t capable of self-studying math for years in hope of a distant payoff</Highlight>, especially since institutional education
+        will not recognize it.
       </Paragraph>
       <Paragraph>
-        This outlines tangibility, which is akin to changing learning from climbing a cliff into walking up stairs, where reward can be found at each step.
+        This outlines tangibility, which is akin to <Highlight>changing learning from climbing a cliff into walking up stairs</Highlight>, where reward can be
+        found at each step.
       </Paragraph>
       <Paragraph>
-        In software, this is common: students begin with building a personal website, feel proud of their creation, then iterate. Contribution, creation, and
-        impact can be created within hours: results are tangible, not abstract.
+        In software, this is common: students begin with building a personal website, feel proud of their creation, then iterate.{" "}
+        <Highlight>Contribution, creation, and impact can be created within hours</Highlight>: results are tangible, not abstract.
       </Paragraph>
-      <Paragraph>
-        Whether it’s web development, biology, or research, we can make progression more tangible by building reward systems that artificially reward
-        intermediate steps, allow students to compete relative to peers at the same level, and encouraging students to follow the learn/teach method.
-      </Paragraph>
+      <Paragraph>Whether it’s web development, biology, or climate research, we can make progression more tangible.</Paragraph>
       <Paragraph>
         👉 &nbsp; We’re building a leveling system that allows us to reward intermediate progress (see KhanAcademy), paired with social incentives.
       </Paragraph>
@@ -133,16 +136,18 @@ export default function Home() {
       <Paragraph>🚨 It’s hard when you’re only competing against yourself and working alone. </Paragraph>
       <Paragraph>🚨 It’s hard if you can’t share your work with others.</Paragraph>
       <Paragraph>
-        Communities can be a place for support and guidance, where students can find role models to aspire to and for peers to collaborate with. Every great
-        builder cites a certain community that helped them along their way.
+        Communities can be a place for support and guidance, where students can find role models to aspire to and for peers to collaborate with.{" "}
+        <Highlight>Every great builder cites a certain community that helped them along their way.</Highlight>
       </Paragraph>
       <Paragraph>
         A community of similarly-paced peers can offer the feedback, criticism, and appreciation to keep students moving. Through shared effort,
-        inter-competition, and group contribution, learning becomes far more rewarding. Communities provide both guidance and tangibility.
+        inter-competition, and group contribution, learning becomes far more rewarding.{" "}
+        <Highlight>Communities provide both guidance and tangibility.</Highlight>
       </Paragraph>
       <Paragraph>
-        Still, building tight community is difficult and fragile, and frequently unscalable. For this reason, the communities we directly create will look
-        different than the Discord servers, Telegram chats, and Twitter groups many of us are familiar with. Scalability, permissionlessness, and stability are
+        Still, building tight community can be difficult, fragile, and often unscalable. For this reason,{" "}
+        <Highlight>the communities we directly create will look different</Highlight>
+        than the Discord servers, Telegram chats, and Twitter groups many of us are familiar with. Scalability, permissionlessness, and stability are
         requirements.
       </Paragraph>
       <Paragraph>
@@ -286,6 +291,11 @@ const Description = styled(Flex)`
   align-items: bottom;
   gap: 10px;
   margin: 20px 0px;
+`;
+
+const Highlight = styled.span`
+  // font-weight: bold;
+  background: #30267c;
 `;
 
 const Paragraph = styled.p`
