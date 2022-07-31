@@ -29,46 +29,70 @@ import MaxPicture from "../../static/profile-pictures/Max.jpeg";
 import ParkerPicture from "../../static/profile-pictures/Parker.jpg";
 import BenPicture from "../../static/profile-pictures/Ben.jpg";
 
+const signatures = [
+  [RhodosPicture, "Rhodos", "Founding Colossus", "??", "Nowhere 🇦🇶", RhodosSignature, true],
+  [MiguelPicture, "Miguel Piedrafita", "Web3 & Crypto", "20", "Nowhere 🇦🇶", Unsigned],
+  [AviPicture, "Avi Schiffman", "Internet Activism", "19", "Nowhere 🇦🇶", Unsigned],
+  [JuanDavidPicture, "Juan David Campelargo", "Learning & Flight", "??", "Nowhere 🇦🇶", Unsigned],
+  [WillPicture, "Will DePue", "Community Analytics", "19", "Los Angeles 🇺🇸", WillSignature],
+  [KevalinPicture, "Kevalin Ketcham", "Crypto", "??", "Nowhere 🇦🇶", Unsigned],
+  [ByeongjunPicture, "Byeongjun Moon", "DAOs & Governance", "??", "Nowhere 🇦🇶", Unsigned],
+  [LucasPicture, "Lucas Chu", "DAO Finance", "??", "Nowhere 🇦🇶", Unsigned],
+  [KirillPicture, "Kirill Avery", "Dec. Identity", "??", "Nowhere 🇦🇶", Unsigned],
+  [SagePicture, "Sage Khanuja", "Health", "??", "Nowhere 🇦🇶", Unsigned],
+  [MaxPicture, "Max Keenan", "Productivity", "??", "Nowhere 🇦🇶", Unsigned],
+  [ParkerPicture, "Parker Henderson", "Unset", "??", "Nowhere 🇦🇶", Unsigned],
+  [SuryaPicture, "Surya Dantuluri", "On-Chain Chaos", "??", "Nowhere 🇦🇶", Unsigned],
+  [AriPicture, "Ari Dutilh", "Community", "17", "Connecticut 🇺🇸", Unsigned],
+  [AryanPicture, "Aryan Sharma", "Web3 Data", "??", "Nowhere 🇦🇶", Unsigned],
+  [VirajPicture, "Viraj Chhajed", "On-Chain Bot Detection", "??", "Nowhere 🇦🇶", Unsigned],
+  [StevenPicture, "Steven Lu", "Next-gen Accelerators", "??", "Nowhere 🇦🇶", Unsigned],
+  [RahulPicture, "Rahul Nandakumar", "DAOs & Community", "??", "Nowhere 🇦🇶", Unsigned],
+  [BenPicture, "Benjamin Lim", "Unset", "??", "Nowhere 🇦🇶", Unsigned],
+  [ChristianPicture, "Christian Glassiognon", "Unset", "??", "Nowhere 🇦🇶", Unsigned],
+];
+
+function shuffle(array) {
+  let currentIndex = array.length,
+    randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
 export default function Signatures({ children }) {
+  const shuffled = shuffle(signatures);
   return (
     <BlockContainer title="/ Signatures">
       <ScrollContainer height={230}>
-        {SignatureBlock(RhodosPicture, "Rhodos", "Building Colossus", "??", "Nowhere 🇦🇶", RhodosSignature)}
-        {SignatureBlock(MiguelPicture, "Miguel Piedrafita", "Web3 & Crypto", "20", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(AviPicture, "Avi Schiffman", "Internet Activism", "19", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(JuanDavidPicture, "Juan David Campelargo", "Learning & Flight", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(WillPicture, "Will DePue", "Community Analytics", "19", "Los Angeles 🇺🇸", WillSignature)}
-        {SignatureBlock(KevalinPicture, "Kevalin Ketcham", "Crypto", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(ByeongjunPicture, "Byeongjun Moon", "DAOs & Governance", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(LucasPicture, "Lucas Chu", "DAO Finance", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(KirillPicture, "Kirill Avery", "Dec. Identity", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(SagePicture, "Sage Khanuja", "Health", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(MaxPicture, "Max Keenan", "Productivity", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(ParkerPicture, "Parker Henderson", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(SuryaPicture, "Surya Dantuluri", "On-Chain Chaos", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(AriPicture, "Ari Dutilh", "Community", "17", "Connecticut 🇺🇸", Unsigned)}
-        {SignatureBlock(AryanPicture, "Aryan Sharma", "Web3 Data", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(VirajPicture, "Viraj Chhajed", "On-Chain Bot Detection", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(StevenPicture, "Steven Lu", "Next-gen Accelerators", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(RahulPicture, "Rahul Nandakumar", "DAOs & Community", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(BenPicture, "Benjamin Lim", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
-        {SignatureBlock(ChristianPicture, "Christian Glassiognon", "Unset", "??", "Nowhere 🇦🇶", Unsigned)}
+        {shuffled.map(([image, name, subject, age, location, signature, gold]) => SignatureBlock(image, name, subject, age, location, signature, gold))}
         {children}
       </ScrollContainer>
     </BlockContainer>
   );
 }
 
-function SignatureBlock(image, name, subject, age, location, signature) {
+function SignatureBlock(image, name, subject, age, location, signature, gold = false) {
   return (
-    <Person>
+    <Person key={name}>
       <LeftInfo>
         <Profile src={image} />
         <TextContent>
           <Name>{name}</Name>
           <Description>
             <Mono dark>in</Mono>
-            <Mono light>{subject}</Mono>
+            <Mono light gold={gold}>
+              {subject}
+            </Mono>
             <Mono dark>/</Mono>
             <Mono light>{age}</Mono>
             <Mono dark>from</Mono>
@@ -127,5 +151,11 @@ const Mono = styled.p`
     dark &&
     css`
       color: #747485;
+    `}
+
+  ${({ gold }) =>
+    gold &&
+    css`
+      color: #e1b13e;
     `}
 `;
