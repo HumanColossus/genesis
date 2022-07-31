@@ -28,6 +28,9 @@ import VirajPicture from "../../static/profile-pictures/Viraj.jpg";
 import MaxPicture from "../../static/profile-pictures/Max.jpeg";
 import ParkerPicture from "../../static/profile-pictures/Parker.jpg";
 import BenPicture from "../../static/profile-pictures/Ben.jpg";
+import AmirPicture from "../../static/profile-pictures/Amir.jpg";
+import OwenPicture from "../../static/profile-pictures/Owen.jpg";
+import EricPicture from "../../static/profile-pictures/Eric.jpg";
 
 const signatures = [
   [RhodosPicture, "Rhodos", "Founding Colossus", "??", "Nowhere 🇦🇶", RhodosSignature, true],
@@ -50,6 +53,9 @@ const signatures = [
   [RahulPicture, "Rahul Nandakumar", "DAOs & Community", "??", "Nowhere 🇦🇶", Unsigned],
   [BenPicture, "Benjamin Lim", "Unset", "??", "Nowhere 🇦🇶", Unsigned],
   [ChristianPicture, "Christian Glassiognon", "Unset", "??", "Nowhere 🇦🇶", Unsigned],
+  [AmirPicture, "Amir Bolous", "Crypto", "??", "Nowhere 🇦🇶", Unsigned],
+  [OwenPicture, "Owen Roe", "Esports", "??", "Nowhere 🇦🇶", Unsigned],
+  [EricPicture, "Eric Button", "Fintech", "??", "Nowhere 🇦🇶", Unsigned],
 ];
 
 function shuffle(array) {

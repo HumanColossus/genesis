@@ -59,8 +59,8 @@ export default function Home() {
         people have struggle gaining momentum:
       </Paragraph>
       <Heading>Guidance</Heading>
-      <Paragraph>🚨 It’s hard to know where/how to start</Paragraph>
-      <Paragraph>🚨 It’s hard to not get stuck or lost along the way</Paragraph>
+      <Paragraph>🚨 It’s hard to know where/how to start.</Paragraph>
+      <Paragraph>🚨 It’s hard to not get stuck or lost along the way.</Paragraph>
       <Paragraph>🚨 It’s hard to stay on track and maintain long-term vision for what you’re doing.</Paragraph>
       <Paragraph>
         It’s easy to forget <Highlight>how easy it is to get stuck when you’re young</Highlight>; knowing where to find answers to questions, finding
@@ -92,8 +92,8 @@ export default function Home() {
         <Image large src={Guidance}></Image>
       </ImageBlock>
       <Heading>Tangibility</Heading>
-      <Paragraph>🚨 It’s hard if contribution .</Paragraph>
       <Paragraph>🚨 It’s hard if learning has little or infrequent real-world, hands-on application. </Paragraph>
+      <Paragraph>🚨 It’s hard if there isn't a strong reason "why" one is learning.</Paragraph>
       <Paragraph>
         It’s counterintuitive that resources, like KhanAcademy, MIT OpenCourseware, or Libgen, are{" "}
         <Highlight>not often cited by builders as paths for self-learning</Highlight>, given that they provide limitless, free, world-class education.
