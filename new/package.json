@@ -15,6 +15,7 @@
     "@trpc/next": "10.0.0-alpha.41",
     "@trpc/react": "10.0.0-alpha.41",
     "@trpc/server": "10.0.0-alpha.41",
+    "array-random": "^0.0.4",
     "clsx": "^1.2.1",
     "next": "12.2.3",
     "next-seo": "^5.5.0",

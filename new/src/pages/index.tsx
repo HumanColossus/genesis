@@ -1,8 +1,11 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import LogoGroup from "../../public/other/LogoGroup.svg";
+import Guidance from "../../public/other/Guidance.png";
 import Tangibility from "../../public/other/Tangibility.png";
+import Community from "../../public/other/Community.png";
 import clsx from "clsx";
+import { signatures } from "configs/signatures";
 
 const Home: NextPage = () => {
   // Styles places here for easy editing of all elements with className = <nameOfClass>
@@ -131,8 +134,8 @@ const Home: NextPage = () => {
         allowing them to compete and progress relatively in their community,
         without justifying to the greater world.
       </p>
-      <div className="justify-center">
-        <Image src={Tangibility} alt="" width={403} height={222} />
+      <div className="flex justify-center">
+        <Image src={Guidance} alt="" width={403} height={222} />
       </div>
       <h1 className={header}>Tangibility</h1>
       <p className={paragraph}>
@@ -200,7 +203,9 @@ const Home: NextPage = () => {
         allowing them to compete and progress relatively in their community,
         without justifying to the greater world.
       </p>
-      <h1>IMAGE HERE</h1>
+      <div className="flex justify-center">
+        <Image src={Tangibility} alt="" width={402} height={195} />
+      </div>
       <h1 className={header}>Community</h1>
       <p className={paragraph}>
         🚨 It’s hard if you don’t have any assistance in your learning.
@@ -262,7 +267,9 @@ const Home: NextPage = () => {
         our members, reminding users of their potential and how similar they are
         to successful builders.
       </p>
-      <h1>IMAGE HERE</h1>
+      <div className="flex justify-center">
+        <Image src={Community} alt="" width={402} height={273} />
+      </div>
       <h1 className={header}>What does this look like?</h1>
       <p className={paragraph}>
         To start, we’ve built a platform for existing builders who are already
@@ -281,42 +288,98 @@ const Home: NextPage = () => {
         We’re also actively recruiting founding members that can function as
         advisors, advocates, and early users. If you’d like to nominate someone,
         you can do so below.{" "}
-        <span className="text-[#747485]">
+        <span className="text-[#747485] italic">
           We temporarily bias towards recruiting founding members who have
           already built high-impact projects or with existing reach in the
           space.
         </span>
       </p>
+      <div className="flex justify-between">
+        <button
+          className="flex justify-center items-center px-6 gap-7 h-10 bg-[#5f4bdd] rounded bold text-white cursor-pointer"
+          onClick={() =>
+            window.open(
+              "mailto:team@colossus.fyi?subject=Nomination%20of...&body=%23%23%23%20Make%20sure%20to%20copy%20the%20nominee%20on%20this%20email!%20%23%23%23%0D%0A%0D%0AHi%2C%0D%0A%0D%0AI'm%20%5Bname%5D%20and%20am%20nominating%20my%20friend%20%5Bname%5D%20for%20Colossus.%0D%0A%0D%0AInfo%20about%20me%3A%0D%0A(name%2C%20two%20sentence%20description%2C%20Twitter%2Fother%20social%2C%20personal%20website)%0D%0A%0D%0AInfo%20about%20the%20nominee%3A%0D%0A(name%2C%20email%2C%20two%20sentence%20description%2C%20Twitter%2Fother%20social%2C%20personal%20website)%0D%0A%0D%0AWhy%20should%20we%20consider%20the%20nominee%3F%20Why%20are%20they%20a%20good%20advocate%2C%20advisor%2C%20and%20community%20member%3F%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A"
+            )
+          }
+        >
+          Nominate a friend
+        </button>
+        <button
+          className="flex justify-center items-center px-6 gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer"
+          onClick={() =>
+            window.open("https://www.getwaitlist.com/waitlist/3960")
+          }
+        >
+          Join waitlist
+        </button>
+        <button
+          className="flex justify-center items-center px-6 gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer"
+          onClick={() =>
+            window.open("mailto:contact@colossus.fyi?subject=Reaching%20out...")
+          }
+        >
+          Contact us
+        </button>
+      </div>
+      <div className="bg-[#00001c] rounded-md mt-12 mb-6 pb-4 pt-1 shadow-custom">
+        <div className="bg-[#00001c] h-48 px-4 overflow-auto rounded-md">
+          <h1 className="sticky top-0 w-full bg-[#00001c] z-10 pt-1">
+            / Signatures
+          </h1>
+          <div className="">
+            {signatures.map((signature, i) => (
+              <div className="flex justify-between mt-2.5 static" key={i}>
+                <div className="flex">
+                  <Image
+                    src={signature.image}
+                    alt="The human colossus logo"
+                    width={40}
+                    height={40}
+                    className="rounded"
+                  />
+                  <div className="flex flex-col justify-evenly mx-2">
+                    <h1 className="text-sm">{signature.name}</h1>
+                    <div className="flex gap-2 text-xs">
+                      <p>in</p>
+                      <p className={clsx({ "text-[#e1b13e]": signature.gold })}>
+                        {signature.subject}
+                      </p>
+                      <p>/</p>
+                      <p>{signature.age}</p>
+                      <p>from</p>
+                      <p>{signature.location}</p>
+                    </div>
+                  </div>
+                </div>
+                <Image
+                  src={signature.signature}
+                  alt="The human colossus logo"
+                  width={80}
+                  height={40}
+                  className="rounded justify-self-end"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#00001c] rounded-md mt-2 mb-6 pt-2.5 px-3 pb-4 shadow-custom">
+        <h1>Get involved!</h1>
+        <div className="flex gap-6 mt-2.5">
+          <button
+            className="flex justify-center items-center px-6 gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer"
+            onClick={() => window.open("https://twitter.com/jointhecolossus")}
+          >
+            Join waitlist
+          </button>
+          <button className="flex justify-center items-center px-6 gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer">
+            Text COLOSSUS to 1 833 225 6887
+          </button>
+        </div>
+      </div>
     </main>
   );
 };
 
 export default Home;
-
-// Technology component
-interface TechnologyCardProps {
-  name: string;
-  description: string;
-  documentation: string;
-}
-
-const TechnologyCard = ({
-  name,
-  description,
-  documentation,
-}: TechnologyCardProps) => {
-  return (
-    <section className="flex flex-col justify-center p-6 duration-500 border-2 border-gray-500 rounded shadow-xl motion-safe:hover:scale-105">
-      <h2 className="text-lg text-gray-700">{name}</h2>
-      <p className="text-sm text-gray-600">{description}</p>
-      <a
-        className="mt-3 text-sm underline text-violet-500 decoration-dotted underline-offset-2"
-        href={documentation}
-        target="_blank"
-        rel="noreferrer"
-      >
-        Documentation
-      </a>
-    </section>
-  );
-};
