@@ -15,7 +15,13 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "noUncheckedIndexedAccess": true
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@/libs/*": ["libs/*"],
+      "@/styles/*": ["styles/*"],
+      "@/components/*": ["components/*"],
+      "@/utils/*": ["utils/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
@@ -23,11 +29,8 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
-    "**/*.mjs"
+    "**/*.mjs",
+    "**/*.css"
   ],
-  "paths": {
-    "@/components/*": ["components/*"]
-    // "@/styles/*": ["styles/*"]
-  },
   "exclude": ["node_modules"]
 }

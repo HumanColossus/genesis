@@ -1,7 +1,7 @@
-import "../styles/globals.css";
+import "@/styles/globals.css";
 import type { AppType } from "next/dist/shared/lib/utils";
-import { trpc } from "../utils/trpc";
-import { DefaultSeo } from "components/SEO";
+import { DefaultSeo } from "@/components/SEO";
+import { trpc } from "@/utils/trpc";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
