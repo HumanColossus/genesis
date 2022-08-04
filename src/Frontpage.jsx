@@ -191,7 +191,7 @@ export default function Home() {
         >
           Nominate a friend
         </Button>
-        <Button dark onClick={() => window.open("https://www.getwaitlist.com/waitlist/3941")}>
+        <Button dark onClick={() => window.open("https://www.getwaitlist.com/waitlist/3960")}>
           Join waitlist
         </Button>
         <Button dark onClick={() => window.open("mailto:contact@colossus.fyi?subject=Reaching%20out...")}>
