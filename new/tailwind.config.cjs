@@ -12,6 +12,11 @@ module.exports = {
             boxShadow: {
                 custom: "0px 0px 3.17099px rgba(255, 255, 255, 0.25), 1.58549px 1.057px 1.057px rgba(167, 186, 255, 0.17);",
             },
+            fontFamily: {
+                mono: ["Mono", "Inter", "sans-serif"],
+                body: ["Body", "Inter", "sans-serif"],
+                button: ["Button", "Inter", "sans-serif"],
+            },
         },
     },
     plugins: [],
