@@ -13,7 +13,7 @@ import LucasPicture from "../../public/profile-pictures/Lucas.jpg";
 import KirillPicture from "../../public/profile-pictures/Kirill.jpg";
 import SagePicture from "../../public/profile-pictures/Sage.jpg";
 import MaxPicture from "../../public/profile-pictures/Max.jpg";
-import ParkerPicture from "../../public/profile-pictures/Parker.jpg";
+import ParkerPicture from "../../public/profile-pictures/parker.jpg";
 import SuryaPicture from "../../public/profile-pictures/Surya.jpg";
 import AriPicture from "../../public/profile-pictures/Ari.jpg";
 import AryanPicture from "../../public/profile-pictures/Aryan.jpg";
