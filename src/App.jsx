@@ -19,7 +19,7 @@ function App() {
       </Marquee>
       <Router>
         <Routes>
-          <Route path="/memo" element={<Frontpage />} />
+          <Route path="memo" element={<Frontpage />} />
           <Route path="*" element={<Redirect link="/memo" />} />
         </Routes>
       </Router>
