@@ -4,6 +4,8 @@ import { Flex, BlockContainer, ScrollContainer } from "../styled.jsx";
 import "../App.css";
 
 import Unsigned from "../../static/signatures/UNSIGNED.svg";
+// import Unsigned from "../../static/signatures/UNSIGNED Stylistic.svg";
+
 import WillSignature from "../../static/signatures/WillSignature.svg";
 import RhodosSignature from "../../static/signatures/RhodosSignature.svg";
 
@@ -31,31 +33,49 @@ import BenPicture from "../../static/profile-pictures/Ben.jpg";
 import AmirPicture from "../../static/profile-pictures/Amir.jpg";
 import OwenPicture from "../../static/profile-pictures/Owen.jpg";
 import EricPicture from "../../static/profile-pictures/Eric.jpg";
+import BereketPicture from "../../static/profile-pictures/Bereket.jpg";
+import HongPicture from "../../static/profile-pictures/Hong.jpg";
+import SamayPicture from "../../static/profile-pictures/Samay.jpg";
+import OmoPicture from "../../static/profile-pictures/Omo.jpg";
+import AnPicture from "../../static/profile-pictures/An.jpg";
+import EmmaPicture from "../../static/profile-pictures/Emma.jpg";
+import NathanPicture from "../../static/profile-pictures/Nathan.jpg";
+import NatashaPicture from "../../static/profile-pictures/Natasha.jpg";
+import DonahuePicture from "../../static/profile-pictures/Donahue.jpg";
 
 const signatures = [
   [RhodosPicture, "Rhodos", "Founding Colossus", "??", "Nowhere 🇦🇶", RhodosSignature, true],
   [MiguelPicture, "Miguel Piedrafita", "Web3 & Crypto", "20", "Nowhere 🇦🇶", Unsigned],
   [AviPicture, "Avi Schiffman", "Internet Activism", "19", "Nowhere 🇦🇶", Unsigned],
-  [JuanDavidPicture, "Juan David Campelargo", "Learning & Flight", "??", "Nowhere 🇦🇶", Unsigned],
+  [JuanDavidPicture, "Juan David Campelargo", "Learning & Flight", "??", "Chicago 🇺🇸", Unsigned],
   [WillPicture, "Will DePue", "Community Analytics", "19", "Los Angeles 🇺🇸", WillSignature],
-  [KevalinPicture, "Kevalin Ketcham", "Crypto", "??", "Nowhere 🇦🇶", Unsigned],
-  [ByeongjunPicture, "Byeongjun Moon", "DAOs & Governance", "??", "Nowhere 🇦🇶", Unsigned],
-  [LucasPicture, "Lucas Chu", "DAO Finance", "??", "Nowhere 🇦🇶", Unsigned],
-  [KirillPicture, "Kirill Avery", "Dec. Identity", "??", "Nowhere 🇦🇶", Unsigned],
-  [SagePicture, "Sage Khanuja", "Health", "??", "Nowhere 🇦🇶", Unsigned],
-  [MaxPicture, "Max Keenan", "Productivity", "??", "Nowhere 🇦🇶", Unsigned],
+  [KevalinPicture, "Kevalin Ketcham", "Crypto", "??", "San Francisco 🇺🇸", Unsigned],
+  [ByeongjunPicture, "Byeongjun Moon", "DAOs & Governance", "??", "Westwood 🇺🇸", Unsigned],
+  [LucasPicture, "Lucas Chu", "DAO Finance", "??", "New York 🇺🇸", Unsigned],
+  [KirillPicture, "Kirill Avery", "Dec. Identity", "??", "San Francisco 🇺🇸", Unsigned],
+  [SagePicture, "Sage Khanuja", "Health", "??", "Seattle 🇺🇸", Unsigned],
+  [MaxPicture, "Max Keenan", "Productivity", "??", "Seattle 🇺🇸", Unsigned],
   [ParkerPicture, "Parker Henderson", "Unset", "??", "Nowhere 🇦🇶", Unsigned],
-  [SuryaPicture, "Surya Dantuluri", "On-Chain Chaos", "??", "Nowhere 🇦🇶", Unsigned],
+  [SuryaPicture, "Surya Dantuluri", "On-Chain Chaos", "??", "San Francisco 🇺🇸", Unsigned],
   [AriPicture, "Ari Dutilh", "Community", "17", "Connecticut 🇺🇸", Unsigned],
   [AryanPicture, "Aryan Sharma", "Web3 Data", "??", "Nowhere 🇦🇶", Unsigned],
-  [VirajPicture, "Viraj Chhajed", "On-Chain Bot Detection", "??", "Nowhere 🇦🇶", Unsigned],
-  [StevenPicture, "Steven Lu", "Next-gen Accelerators", "??", "Nowhere 🇦🇶", Unsigned],
-  [RahulPicture, "Rahul Nandakumar", "DAOs & Community", "??", "Nowhere 🇦🇶", Unsigned],
+  [VirajPicture, "Viraj Chhajed", "On-Chain Bot Detection", "??", "Westwood 🇺🇸", Unsigned],
+  [StevenPicture, "Steven Lu", "Next-gen Accelerators", "??", "Seattle 🇺🇸", Unsigned],
+  [RahulPicture, "Rahul Nandakumar", "DAOs & Community", "??", "New Jersey 🇺🇸", Unsigned],
   [BenPicture, "Benjamin Lim", "Unset", "??", "Nowhere 🇦🇶", Unsigned],
-  [ChristianPicture, "Christian Glassiognon", "Unset", "??", "Nowhere 🇦🇶", Unsigned],
-  [AmirPicture, "Amir Bolous", "Crypto", "??", "Nowhere 🇦🇶", Unsigned],
-  [OwenPicture, "Owen Roe", "Esports", "??", "Nowhere 🇦🇶", Unsigned],
-  [EricPicture, "Eric Button", "Fintech", "??", "Nowhere 🇦🇶", Unsigned],
+  [ChristianPicture, "Christian Glassiognon", "Unset", "??", "San Jose 🇺🇸", Unsigned],
+  [AmirPicture, "Amir Bolous", "Crypto", "??", "Atlanta 🇺🇸", Unsigned],
+  [OwenPicture, "Owen Roe", "Esports", "19", "Nowhere 🇦🇶", Unsigned],
+  [EricPicture, "Eric Button", "Fintech", "??", "New York 🇺🇸", Unsigned],
+  [BereketPicture, "Bereket Semagn", "Development", "13", "Toronto 🇨🇦", Unsigned],
+  [SamayPicture, "Samay Shamdasani", "Unlocking Potential", "??", "Ann Arbor 🇺🇸", Unsigned],
+  [NathanPicture, "Nathan Newman", "Unlocking Potential", "??", "Ann Arbor 🇺🇸", Unsigned],
+  [EmmaPicture, "Emma Salinas", "Something New", "??", "San Francisco 🇺🇸", Unsigned],
+  [HongPicture, "Daniel Hong", "Blockchain", "??", "Nowhere 🇦🇶", Unsigned],
+  [OmoPicture, "Omoruyi Atekha", "Coordination", "??", "San Francisco 🇺🇸", Unsigned],
+  [DonahuePicture, "Nick Donahue", "Housing", "??", "Nowhere 🇦🇶", Unsigned],
+  [AnPicture, "An Vu", "Education & Communities", "??", "Nowhere 🇦🇶", Unsigned],
+  [NatashaPicture, "Natasha Asmi", "Decentralized Science", "??", "Ann Arbor 🇺🇸", Unsigned],
 ];
 
 function shuffle(array) {
