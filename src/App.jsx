@@ -19,7 +19,8 @@ function App() {
       </Marquee>
       <Router>
         <Routes>
-          <Route path="*" element={<Frontpage />} />
+          <Route path="/memo" element={<Frontpage />} />
+          <Route path="*" element={<Redirect link="/memo" />} />
         </Routes>
       </Router>
       <Marquee style={{ backgroundColor: "#5F4BDD", marginTop: "80px" }} gradient={true} gradientColor={[0, 0, 28]} speed={10}>
