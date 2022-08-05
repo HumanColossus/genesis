@@ -9,23 +9,23 @@ import { signatures } from "configs/signatures";
 
 const Home: NextPage = () => {
   // Styles places here for easy editing of all elements with className = <nameOfClass>
-  const paragraph = clsx("my-4 w-full text-[#e9e9ec]");
+  const paragraph = clsx("my-4 w-full text-[#e9e9ec] leading-5");
   const highlight = clsx("bg-[#30267c]");
-  const header = clsx("my-5 text-2xl");
+  const header = clsx("my-4 font-bold text-2xl my-5");
   const horizonal_rule = clsx(
     "my-2.5 border-solid border-0.1 border-[#747485]"
   );
 
   return (
     <main className="mt-8 flex justify-center">
-      <div className="max-w-xl">
+      <div className="max-w-custom">
         <hr className={horizonal_rule} />
-        <h1 className="text-white text-4xl my-6">
+        <h1 className="text-white text-4xl my-6 font-bold">
           A worldwide education platform for the self-motivated.
         </h1>
         <div className="flex my-5">
           <Image src={LogoGroup} alt="The human colossus logo" />
-          <p className="pt-0.5 m-0 ml-2.5 text-sm text-[#747485]">
+          <p className="pt-0.5 m-0 ml-2.5 text-sm text-[#747485] font-mono">
             / Jul 12, 2022
           </p>
           <hr className={horizonal_rule} />
@@ -79,7 +79,9 @@ const Home: NextPage = () => {
         </p>
         <div className="flex gap-3.5">
           <div className="w-px bg-white" />
-          <p className="text-lg">Why is it so difficult to get started?</p>
+          <p className="text-lg font-bold">
+            Why is it so difficult to get started?
+          </p>
         </div>
         <p className={paragraph}>
           It’s not for lack of effort. It’s not for lack of time. It’s not for
@@ -299,9 +301,9 @@ const Home: NextPage = () => {
             space.
           </span>
         </p>
-        <div className="flex justify-between">
+        <div className="flex justify-between mt-4">
           <button
-            className="font-button flex justify-center items-center px-6 gap-7 h-10 bg-[#5f4bdd] rounded bold text-white cursor-pointer"
+            className="font-button font-bold flex justify-center items-center px-6 gap-7 h-10 bg-[#5f4bdd] rounded bold text-white cursor-pointer"
             onClick={() =>
               window.open(
                 "mailto:team@colossus.fyi?subject=Nomination%20of...&body=%23%23%23%20Make%20sure%20to%20copy%20the%20nominee%20on%20this%20email!%20%23%23%23%0D%0A%0D%0AHi%2C%0D%0A%0D%0AI'm%20%5Bname%5D%20and%20am%20nominating%20my%20friend%20%5Bname%5D%20for%20Colossus.%0D%0A%0D%0AInfo%20about%20me%3A%0D%0A(name%2C%20two%20sentence%20description%2C%20Twitter%2Fother%20social%2C%20personal%20website)%0D%0A%0D%0AInfo%20about%20the%20nominee%3A%0D%0A(name%2C%20email%2C%20two%20sentence%20description%2C%20Twitter%2Fother%20social%2C%20personal%20website)%0D%0A%0D%0AWhy%20should%20we%20consider%20the%20nominee%3F%20Why%20are%20they%20a%20good%20advocate%2C%20advisor%2C%20and%20community%20member%3F%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A"
@@ -311,7 +313,7 @@ const Home: NextPage = () => {
             Nominate a friend
           </button>
           <button
-            className="font-button flex justify-center items-center px-6 gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer"
+            className="font-button font-bold flex justify-center items-center px-6 gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer"
             onClick={() =>
               window.open("https://www.getwaitlist.com/waitlist/3960")
             }
@@ -319,7 +321,7 @@ const Home: NextPage = () => {
             Join waitlist
           </button>
           <button
-            className="font-button flex justify-center items-center px-6 gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer"
+            className="font-button font-bold flex justify-center items-center px-6 gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer"
             onClick={() =>
               window.open(
                 "mailto:contact@colossus.fyi?subject=Reaching%20out..."
@@ -377,17 +379,17 @@ const Home: NextPage = () => {
           <h1>Get involved!</h1>
           <div className="flex gap-6 mt-2.5">
             <button
-              className="font-button first-letter:flex justify-center items-center px-6 gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer"
+              className="font-button font-bold text-sm first-letter:flex justify-center items-center px-6 gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer"
               onClick={() => window.open("https://twitter.com/jointhecolossus")}
             >
               Follow on Twitter
             </button>
-            <button className="font-button flex justify-center items-center px-6 gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer">
+            <button className="font-button font-bold text-sm flex justify-center items-center px-6 gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer">
               Text COLOSSUS to 1 833 225 6887
             </button>
           </div>
         </div>
-        <p className="my-12 text-[#747485] italic text-sm p-4">
+        <p className="mt-14 mb-14 text-[#747485] italic text-csm p-4 font-mono leading-5">
           <b>Diversity, Equity, and Inclusion: </b>
           <br />
           The online learning revolution is global and indiscriminatory of

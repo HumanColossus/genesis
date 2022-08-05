@@ -17,6 +17,12 @@ module.exports = {
                 body: ["Body", "Inter", "sans-serif"],
                 button: ["Button", "Inter", "sans-serif"],
             },
+            maxWidth: {
+                custom: "550px",
+            },
+            fontSize: {
+                csm: "13px",
+            },
         },
     },
     plugins: [],
