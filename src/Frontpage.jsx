@@ -14,7 +14,7 @@ import Signatures from "./containers/Signatures.jsx";
 export default function Home() {
   return (
     <Main>
-      <hr />
+      {/* <hr /> */}
       <Title>A worldwide education platform for the self-motivated.</Title>
       <Description>
         <Image src={LogoGroup}></Image>
@@ -22,7 +22,7 @@ export default function Home() {
           / Jul 12, 2022
         </Mono>
       </Description>
-      <hr />
+      <hr style={{ marginBottom: "20px" }} />
       <Paragraph>
         <Highlight>The next generation of builders is self-taught, and already building the future, right now.</Highlight> Most began online, watching Youtube
         videos, building web apps, reading articles, joining professional communities, shipping products, while underserved by institutional education.
@@ -92,6 +92,7 @@ export default function Home() {
         <Image large src={Guidance}></Image>
       </ImageBlock>
       <Heading>Tangibility</Heading>
+      <Paragraph>🚨 It’s hard if your progress doesn't show results or feel rewarding.</Paragraph>
       <Paragraph>🚨 It’s hard if learning has little or infrequent real-world, hands-on application. </Paragraph>
       <Paragraph>🚨 It’s hard if there isn't a strong reason "why" one is learning.</Paragraph>
       <Paragraph>

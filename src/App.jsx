@@ -11,11 +11,11 @@ import Marquee from "react-fast-marquee";
 function App() {
   return (
     <>
-      <Marquee style={{ backgroundColor: "#5F4BDD" }} gradient={true} gradientColor={[0, 0, 28]} speed={10}>
+      <Marquee style={{ backgroundColor: "#30267C", marginBottom: "30px" }} gradient={true} gradientColor={[0, 0, 28]} speed={10}>
         {true &&
           Array(10)
             .fill(0)
-            .map((_, i) => <ScrollText key={i}>CONFIDENTIAL DO NOT SHARE</ScrollText>)}
+            .map((_, i) => <ScrollText key={i}>ANNOUNCEMENT SOON</ScrollText>)}
       </Marquee>
       <Router>
         <Routes>
@@ -26,7 +26,7 @@ function App() {
         {true &&
           Array(10)
             .fill(0)
-            .map((_, i) => <ScrollText key={i}>CONFIDENTIAL DO NOT SHARE</ScrollText>)}
+            .map((_, i) => <ScrollText key={i}>ANNOUNCEMENT SOON</ScrollText>)}
       </Marquee>
     </>
   );
