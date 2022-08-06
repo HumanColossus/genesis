@@ -218,7 +218,7 @@ const Home: NextPage = () => {
         </div>
         <div className="bg-[#00001c] rounded-lg mt-12 mb-6 pb-4 pt-1.5 shadow-custom h-72 px-4">
           <h1 className="w-full bg-[#00001c] z-10 pt-1 font-semibold	">/ Signatures</h1>
-          <div className="flex flex-col gap-3.5 overflow-auto h-56 mt-3 rounded">
+          <div className="flex flex-col gap-3.5 overflow-y-auto overflow-x-hidden h-56 mt-3 rounded">
             {signatures.map((signature, i) => (
               <div className="flex justify-between static" key={i}>
                 <div className="flex shrink-0">
