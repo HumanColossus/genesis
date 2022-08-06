@@ -7,7 +7,7 @@ import Community from "../../public/other/Community.png";
 import clsx from "clsx";
 import { signatures } from "configs/signatures";
 
-const Memo: NextPage = () => {
+const Home: NextPage = () => {
   // Styles places here for easy editing of all elements with className = <nameOfClass>
   const paragraph = clsx("my-4 w-full text-[#e9e9ec] leading-5");
   const highlight = clsx("bg-[#30267c]");
@@ -194,6 +194,7 @@ const Memo: NextPage = () => {
         <div className="flex justify-between mt-4">
           <button
             className="font-button font-bold flex justify-center items-center px-8 gap-7 h-10 bg-[#5f4bdd] rounded bold text-white cursor-pointer text-sm"
+            // style={{ lineHeight: "10px" }}
             onClick={() =>
               window.open(
                 "mailto:team@colossus.fyi?subject=Nomination%20of...&body=%23%23%23%20Make%20sure%20to%20copy%20the%20nominee%20on%20this%20email!%20%23%23%23%0D%0A%0D%0AHi%2C%0D%0A%0D%0AI'm%20%5Bname%5D%20and%20am%20nominating%20my%20friend%20%5Bname%5D%20for%20Colossus.%0D%0A%0D%0AInfo%20about%20me%3A%0D%0A(name%2C%20two%20sentence%20description%2C%20Twitter%2Fother%20social%2C%20personal%20website)%0D%0A%0D%0AInfo%20about%20the%20nominee%3A%0D%0A(name%2C%20email%2C%20two%20sentence%20description%2C%20Twitter%2Fother%20social%2C%20personal%20website)%0D%0A%0D%0AWhy%20should%20we%20consider%20the%20nominee%3F%20Why%20are%20they%20a%20good%20advocate%2C%20advisor%2C%20and%20community%20member%3F%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A"
@@ -209,7 +210,7 @@ const Memo: NextPage = () => {
             Join waitlist
           </button>
           <button
-            className="font-button font-bold flex justify-center items-center px-8 gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer text-sm"
+            className="font-button font-bold flex justify-center items-center px-8  gap-7 h-10 bg-[#191933] rounded bold text-white cursor-pointer text-sm"
             onClick={() => window.open("mailto:contact@colossus.fyi?subject=Reaching%20out...")}
           >
             Contact us
@@ -220,7 +221,7 @@ const Memo: NextPage = () => {
           <div className="flex flex-col gap-3.5 overflow-auto h-56 mt-3 rounded">
             {signatures.map((signature, i) => (
               <div className="flex justify-between static" key={i}>
-                <div className="flex">
+                <div className="flex shrink-0">
                   <Image src={signature.image} alt="The human colossus logo" width={40} height={40} className="rounded" />
                   <div className="flex flex-col justify-between mx-3">
                     <h1 className="text-normal font-semibold" style={{ lineHeight: "20.5px", color: "#E9E9EC" }}>
@@ -267,4 +268,4 @@ const Memo: NextPage = () => {
   );
 };
 
-export default Memo;
+export default Home;
