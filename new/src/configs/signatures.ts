@@ -8,7 +8,7 @@ import AviPicture from "../../public/profile-pictures/Avi.jpg";
 import JuanDavidPicture from "../../public/profile-pictures/JuanDavid.jpg";
 import WillPicture from "../../public/profile-pictures/PFP.png";
 import KevalinPicture from "../../public/profile-pictures/Kevalin.jpg";
-import ByeongjunPicture from "../../public/profile-pictures/Byeongjun.jpg";
+import ByeongjunPicture from "../../public/profile-pictures/Byeongjun.jpeg";
 import LucasPicture from "../../public/profile-pictures/Lucas.jpg";
 import KirillPicture from "../../public/profile-pictures/Kirill.jpg";
 import SagePicture from "../../public/profile-pictures/Sage.jpg";
@@ -16,11 +16,11 @@ import MaxPicture from "../../public/profile-pictures/Max.jpg";
 import ParkerPicture from "../../public/profile-pictures/parker.jpg";
 import SuryaPicture from "../../public/profile-pictures/Surya.jpg";
 import AriPicture from "../../public/profile-pictures/Ari.jpg";
-import AryanPicture from "../../public/profile-pictures/Aryan.jpg";
-import VirajPicture from "../../public/profile-pictures/Viraj.jpg";
+import AryanPicture from "../../public/profile-pictures/Aryan.jpeg";
+import VirajPicture from "../../public/profile-pictures/Viraj.jpeg";
 import StevenPicture from "../../public/profile-pictures/Steven.jpg";
 import RahulPicture from "../../public/profile-pictures/Rahul.jpg";
-import BenPicture from "../../public/profile-pictures/Ben.jpg";
+import BenPicture from "../../public/profile-pictures/Ben.jpeg";
 import AmirPicture from "../../public/profile-pictures/Amir.jpg";
 import OwenPicture from "../../public/profile-pictures/Owen.jpg";
 import EricPicture from "../../public/profile-pictures/Eric.jpg";
@@ -33,6 +33,15 @@ import EmmaPicture from "../../public/profile-pictures/Emma.jpg";
 import NathanPicture from "../../public/profile-pictures/Nathan.jpg";
 import NatashaPicture from "../../public/profile-pictures/Natasha.jpg";
 import DonahuePicture from "../../public/profile-pictures/Donahue.jpg";
+import TrumanPicture from "../../public/profile-pictures/Truman.jpeg";
+import JackPicture from "../../public/profile-pictures/Jack.jpg";
+import AlexaPicture from "../../public/profile-pictures/Alexa.jpg";
+import JustinaPicture from "../../public/profile-pictures/Justina.jpg";
+import KaitoPicture from "../../public/profile-pictures/Kaito.jpg";
+import RahulCPicture from "../../public/profile-pictures/RahulC.jpg";
+import AmiPicture from "../../public/profile-pictures/Ami.jpg";
+import SauravPicture from "../../public/profile-pictures/Saurav.jpg";
+
 import { StaticImageData } from "next/image";
 
 type Signatures = {
@@ -68,7 +77,7 @@ export const signatures: Array<Signatures> = [
     name: "Rhodos",
     subject: "Founding Colossus",
     age: "??",
-    location: "Nowhere 🇦🇶",
+    location: "????? 🏴",
     signature: RhodosSignature,
     gold: true,
   },
@@ -94,7 +103,7 @@ export const signatures: Array<Signatures> = [
     image: JuanDavidPicture,
     name: "Juan David Campelargo",
     subject: "Learning & Flight",
-    age: "??",
+    age: "20",
     location: "Chicago 🇺🇸",
     signature: Unsigned,
     gold: false,
@@ -112,7 +121,7 @@ export const signatures: Array<Signatures> = [
     image: KevalinPicture,
     name: "Kevalin Ketcham",
     subject: "Crypto",
-    age: "??",
+    age: "17",
     location: "San Francisco 🇺🇸",
     signature: Unsigned,
     gold: false,
@@ -121,7 +130,7 @@ export const signatures: Array<Signatures> = [
     image: ByeongjunPicture,
     name: "Byeongjun Moon",
     subject: "DAOs & Governance",
-    age: "??",
+    age: "18",
     location: "Westwood 🇺🇸",
     signature: Unsigned,
     gold: false,
@@ -130,7 +139,7 @@ export const signatures: Array<Signatures> = [
     image: LucasPicture,
     name: "Lucas Chu",
     subject: "DAO Finance",
-    age: "??",
+    age: "20",
     location: "New York 🇺🇸",
     signature: Unsigned,
     gold: false,
@@ -153,7 +162,7 @@ export const signatures: Array<Signatures> = [
     signature: Unsigned,
     gold: false,
   },
-  { image: NatashaPicture, name: "Natasha Asmi", subject: "Decentralized Science", age: "??", location: "Ann Arbor 🇺🇸", signature: Unsigned, gold: false },
+  { image: NatashaPicture, name: "Natasha Asmi", subject: "Decentralized Science", age: "19", location: "Ann Arbor 🇺🇸", signature: Unsigned, gold: false },
 
   {
     image: MaxPicture,
@@ -167,7 +176,7 @@ export const signatures: Array<Signatures> = [
   {
     image: ParkerPicture,
     name: "Parker Henderson",
-    subject: "Unset",
+    subject: "Design",
     age: "??",
     location: "Nowhere 🇦🇶",
     signature: Unsigned,
@@ -196,16 +205,17 @@ export const signatures: Array<Signatures> = [
     image: AryanPicture,
     name: "Aryan Sharma",
     subject: "Web3 Data",
-    age: "??",
+    age: "17",
     location: "Nowhere 🇦🇶",
     signature: Unsigned,
     gold: false,
   },
+  { image: AlexaPicture, name: "Alexa Kayman", subject: "Teen Investing", age: "16", location: "New York City 🇺🇸", signature: Unsigned, gold: false },
   {
     image: VirajPicture,
     name: "Viraj Chhajed",
     subject: "On-Chain Bot Detection",
-    age: "??",
+    age: "18",
     location: "Westwood 🇺🇸",
     signature: Unsigned,
     gold: false,
@@ -214,7 +224,7 @@ export const signatures: Array<Signatures> = [
     image: StevenPicture,
     name: "Steven Lu",
     subject: "Next-gen Accelerators",
-    age: "??",
+    age: "20",
     location: "Seattle 🇺🇸",
     signature: Unsigned,
     gold: false,
@@ -240,22 +250,31 @@ export const signatures: Array<Signatures> = [
   {
     image: ChristianPicture,
     name: "Christian Glassiognon",
-    subject: "Unset",
+    subject: "Development",
     age: "??",
-    location: "Nowhere 🇦🇶",
+    location: "San Jose 🇺🇸",
     signature: Unsigned,
     gold: false,
   },
+  { image: JustinaPicture, name: "Justina Chua", subject: "Token-Gated Commerce", age: "??", location: "Nowhere 🇦🇶", signature: Unsigned, gold: false },
+  { image: BereketPicture, name: "Bereket Semagn", subject: "Development", age: "13", location: "Toronto 🇨🇦", signature: Unsigned, gold: false },
+
+  { image: OmoPicture, name: "Omoruyi Atekha", subject: "Coordination", age: "??", location: "San Francisco 🇺🇸", signature: Unsigned, gold: false },
+
   { image: AmirPicture, name: "Amir Bolous", subject: "Crypto", age: "??", location: "Atlanta 🇺🇸", signature: Unsigned, gold: false },
   { image: OwenPicture, name: "Owen Roe", subject: "Esports", age: "19", location: "Nowhere 🇦🇶", signature: Unsigned, gold: false },
   { image: EricPicture, name: "Eric Button", subject: "Fintech", age: "??", location: "New York 🇺🇸", signature: Unsigned, gold: false },
-  { image: BereketPicture, name: "Bereket Semagn", subject: "Development", age: "13", location: "Toronto 🇨🇦", signature: Unsigned, gold: false },
   { image: SamayPicture, name: "Samay Shamdasani", subject: "Unlocking Potential", age: "??", location: "Ann Arbor 🇺🇸", signature: Unsigned, gold: false },
-  { image: NathanPicture, name: "Nathan Newman", subject: "Unlocking Potential", age: "??", location: "Ann Arbor 🇺🇸", signature: Unsigned, gold: false },
-  { image: HongPicture, name: "Daniel Hong", subject: "Blockchain", age: "??", location: "Nowhere 🇦🇶", signature: Unsigned, gold: false },
-  { image: OmoPicture, name: "Omoruyi Atekha", subject: "Coordination", age: "??", location: "San Francisco 🇺🇸", signature: Unsigned, gold: false },
+  { image: NathanPicture, name: "Nathan Newman", subject: "Deep Tech", age: "19", location: "Ann Arbor 🇺🇸", signature: Unsigned, gold: false },
+  { image: HongPicture, name: "Daniel Hong", subject: "Blockchain", age: "21", location: "Nowhere 🇦🇶", signature: Unsigned, gold: false },
+  { image: RahulCPicture, name: "Rahul Chhabra", subject: "Social Fintech", age: "24", location: "India 🇮🇳", signature: Unsigned, gold: false },
   { image: DonahuePicture, name: "Nick Donahue", subject: "Housing", age: "??", location: "Nowhere 🇦🇶", signature: Unsigned, gold: false },
+  { image: TrumanPicture, name: "Truman Sacks", subject: "Resell Economy", age: "??", location: "Los Angeles 🇺🇸", signature: Unsigned, gold: false },
+  { image: JackPicture, name: "Jack O'Regan Kenney", subject: "Resell Economy", age: "19", location: "Dublin 🇮🇪", signature: Unsigned, gold: false },
+  { image: AmiPicture, name: "Ami Yoshimura", subject: "Builder Communities", age: "??", location: "New York City 🇺🇸", signature: Unsigned, gold: false },
+  { image: KaitoPicture, name: "Kaito Cunningham", subject: "DAO Finance", age: "??", location: "New York City 🇺🇸", signature: Unsigned, gold: false },
   { image: AnPicture, name: "An Vu", subject: "Education & Communities", age: "??", location: "Nowhere 🇦🇶", signature: Unsigned, gold: false },
+  { image: SauravPicture, name: "Saurav Kumar", subject: "AI Research", age: "18", location: "San Francisco 🇺🇸", signature: Unsigned, gold: false },
 ];
 
 // test
