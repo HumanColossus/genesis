@@ -237,7 +237,10 @@ const Home: NextPage = () => {
                     </div>
                   </div>
                 </div>
-                <Image src={signature.signature} alt="The human colossus logo" width={80} height={40} className="rounded justify-self-end" />
+                {console.log(signature.signature)}
+                <div style={{ width: "80px" }}>
+                  <Image src={signature.signature} alt="The human colossus logo" layout="intrinsic" className="rounded relative" />
+                </div>
               </div>
             ))}
           </div>

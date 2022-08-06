@@ -1,6 +1,11 @@
 import Unsigned from "../../public/signatures/UNSIGNED.svg";
 import RhodosSignature from "../../public/signatures/RhodosSignature.svg";
 import WillSignature from "../../public/signatures/WillSignature.svg";
+import KevalinSignature from "../../public/signatures/KevalinSignature.png";
+import MaxSignature from "../../public/signatures/MaxSignature.png";
+import OwenSignature from "../../public/signatures/OwenSignature.png";
+import JuanDavidSignature from "../../public/signatures/JuanDavidSignature.png";
+
 import ChristianPicture from "../../public/profile-pictures/Christian.jpg";
 import RhodosPicture from "../../public/profile-pictures/RhodosPFP.png";
 import MiguelPicture from "../../public/profile-pictures/Miguel.jpg";
@@ -105,7 +110,7 @@ export const signatures: Array<Signatures> = [
     subject: "Learning & Flight",
     age: "20",
     location: "Chicago 🇺🇸",
-    signature: Unsigned,
+    signature: JuanDavidSignature,
     gold: false,
   },
   {
@@ -123,7 +128,7 @@ export const signatures: Array<Signatures> = [
     subject: "Crypto",
     age: "17",
     location: "San Francisco 🇺🇸",
-    signature: Unsigned,
+    signature: KevalinSignature,
     gold: false,
   },
   {
@@ -170,7 +175,7 @@ export const signatures: Array<Signatures> = [
     subject: "Productivity",
     age: "??",
     location: "Seattle 🇺🇸",
-    signature: Unsigned,
+    signature: MaxSignature,
     gold: false,
   },
   {
@@ -262,7 +267,7 @@ export const signatures: Array<Signatures> = [
   { image: OmoPicture, name: "Omoruyi Atekha", subject: "Coordination", age: "??", location: "San Francisco 🇺🇸", signature: Unsigned, gold: false },
 
   { image: AmirPicture, name: "Amir Bolous", subject: "Crypto", age: "??", location: "Atlanta 🇺🇸", signature: Unsigned, gold: false },
-  { image: OwenPicture, name: "Owen Roe", subject: "Esports", age: "19", location: "Nowhere 🇦🇶", signature: Unsigned, gold: false },
+  { image: OwenPicture, name: "Owen Roe", subject: "Esports", age: "19", location: "Nowhere 🇦🇶", signature: OwenSignature, gold: false },
   { image: EricPicture, name: "Eric Button", subject: "Fintech", age: "??", location: "New York 🇺🇸", signature: Unsigned, gold: false },
   { image: SamayPicture, name: "Samay Shamdasani", subject: "Unlocking Potential", age: "??", location: "Ann Arbor 🇺🇸", signature: Unsigned, gold: false },
   { image: NathanPicture, name: "Nathan Newman", subject: "Deep Tech", age: "19", location: "Ann Arbor 🇺🇸", signature: Unsigned, gold: false },
