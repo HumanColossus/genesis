@@ -7,7 +7,7 @@ import Community from "../../public/other/Community.png";
 import clsx from "clsx";
 import { signatures } from "configs/signatures";
 
-const Home: NextPage = () => {
+const Memo: NextPage = () => {
   // Styles places here for easy editing of all elements with className = <nameOfClass>
   const paragraph = clsx("my-4 w-full text-[#e9e9ec] leading-5");
   const highlight = clsx("bg-[#30267c]");
@@ -267,4 +267,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Memo;
