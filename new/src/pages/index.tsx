@@ -18,13 +18,13 @@ const Home: NextPage = () => {
     <main className="mt-4 flex justify-center px-4">
       <div className="max-w-custom">
         {/* <hr className={horizonal_rule} /> */}
-        <h1 className="text-white text-4xl my-6 font-bold">A worldwide education platform for the self-motivated.</h1>
-        <div className="flex my-5">
+        <h1 className="text-white text-4xl mt-6 mb-4 font-bold">A worldwide education platform for the self-motivated.</h1>
+        <div className="flex mb-5">
           <Image src={LogoGroup} alt="The human colossus logo" />
           <p className="pt-0.5 m-0 ml-2.5 text-sm text-[#747485] font-mono">/ Jul 12, 2022</p>
           <hr className={horizonal_rule} />
         </div>
-        <hr className={horizonal_rule} />
+        <hr className={horizonal_rule} style={{ marginBottom: "20px" }} />
         <p className={paragraph}>
           <span className={highlight}>The next generation of builders is self-taught, and already building the future, right now.</span> Most began online,
           watching Youtube videos, building web apps, reading articles, joining professional communities, shipping products, while underserved by institutional
@@ -97,7 +97,8 @@ const Home: NextPage = () => {
           <Image src={Guidance} alt="" width={403} height={222} />
         </div>
         <h1 className={header}>Tangibility</h1>
-        <p className={paragraph}>🚨 It’s hard if learning has little or infrequent real-world, hands-on application. </p>
+        <p className={paragraph}>🚨 It&apos;s hard if your progress doesn't show results or feel rewarding.</p>
+        <p className={paragraph}>🚨 It&apos;s hard if learning has little or infrequent real-world, hands-on application. </p>
         <p className={paragraph}>🚨 It&apos;s hard if there isn&apos;t a strong reason &quot;why&quot; one is learning.</p>
         <p className={paragraph}>
           It’s counterintuitive that resources, like KhanAcademy, MIT OpenCourseware, or Libgen, are{" "}
@@ -216,9 +217,9 @@ const Home: NextPage = () => {
         </div>
         <div className="bg-[#00001c] rounded-lg mt-12 mb-6 pb-4 pt-1.5 shadow-custom h-72 px-4">
           <h1 className="w-full bg-[#00001c] z-10 pt-1 font-semibold	">/ Signatures</h1>
-          <div className="flex flex-col gap-0.5 overflow-auto h-56 mt-3 rounded">
+          <div className="flex flex-col gap-3.5 overflow-auto h-56 mt-3 rounded">
             {signatures.map((signature, i) => (
-              <div className="flex justify-between mt-2.5 static" key={i}>
+              <div className="flex justify-between static" key={i}>
                 <div className="flex">
                   <Image src={signature.image} alt="The human colossus logo" width={40} height={40} className="rounded" />
                   <div className="flex flex-col justify-between mx-3">

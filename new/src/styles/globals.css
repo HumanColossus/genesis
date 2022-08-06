@@ -2,57 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 html {
-    background: #00001c;
-    color: white;
-    margin: 0;
-    font-family: "Body";
-    -webkit-font-smoothing: antialiased;
+  background: #00001c;
+  color: white;
+  margin: 0;
+  font-family: "Body";
+  -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 @font-face {
-    font-family: "Mono";
-    src: url("../../public/fonts/ABCFavoritEduMono-Regular.otf") format("opentype");
+  font-family: "Mono";
+  src: url("../../public/fonts/ABCFavoritEduMono-Regular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "Body";
-    src: url("../../public/fonts/ABCSocialEdu-Regular.woff2") format("woff2");
-    font-weight: normal;
+  font-family: "Body";
+  src: url("../../public/fonts/ABCSocialEdu-Regular.woff2") format("woff2");
+  font-weight: normal;
 }
 
 @font-face {
-    font-family: "Body";
-    src: url("../../public/fonts/ABCSocialEdu-RegularItalic.woff2") format("woff2");
-    font-weight: normal;
-    font-style: italic;
+  font-family: "Body";
+  src: url("../../public/fonts/ABCSocialEdu-RegularItalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: "Body";
-    src: url("../../public/fonts/ABCSocialEdu-Bold.woff2") format("woff2");
-    font-weight: bolder;
+  font-family: "Body";
+  src: url("../../public/fonts/ABCSocialEdu-Bold.woff2") format("woff2");
+  font-weight: bolder;
 }
 
 @font-face {
-    font-family: "Body";
-    src: url("../../public/fonts/ABCSocialEdu-BoldItalic.woff2") format("woff2");
-    font-weight: bold;
-    font-style: italic;
+  font-family: "Body";
+  src: url("../../public/fonts/ABCSocialEdu-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
 }
 
 @font-face {
-    font-family: "Body";
-    src: url("../../public/fonts/ABCSocialEdu-Book.woff2") format("woff2");
-    font-weight: lighter;
+  font-family: "Body";
+  src: url("../../public/fonts/ABCSocialEdu-Book.woff2") format("woff2");
+  font-weight: lighter;
 }
 
 @font-face {
-    font-family: "Body";
-    src: url("../../public/fonts/ABCSocialEdu-Medium.woff2") format("woff2");
-    font-weight: bold;
+  font-family: "Body";
+  src: url("../../public/fonts/ABCSocialEdu-Medium.woff2") format("woff2");
+  font-weight: bold;
 }
 
 @font-face {
-    font-family: "Button";
-    src: url("../../public/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
+  font-family: "Button";
+  src: url("../../public/fonts/SpaceGrotesk-Regular.ttf") format("truetype");
 }
