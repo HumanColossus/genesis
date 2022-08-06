@@ -97,7 +97,7 @@ const Home: NextPage = () => {
           <Image src={Guidance} alt="" width={403} height={222} />
         </div>
         <h1 className={header}>Tangibility</h1>
-        <p className={paragraph}>🚨 It&apos;s hard if your progress doesn't show results or feel rewarding.</p>
+        <p className={paragraph}>🚨 It&apos;s hard if your progress doesn&lsquo;t show results or feel rewarding.</p>
         <p className={paragraph}>🚨 It&apos;s hard if learning has little or infrequent real-world, hands-on application. </p>
         <p className={paragraph}>🚨 It&apos;s hard if there isn&apos;t a strong reason &quot;why&quot; one is learning.</p>
         <p className={paragraph}>
