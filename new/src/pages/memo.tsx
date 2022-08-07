@@ -4,15 +4,15 @@ import LogoGroup from "../../public/other/LogoGroup.svg";
 import Guidance from "../../public/other/Guidance.png";
 import Tangibility from "../../public/other/Tangibility.png";
 import Community from "../../public/other/Community.png";
-import clsx from "clsx";
 import { signatures } from "configs/signatures";
+import classNames from "classnames";
 
 const Home: NextPage = () => {
   // Styles places here for easy editing of all elements with className = <nameOfClass>
-  const paragraph = clsx("my-4 w-full text-[#e9e9ec] leading-5");
-  const highlight = clsx("bg-[#30267c]");
-  const header = clsx("my-4 font-bold text-2xl my-5");
-  const horizonal_rule = clsx(
+  const paragraph = classNames("my-4 w-full text-[#e9e9ec] leading-5");
+  const highlight = classNames("bg-[#30267c]");
+  const header = classNames("my-4 font-bold text-2xl my-5");
+  const horizonal_rule = classNames(
     "my-2.5 border-solid border-0.1 border-[#747485]"
   );
 
@@ -368,7 +368,11 @@ const Home: NextPage = () => {
                       }}
                     >
                       <p style={{ color: "rgb(116, 116, 133)" }}>in</p>
-                      <p className={clsx({ "text-[#e1b13e]": signature.gold })}>
+                      <p
+                        className={classNames({
+                          "text-[#e1b13e]": signature.gold,
+                        })}
+                      >
                         {signature.subject}
                       </p>
                       <p>/</p>
