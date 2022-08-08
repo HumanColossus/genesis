@@ -16,16 +16,14 @@ function defineNextConfig(config) {
     return config;
 }
 
-export default defineNextConfig(
-    withPlausibleProxy()({
-        reactStrictMode: true,
-        swcMinify: true,
-        async redirects() {
-            return [{
-                source: "/",
-                destination: "/memo",
-                permanent: false,
-            }, ];
-        },
-    })
-);
+export default defineNextConfig({
+    reactStrictMode: true,
+    swcMinify: true,
+    async redirects() {
+        return [{
+            source: "/",
+            destination: "/memo",
+            permanent: false,
+        }, ];
+    },
+});
