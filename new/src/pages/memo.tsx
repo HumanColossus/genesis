@@ -6,6 +6,7 @@ import Tangibility from "../../public/other/Tangibility.png";
 import Community from "../../public/other/Community.png";
 import { signatures } from "configs/signatures";
 import classNames from "classnames";
+import { usePlausible } from "next-plausible";
 
 const Home: NextPage = () => {
   // Styles places here for easy editing of all elements with className = <nameOfClass>
@@ -15,6 +16,8 @@ const Home: NextPage = () => {
   const horizonal_rule = classNames(
     "my-2.5 border-solid border-0.1 border-[#747485]"
   );
+
+  const plausible = usePlausible();
 
   return (
     <main className="mt-4 flex justify-center px-4">
@@ -309,29 +312,32 @@ const Home: NextPage = () => {
           <button
             className="bold flex h-10 cursor-pointer items-center justify-center gap-7 rounded bg-[#5f4bdd] px-8 font-button text-sm font-bold text-white"
             // style={{ lineHeight: "10px" }}
-            onClick={() =>
+            onClick={() => {
+              plausible("clicked-nominate");
               window.open(
                 "mailto:team@colossus.fyi?subject=Nomination%20of...&body=%23%23%23%20Make%20sure%20to%20copy%20the%20nominee%20on%20this%20email!%20%23%23%23%0D%0A%0D%0AHi%2C%0D%0A%0D%0AI'm%20%5Bname%5D%20and%20am%20nominating%20my%20friend%20%5Bname%5D%20for%20Colossus.%0D%0A%0D%0AInfo%20about%20me%3A%0D%0A(name%2C%20two%20sentence%20description%2C%20Twitter%2Fother%20social%2C%20personal%20website)%0D%0A%0D%0AInfo%20about%20the%20nominee%3A%0D%0A(name%2C%20email%2C%20two%20sentence%20description%2C%20Twitter%2Fother%20social%2C%20personal%20website)%0D%0A%0D%0AWhy%20should%20we%20consider%20the%20nominee%3F%20Why%20are%20they%20a%20good%20advocate%2C%20advisor%2C%20and%20community%20member%3F%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A"
-              )
-            }
+              );
+            }}
           >
             Nominate a friend
           </button>
           <button
             className="bold flex h-10 cursor-pointer items-center justify-center gap-7 rounded bg-[#191933] px-8 font-button text-sm font-bold text-white"
-            onClick={() =>
-              window.open("https://www.getwaitlist.com/waitlist/3960")
-            }
+            onClick={() => {
+              plausible("clicked-waitlist");
+              window.open("https://www.getwaitlist.com/waitlist/3960");
+            }}
           >
             Join waitlist
           </button>
           <button
             className="bold flex h-10 cursor-pointer items-center justify-center  gap-7 rounded bg-[#191933] px-8 font-button text-sm font-bold text-white"
-            onClick={() =>
+            onClick={() => {
+              plausible("clicked-contact");
               window.open(
                 "mailto:contact@colossus.fyi?subject=Reaching%20out..."
-              )
-            }
+              );
+            }}
           >
             Contact us
           </button>
@@ -401,7 +407,10 @@ const Home: NextPage = () => {
           <div className="mt-2.5 flex gap-6">
             <button
               className="bold h-10 cursor-pointer items-center justify-center gap-7 rounded bg-[#191933] px-6 font-button text-sm font-bold text-white first-letter:flex"
-              onClick={() => window.open("https://twitter.com/jointhecolossus")}
+              onClick={() => {
+                plausible("clicked-twitter");
+                window.open("https://twitter.com/jointhecolossus");
+              }}
             >
               Follow on Twitter
             </button>
