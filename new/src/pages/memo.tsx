@@ -409,7 +409,7 @@ const Home: NextPage = () => {
               className="bold h-10 cursor-pointer items-center justify-center gap-7 rounded bg-[#191933] px-6 font-button text-sm font-bold text-white first-letter:flex"
               onClick={() => {
                 plausible("clicked-twitter");
-                window.open("https://twitter.com/jointhecolossus");
+                window.open("https://twitter.com/colossusfyi");
               }}
             >
               Follow on Twitter
