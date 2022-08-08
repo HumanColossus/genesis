@@ -13,7 +13,7 @@ import { withPlausibleProxy } from "next-plausible";
  */
 
 function defineNextConfig(config) {
-    return { config };
+    return config;
 }
 
 // export default defineNextConfig({
