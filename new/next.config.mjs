@@ -13,17 +13,34 @@ import { withPlausibleProxy } from "next-plausible";
  */
 
 function defineNextConfig(config) {
-    return config;
+  return config;
 }
 
 export default defineNextConfig({
-    reactStrictMode: true,
-    swcMinify: true,
-    async redirects() {
-        return [{
-            source: "/",
-            destination: "/memo",
-            permanent: false,
-        }, ];
-    },
+  reactStrictMode: true,
+  swcMinify: true,
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/memo",
+        permanent: false,
+      },
+      {
+        source: "/apply",
+        destination: "https://fepmaftot5b.typeform.com/to/YgUcfdxu",
+        permanent: false,
+      },
+      {
+        source: "/twitter",
+        destination: "https://twitter.com/colossusfyi",
+        permanent: false,
+      },
+      {
+        source: "/figma",
+        destination: "https://www.figma.com/file/pxnEjpKyfYBEr9orAVgv11/The-Human-Colossus%3A-Design-%26-Prototyping",
+        permanent: false,
+      },
+    ];
+  },
 });
