@@ -48,6 +48,11 @@ export default defineNextConfig({
         destination: "https://twitter.com/colossusfyi",
         permanent: false,
       },
+      {
+        source: "/figma",
+        destination: "https://www.figma.com/file/pxnEjpKyfYBEr9orAVgv11/The-Human-Colossus%3A-Design-%26-Prototyping",
+        permanent: false,
+      },
     ];
   },
 });
