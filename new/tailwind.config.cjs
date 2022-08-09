@@ -23,6 +23,9 @@ module.exports = {
             fontSize: {
                 csm: "13px",
             },
+            lineHeight: {
+                5.5: "20.5px",
+            },
         },
     },
     plugins: [],
