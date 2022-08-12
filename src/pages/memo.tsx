@@ -117,7 +117,7 @@ const Home: NextPage = () => {
           <p className={paragraph}>
             Most importantly,{" "}
             <span className="bg-[#30267c]">
-              we don’t need to create new educational content
+              we don’t need to create new educational content. &nbsp
             </span>
             just direction on where to find existing resources. We don’t need to
             supplement the countless courses, videos, textbooks, and articles
@@ -125,7 +125,7 @@ const Home: NextPage = () => {
           </p>
           <p className={paragraph}>
             The minority of content produced by Colossus members will be what
-            they would have created already, in the form project releases and
+            they would have created already, in the form of project releases and
             articles, modified to fit the platform (steps for replication,
             learning pre-requisites, etc.).
           </p>
