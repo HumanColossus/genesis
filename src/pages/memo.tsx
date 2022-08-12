@@ -117,9 +117,9 @@ const Home: NextPage = () => {
           <p className={paragraph}>
             Most importantly,{" "}
             <span className="bg-[#30267c]">
-              we don’t need to create new educational content. &nbsp
+              we don’t need to create new educational content,
             </span>
-            just direction on where to find existing resources. We don’t need to
+            &#160; just direction on where to find existing resources. We don’t need to
             supplement the countless courses, videos, textbooks, and articles
             already out there, for free!
           </p>
