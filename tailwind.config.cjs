@@ -16,6 +16,7 @@ module.exports = {
                 mono: ["Mono", "Inter", "sans-serif"],
                 body: ["Body", "Inter", "sans-serif"],
                 button: ["Button", "Inter", "sans-serif"],
+                signature: ["Birthstone", "serif"],
             },
             maxWidth: {
                 custom: "550px",
