@@ -380,16 +380,22 @@ const Home: NextPage = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex h-full w-20 items-center justify-center">
-                    <Image
-                      src={signature.signature}
-                      alt="The human colossus logo"
-                      className="relative rounded"
-                      width={78}
-                      height={25}
-                      layout="fixed"
-                    />
-                  </div>
+                  {signature.signature ? (
+                    <div className="flex h-full w-20 items-center justify-center">
+                      <Image
+                        src={signature.signature}
+                        alt="The human colossus logo"
+                        className="relative rounded"
+                        width={78}
+                        height={25}
+                        layout="fixed"
+                      />
+                    </div>
+                  ) : (
+                    <span className="align-middle font-signature text-xl text-[#4C4C60]">
+                      {signature.name}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>
