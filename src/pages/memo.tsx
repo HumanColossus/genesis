@@ -119,9 +119,9 @@ const Home: NextPage = () => {
             <span className="bg-[#30267c]">
               we don’t need to create new educational content,
             </span>
-            &#160; just direction on where to find existing resources. We don’t need to
-            supplement the countless courses, videos, textbooks, and articles
-            already out there, for free!
+            &#160; just direction on where to find existing resources. We don’t
+            need to supplement the countless courses, videos, textbooks, and
+            articles already out there, for free!
           </p>
           <p className={paragraph}>
             The minority of content produced by Colossus members will be what
@@ -404,7 +404,7 @@ const Home: NextPage = () => {
             <h1 className="z-10 w-full bg-[#00001c] pt-1 font-semibold">
               Get involved!
             </h1>
-            <div className="mt-2.5 flex gap-6">
+            <div className="mt-2.5 flex flex-wrap gap-6">
               <button
                 className="bold flex h-10 cursor-pointer items-center justify-center rounded bg-[#191933] px-6 font-button text-sm font-bold text-white first-letter:flex"
                 onClick={() => {
@@ -414,7 +414,7 @@ const Home: NextPage = () => {
               >
                 Follow on Twitter
               </button>
-              <button className="bold flex h-10 cursor-pointer items-center justify-center rounded bg-[#191933] px-6 font-button text-sm font-bold text-white">
+              <button className="bold flex h-10 cursor-pointer items-center justify-center rounded bg-[#191933] px-2 font-button text-sm font-bold text-white">
                 Text COLOSSUS to 1 833 225 6887
               </button>
             </div>
