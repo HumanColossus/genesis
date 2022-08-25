@@ -10,11 +10,14 @@
         "postinstall": "prisma generate"
     },
     "dependencies": {
+        "@mdx-js/loader": "^2.1.3",
+        "@next/mdx": "^12.2.5",
         "@prisma/client": "^4.1.0",
         "@trpc/client": "10.0.0-alpha.41",
         "@trpc/next": "10.0.0-alpha.41",
         "@trpc/react": "10.0.0-alpha.41",
         "@trpc/server": "10.0.0-alpha.41",
+        "@types/mdx": "^2.0.2",
         "classnames": "^2.3.1",
         "logrocket": "^3.0.1",
         "next": "12.2.3",

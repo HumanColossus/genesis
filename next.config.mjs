@@ -2,6 +2,7 @@
 // import { env } from "./src/env/server.mjs";
 
 import { withPlausibleProxy } from "next-plausible";
+import nextMDX from "@next/mdx"
 
 /**
  * Don't be scared of the generics here.
@@ -12,9 +13,18 @@ import { withPlausibleProxy } from "next-plausible";
  * @constraint {{import('next').NextConfig}}
  */
 
+const withMDX = nextMDX({
+  extension: /\.mdx?$/,
+  options: { providerImportSource: '@mdx-js/react', }
+})
+
 function defineNextConfig(config) {
-  return config;
+  return withMDX({
+    ...config,
+    pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js'],
+  })
 }
+
 
 export default defineNextConfig({
   reactStrictMode: true,
@@ -44,3 +54,4 @@ export default defineNextConfig({
     ];
   },
 });
+
