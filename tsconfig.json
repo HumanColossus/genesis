@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -15,13 +15,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "noUncheckedIndexedAccess": true,
-    "paths": {
-      "@/libs/*": ["libs/*"],
-      "@/styles/*": ["styles/*"],
-      "@/components/*": ["components/*"],
-      "@/utils/*": ["utils/*"]
-    }
+    "noUncheckedIndexedAccess": true
   },
   "include": [
     "next-env.d.ts",

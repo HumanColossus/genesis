@@ -1,4 +1,4 @@
-import siteMetaData from "configs/siteMetaData";
+import siteMetaData from "../../configs/siteMetaData";
 import { DefaultSeo as NextDefaultSeo } from "next-seo";
 
 interface Props {
