@@ -7,8 +7,10 @@ html {
   margin: 0;
   font-family: "Body";
   -webkit-font-smoothing: antialiased;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 html::-webkit-scrollbar {
@@ -42,7 +44,7 @@ html::-webkit-scrollbar {
 @font-face {
   font-family: "Body";
   src: url("../../public/fonts/ABCSocialEdu-BoldItalic.woff2") format("woff2");
-  font-weight: bold;
+  font-weight: bolder;
   font-style: italic;
 }
 

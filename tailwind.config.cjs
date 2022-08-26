@@ -18,6 +18,9 @@ module.exports = {
                 button: ["Button", "Inter", "sans-serif"],
                 signature: ["Birthstone", "serif"],
             },
+            textColor: {
+                muted: "#747485"
+            },
             maxWidth: {
                 custom: "550px",
             },

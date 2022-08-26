@@ -19,13 +19,11 @@ function defineNextConfig(config) {
 export default defineNextConfig({
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ["pbs.twimg.com"],
+  },
   async redirects() {
     return [
-      {
-        source: "/",
-        destination: "/memo",
-        permanent: false,
-      },
       {
         source: "/apply",
         destination: "https://fepmaftot5b.typeform.com/to/YgUcfdxu",

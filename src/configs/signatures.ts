@@ -5,7 +5,7 @@ import MaxSignature from "../../public/signatures/MaxSignature.png";
 import OwenSignature from "../../public/signatures/OwenSignature.png";
 import JuanDavidSignature from "../../public/signatures/JuanDavidSignature.png";
 
-import ChristianPicture from "../../public/profile-pictures/Christian.jpg";
+import ChristianPicture from "../../public/profile-pictures/glassy.jpg";
 import RhodosPicture from "../../public/profile-pictures/RhodosPFP.png";
 import MiguelPicture from "../../public/profile-pictures/Miguel.jpg";
 import AviPicture from "../../public/profile-pictures/Avi.jpg";
@@ -48,7 +48,7 @@ import SauravPicture from "../../public/profile-pictures/Saurav.jpg";
 
 import { StaticImageData } from "next/image";
 
-type Signatures = {
+export type Signatures = {
   image: StaticImageData;
   name: string;
   subject: string;
@@ -57,26 +57,6 @@ type Signatures = {
   signature?: any;
   gold: boolean;
 };
-
-function shuffle(array: any[]) {
-  let currentIndex = array.length,
-    randomIndex;
-
-  // While there remain elements to shuffle.
-  while (currentIndex != 0) {
-    // Pick a remaining element.
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex--;
-
-    // And swap it with the current element.
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
-    ];
-  }
-
-  return array;
-}
 
 export const signatures: Array<Signatures> = [
   {

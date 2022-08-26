@@ -4,9 +4,10 @@ import LogoGroup from "../../public/other/LogoGroup.svg";
 import Guidance from "../../public/other/Guidance.png";
 import Tangibility from "../../public/other/Tangibility.png";
 import Community from "../../public/other/Community.png";
-import { signatures } from "configs/signatures";
+import { signatures } from "../configs/signatures";
 import classNames from "classnames";
 import { usePlausible } from "next-plausible";
+import { MarqueeLayout } from "src/components/basics";
 
 const Home: NextPage = () => {
   // Styles places here for easy editing of all elements with className = <nameOfClass>
@@ -21,8 +22,8 @@ const Home: NextPage = () => {
 
   return (
     <main>
-      <div className="px-4">
-        <div className="mx-auto flex max-w-custom flex-col gap-0 pt-4">
+      <MarqueeLayout>
+        <div className="mx-auto flex max-w-custom flex-col gap-0 px-4 pt-4">
           {/* <hr className={horizonal_rule} /> */}
           <h1 className="mb-4 mt-6 text-4xl font-bold text-white">
             A worldwide education platform for the self-motivated.
@@ -430,7 +431,7 @@ const Home: NextPage = () => {
             large.
           </p>
         </div>
-      </div>
+      </MarqueeLayout>
     </main>
   );
 };
