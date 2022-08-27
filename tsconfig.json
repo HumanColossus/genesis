@@ -25,6 +25,6 @@
     "**/*.js",
     "**/*.mjs",
     "**/*.css"
-  ],
+, "src/components/PostsComponents/Head.jsx", "src/pages/posts.mdx"  ],
   "exclude": ["node_modules"]
 }
