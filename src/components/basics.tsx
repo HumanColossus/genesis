@@ -122,7 +122,7 @@ export const BlockContent: React.FC<{
   return (
     <>
       <div className="flex shrink-0">
-        <Image src={image} alt="The human colossus logo" width={40} x height={40} className="rounded" />
+        <Image src={image} alt="The human colossus logo" width={40} height={40} className="rounded" />
         <div className="mx-3 flex flex-col justify-between">
           <h1 className="text-normal font-semibold leading-5.5 text-[#E9E9EC]">{title}</h1>
           <div className="mt-0 flex gap-2 font-mono text-xs leading-[16.5px] text-[#BBBBC3]">{children}</div>
