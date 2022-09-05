@@ -64,7 +64,7 @@ const Index: NextPage = () => {
           The first thing that users are concerned with is transaction latency, or the amount of time between initiating a transaction or payment and receiving
           confirmation that it is valid (for instance, that they have enough money). In classical BFT systems (e.g. PBFT, Tendermint, Tusk & Narwhal, etc), a
           transaction is finalized once it gets confirmed, whereas in longest-chain consensus (e.g. Nakamoto Consensus, Solana/Ethereum PoS), a transaction may
-          get included in a block and then reorged. As a result, we need to wait until a transaction is "k-blocks deep," resulting in a latency that is
+          get included in a block and then reorged. As a result, we need to wait until a transaction is k-blocks deep, resulting in a latency that is
           significantly greater than a single confirmation.
         </p>
         <p className=" w-full font-thin leading-6	text-[#D2D2D8]	">
@@ -88,7 +88,7 @@ const Index: NextPage = () => {
           for the work they do and the promises they make to end users.
         </p>
         <p className="w-full font-thin leading-6	text-[#D2D2D8]	">
-          In future work we plan to apply this methodology to existing consensus systems, if that's something of interest, please reach out on Twitter!
+          In future work we plan to apply this methodology to existing consensus systems, if thats something of interest, please reach out on Twitter!
         </p>
       </div>
       <hr className={"mt-0 border-0.1 border-solid border-[#2D304F]"} />
