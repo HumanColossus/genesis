@@ -7,7 +7,7 @@ import { trpc } from "src/utils/trpc";
 import { NextPage } from "next";
 import { AppProps } from "next/app";
 import { useEffect } from "react";
-import MDXComponents from "./posts/MDXComponents";
+// import MDXComponents from "./posts/MDXComponents";
 import { MDXProvider } from "@mdx-js/react";
 
 export type NextPageWithAuth = NextPage & {
@@ -36,26 +36,23 @@ const Auth = ({ children }: { children: any }) => {
   return null;
 };
 
-const MyApp = ({
-  Component,
-  pageProps: { session, ...pageProps },
-}: AppPropsWithAuth) => {
+const MyApp = ({ Component, pageProps: { session, ...pageProps } }: AppPropsWithAuth) => {
   LogRocket.init("insilica-labs/colossus");
   return (
-    <MDXProvider components={MDXComponents}>
-      <SessionProvider session={session}>
-        <PlausibleProvider domain="colossus.fyi">
-          <DefaultSeo />
-          {Component.auth ? (
-            <Auth>
-              <Component {...pageProps} />
-            </Auth>
-          ) : (
+    // <MDXProvider components={MDXComponents}>
+    <SessionProvider session={session}>
+      <PlausibleProvider domain="colossus.fyi">
+        <DefaultSeo />
+        {Component.auth ? (
+          <Auth>
             <Component {...pageProps} />
-          )}
-        </PlausibleProvider>
-      </SessionProvider>
-    </MDXProvider>
+          </Auth>
+        ) : (
+          <Component {...pageProps} />
+        )}
+      </PlausibleProvider>
+    </SessionProvider>
+    // </MDXProvider>
   );
 };
 
