@@ -19,25 +19,27 @@ import YoutubeIcon from "../../../public/icons/YoutubeIcon.png";
 import TwitterIcon from "../../../public/icons/TwitterIcon.png";
 
 const AviSpeaking = () => {
-  return (
-    <div className="-mb-3 flex gap-2">
-      <div className="mt-[2px]">
-        <Image src={signatures[2]?.image} className="rounded-md" width={20} height={20} alt="" />
+  if (signatures[2])
+    return (
+      <div className="-mb-3 flex gap-2">
+        <div className="mt-[2px]">
+          <Image src={signatures[2].image} className="rounded-md" width={20} height={20} alt="" />
+        </div>
+        <p className="m-0">Avi Schiffman</p>
       </div>
-      <p className="m-0">Avi Schiffman</p>
-    </div>
-  );
+    );
 };
 
 const WillSpeaking = () => {
-  return (
-    <div className="-mb-3 flex gap-2">
-      <div className="mt-[2px]">
-        <Image src={signatures[4]?.image} className="rounded-md" width={20} height={20} alt="" />
+  if (signatures[4])
+    return (
+      <div className="-mb-3 flex gap-2">
+        <div className="mt-[2px]">
+          <Image src={signatures[4].image} className="rounded-md" width={20} height={20} alt="" />
+        </div>
+        <p className="m-0">Will DePue</p>
       </div>
-      <p className="m-0">Will DePue</p>
-    </div>
-  );
+    );
 };
 
 const Index: NextPage = () => {
