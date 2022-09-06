@@ -17,29 +17,29 @@ import SiteIcon from "../../../public/posts/UTS.png";
 import SiteIcon2 from "../../../public/posts/nCovIcon.png";
 import YoutubeIcon from "../../../public/icons/YoutubeIcon.png";
 import TwitterIcon from "../../../public/icons/TwitterIcon.png";
+import AviPicture from "../../public/profile-pictures/Avi.jpg";
+import WillPicture from "../../public/profile-pictures/PFP.png";
 
 const AviSpeaking = () => {
-  if (signatures[2])
-    return (
-      <div className="-mb-3 flex gap-2">
-        <div className="mt-[2px]">
-          <Image src={signatures[2].image} className="rounded-md" width={20} height={20} alt="" />
-        </div>
-        <p className="m-0">Avi Schiffman</p>
+  return (
+    <div className="-mb-3 flex gap-2">
+      <div className="mt-[2px]">
+        <Image src={AviPicture} className="rounded-md" width={20} height={20} alt="" />
       </div>
-    );
+      <p className="m-0">Avi Schiffman</p>
+    </div>
+  );
 };
 
 const WillSpeaking = () => {
-  if (signatures[4])
-    return (
-      <div className="-mb-3 flex gap-2">
-        <div className="mt-[2px]">
-          <Image src={signatures[4].image} className="rounded-md" width={20} height={20} alt="" />
-        </div>
-        <p className="m-0">Will DePue</p>
+  return (
+    <div className="-mb-3 flex gap-2">
+      <div className="mt-[2px]">
+        <Image src={WillPicture} className="rounded-md" width={20} height={20} alt="" />
       </div>
-    );
+      <p className="m-0">Will DePue</p>
+    </div>
+  );
 };
 
 const Index: NextPage = () => {
@@ -50,7 +50,7 @@ const Index: NextPage = () => {
         <div className="relative">
           <Image src={PostBackground} alt="Post icon" className="rounded-md opacity-80" />
           <div className="absolute bottom-3 left-3  p-0">
-            <Image src={signatures[2]?.image} alt="Post icon" width="60px" height="60px" className="m-0 rounded-md" />
+            <Image src={AviPicture} alt="Post icon" width="60px" height="60px" className="m-0 rounded-md" />
           </div>
         </div>
         <h1 className="mt-3 text-3xl">How I built a platform to help Ukrainian refugees find homes.</h1>
@@ -768,7 +768,7 @@ const Index: NextPage = () => {
           </div>
         </div>
         <div className="mt-4 flex flex-col gap-3">
-          <LargeBlockContent image={signatures[4]?.image} title={signatures[4]?.name}>
+          <LargeBlockContent image={WillPicture} title={"Will DePue"}>
             <p className="text-[#747485]">in</p>
             <p>{signatures[4]?.subject}</p>
             <p className="text-[#747485]">/</p>
@@ -776,7 +776,7 @@ const Index: NextPage = () => {
             <p className="text-[#747485]">from</p>
             <p>{signatures[4]?.location}</p>
           </LargeBlockContent>
-          <LargeBlockContent image={signatures[2]?.image} title={signatures[2]?.name}>
+          <LargeBlockContent image={AviPicture} title={"Avi Schiffmann"}>
             <p className="text-[#747485]">in</p>
             <p
               className={classNames({
