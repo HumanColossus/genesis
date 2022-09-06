@@ -53,11 +53,11 @@ export const Header: React.FC<{
 export const Footer: React.FC = () => {
   return (
     <div className="mx-auto mt-8 h-12 max-w-[600px]">
-      <div className=" flex justify-between px-2 font-mono text-[13px] leading-[16.5px] text-[#45455B]">
-        <Link href="memo">Read our mission</Link>
+      <div className=" flex justify-between gap-3 px-3 text-center font-mono text-[13px] leading-[16.5px] text-[#45455B]">
+        <Link href="/memo">Our mission</Link>
         <a href="https://twitter.com/colossusfyi">Get updates</a>
         <a href="mailto:team@colossus.fyi">Contact us</a>
-        <a href="">Privacy & Terms</a>
+        <Link href="/legal">Legal</Link>
       </div>
     </div>
   );
@@ -140,11 +140,13 @@ export const LargeBlockContent: React.FC<{
 }> = ({ image, title, children, grey = false }) => {
   return (
     <>
-      <div className="flex shrink-0">
-        <Image src={image} alt="The human colossus logo" width={45} height={45} className="rounded-md" />
-        <div className="mx-3 flex flex-col justify-between py-[1px]">
-          <h1 className={"text-[17px] font-semibold leading-5.5 " + (grey ? "text-[#c7c7d1]" : "text-[#E9E9EC]")}>{title}</h1>
-          <div className="mt-0 flex gap-2 font-mono text-[13px] leading-[16.5px] text-[#BBBBC3]">{children}</div>
+      <div className="static flex h-10">
+        <div className="relative flex shrink-0 items-center justify-between">
+          <Image src={image} alt="The human colossus logo" width={45} height={45} className="rounded-md" />
+          <div className="mx-3 flex flex-col justify-between py-[1px]">
+            <h1 className={"text-[17px] font-semibold leading-5.5 " + (grey ? "text-[#c7c7d1]" : "text-[#E9E9EC]")}>{title}</h1>
+            <div className="mt-[5px] flex gap-2 font-mono text-[13px] leading-[16.5px] text-[#BBBBC3]">{children}</div>
+          </div>
         </div>
       </div>
     </>

@@ -56,6 +56,7 @@ export type Signatures = {
   location: string;
   signature?: any;
   gold: boolean;
+  link?: string;
 };
 
 export const signatures: Array<Signatures> = [

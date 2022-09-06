@@ -20,7 +20,7 @@ const Index: NextPage = () => {
                   <p className="text-[#747485]">via</p>
                   <p>colossus.fyi</p>
                   <p className="text-[#747485]">/</p>
-                  <p className="text-[#747485]">Expose ambition. Recruiting young builders...</p>
+                  <p className="text-[#747485]">Expose ambition. Recruiting young buil...</p>
                 </BlockContent>
               </BlockWrapper>
             </a>
@@ -35,10 +35,10 @@ const Index: NextPage = () => {
               image={signatures[2]?.image}
               description="do online activism"
               name="Avi Schiffman"
-              link=""
+              link="/posts/avi-interview"
             />
-            <BuilderStory title="Releasing on Sepetember 14th." image={WillShaded} description="????? ?? ?????? ??????" name="???? ?????" link="" />
-            <BuilderStory title="Releasing on Sepetember 24th." image={MiguelShaded} description="????? ??? ??????????" name="????? ?????????" link="" />
+            <BuilderStory title="Releasing on Sepetember 14th." image={WillShaded} description="????? ?? ?????? ??????" name="???? ?????" />
+            <BuilderStory title="Releasing on Sepetember 24th." image={MiguelShaded} description="????? ??? ??????????" name="????? ?????????" />
             {/* <BuilderStory
               title="How I built Discord analytics for 3m+ community members."
               image={signatures[4]?.image}
@@ -57,12 +57,12 @@ const Index: NextPage = () => {
         </ScrollableWrapper>
       </Container>
       <div className="p-2">
-        <h1 className="mb-4 text-xl leading-5.5 text-[#E9E9EC]">Founding Members</h1>
-        <ScrollableWrapper>
-          <div className="flex flex-col gap-4">
+        <h1 className="mb-3 text-xl leading-5.5 text-[#E9E9EC] ">Founding Members</h1>
+        <div className="overflow-hidden rounded pb-1">
+          <div className="mt-1 flex flex-col gap-4">
             {signatures.map((signature, i) => (
-              <a key={i} href={i > 4 ? undefined : ""}>
-                <LargeBlockContent image={signature.image} title={signature.name} grey={i > 4}>
+              <a key={i}>
+                <LargeBlockContent image={signature.image} title={signature.name}>
                   <p className="text-[#747485]">in</p>
                   <p
                     className={classNames({
@@ -79,7 +79,7 @@ const Index: NextPage = () => {
               </a>
             ))}
           </div>
-        </ScrollableWrapper>
+        </div>
       </div>
     </Main>
   );

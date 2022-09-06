@@ -45,7 +45,7 @@ const WillSpeaking = () => {
 const Index: NextPage = () => {
   return (
     <Main>
-      <Header link="/sign-in" value="Join The Colossus" showBackground={true} />
+      <Header link="/apply" value="Join The Colossus" showBackground={true} />
       <div>
         <div className="relative">
           <Image src={PostBackground} alt="Post icon" className="rounded-md opacity-80" />
@@ -767,62 +767,66 @@ const Index: NextPage = () => {
             </a>
           </div>
         </div>
-        <div className="mt-4 flex flex-col gap-3">
-          <LargeBlockContent image={WillPicture} title={"Will DePue"}>
-            <p className="text-[#747485]">in</p>
-            <p>{signatures[4]?.subject}</p>
-            <p className="text-[#747485]">/</p>
-            <p>{signatures[4]?.age}</p>
-            <p className="text-[#747485]">from</p>
-            <p>{signatures[4]?.location}</p>
-          </LargeBlockContent>
-          <LargeBlockContent image={AviPicture} title={"Avi Schiffmann"}>
-            <p className="text-[#747485]">in</p>
-            <p
-              className={classNames({
-                "text-[#e1b13e]": signatures[2]?.name === "Rhodos",
-              })}
-            >
-              {signatures[2]?.subject}
-            </p>
-            <p className="text-[#747485]">/</p>
-            <p>{signatures[2]?.age}</p>
-            <p className="text-[#747485]">from</p>
-            <p>{signatures[2]?.location}</p>
-          </LargeBlockContent>
+        <div className="overflow-hidden pb-1">
+          <div className="mt-4 flex flex-col gap-4">
+            <LargeBlockContent image={WillPicture} title={"Will DePue"}>
+              <p className="text-[#747485]">in</p>
+              <p>{signatures[4]?.subject}</p>
+              <p className="text-[#747485]">/</p>
+              <p>{signatures[4]?.age}</p>
+              <p className="text-[#747485]">from</p>
+              <p>{signatures[4]?.location}</p>
+            </LargeBlockContent>
+            <LargeBlockContent image={AviPicture} title={"Avi Schiffmann"}>
+              <p className="text-[#747485]">in</p>
+              <p
+                className={classNames({
+                  "text-[#e1b13e]": signatures[2]?.name === "Rhodos",
+                })}
+              >
+                {signatures[2]?.subject}
+              </p>
+              <p className="text-[#747485]">/</p>
+              <p>{signatures[2]?.age}</p>
+              <p className="text-[#747485]">from</p>
+              <p>{signatures[2]?.location}</p>
+            </LargeBlockContent>
+          </div>
         </div>
       </div>
       <div>
         <h1 className="mt-0 text-2xl">/ Attachments</h1>
-        <div className="mt-4 flex flex-col gap-3">
-          {/* <LargeBlockContent image={GithubIcon} title="Explore project files via Github repository">
+        <div className="overflow-hidden pb-1">
+          <div className="mt-4 flex flex-col gap-4">
+            {/* <LargeBlockContent image={GithubIcon} title="Explore project files via Github repository">
             <p className="text-[#747485]">from</p>
             <p>will/plagiarism.fyi</p>
           </LargeBlockContent> */}
-          <Link href={"https://twitter.com/avischiffmann"}>
-            <a>
-              <LargeBlockContent image={TwitterIcon} title="Follow Avi Schiffmann on Twitter">
-                <p className="text-[#747485]">via</p>
-                <p>twitter.com</p>
-              </LargeBlockContent>
-            </a>
-          </Link>
-          <Link href={"https://www.youtube.com/watch?v=R03a3SOW2Jc"}>
-            <a>
-              <LargeBlockContent image={YoutubeIcon} title="Watch video of this interview">
-                <p className="text-[#747485]">from</p>
-                <p>will/plagiarism.fyi</p>
-              </LargeBlockContent>
-            </a>
-          </Link>
-          <Link href={"https://humancolossus.substack.com/"}>
-            <a>
-              <LargeBlockContent image={BookIcon} title="Learn how to replicate this project">
-                <p className="text-[#747485]">teaches</p>
-                <p>APIs, Front-end, Simple Databases, Stripe</p>
-              </LargeBlockContent>
-            </a>
-          </Link>
+            <Link href={"https://twitter.com/avischiffmann"}>
+              <a>
+                <LargeBlockContent image={TwitterIcon} title="Follow Avi Schiffmann on Twitter">
+                  <p className="text-[#747485]">via</p>
+                  <p>twitter.com</p>
+                </LargeBlockContent>
+              </a>
+            </Link>
+            <Link href={"https://www.youtube.com/watch?v=R03a3SOW2Jc"}>
+              <a>
+                <LargeBlockContent image={YoutubeIcon} title="Watch video of this interview">
+                  <p className="text-[#747485]">from</p>
+                  <p>will/plagiarism.fyi</p>
+                </LargeBlockContent>
+              </a>
+            </Link>
+            <Link href={"https://humancolossus.substack.com/"}>
+              <a>
+                <LargeBlockContent image={BookIcon} title="Learn how to replicate this project">
+                  <p className="text-[#747485]">teaches</p>
+                  <p>APIs, Front-end, Simple Databases, Stripe</p>
+                </LargeBlockContent>
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
       <div>
