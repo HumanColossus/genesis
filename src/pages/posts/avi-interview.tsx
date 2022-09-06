@@ -17,8 +17,8 @@ import SiteIcon from "../../../public/posts/UTS.png";
 import SiteIcon2 from "../../../public/posts/nCovIcon.png";
 import YoutubeIcon from "../../../public/icons/YoutubeIcon.png";
 import TwitterIcon from "../../../public/icons/TwitterIcon.png";
-import AviPicture from "../../public/profile-pictures/Avi.jpg";
-import WillPicture from "../../public/profile-pictures/PFP.png";
+import AviPicture from "../../../public/profile-pictures/Avi.jpg";
+import WillPicture from "../../../public/profile-pictures/PFP.png";
 
 const AviSpeaking = () => {
   return (
