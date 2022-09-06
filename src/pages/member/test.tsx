@@ -1,15 +1,15 @@
 import type { NextPage } from "next";
 import Image from "next/image";
-import GoldStar from "../../public/icons/GoldStar.svg";
-import Twitter from "../../public/icons/Twitter.svg";
-import Substack from "../../public/icons/Substack.svg";
-import Message from "../../public/icons/Message.svg";
-import { Main, Container, ScrollableWrapper, BuilderStory, Hrline, Box, Organization, Header, ImageButton } from "../components/basics";
+import GoldStar from "../../../public/icons/GoldStar.svg";
+import Twitter from "../../../public/icons/Twitter.svg";
+import Substack from "../../../public/icons/Substack.svg";
+import Message from "../../../public/icons/Message.svg";
+import { Main, Container, ScrollableWrapper, BuilderStory, Hrline, Box, Organization, Header, ImageButton } from "../../components/basics";
 
 const Test: NextPage = () => {
   return (
     <Main>
-      <Header value="Join the Colossus" link="/" showBackground />
+      <Header value="Join the Colossus" link="/apply" showBackground />
       <div className="-mt-4 flex flex-col gap-y-2">
         <Hrline />
         <div className=" mt-1 flex items-center gap-4">
@@ -35,7 +35,7 @@ const Test: NextPage = () => {
         </div>
         <Hrline />
 
-        <div className="mt-1 mb-1">
+        <div className="mt-1 mb-1 px-1">
           <div className="flex justify-between">
             <h1 className="text-[22px]">About me</h1>
 
@@ -75,7 +75,7 @@ const Test: NextPage = () => {
             title="A global education platform for the self-motivated."
             image="https://pbs.twimg.com/profile_images/1555419633460473856/tabdTAGz_400x400.jpg"
             location="🌍"
-            time="June 2022"
+            time="2022"
             size="50+"
             name="Colossus"
             link=""
@@ -90,7 +90,7 @@ const Test: NextPage = () => {
             title="A global education platform for the self-motivated."
             image="https://pbs.twimg.com/profile_images/1555419633460473856/tabdTAGz_400x400.jpg"
             location="🌍"
-            time="June 2022"
+            time="2022"
             size="50+"
             name="Colossus"
             link=""

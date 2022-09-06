@@ -81,7 +81,7 @@ export const signatures: Array<Signatures> = [
     name: "Avi Schiffman",
     subject: "Internet Activism",
     age: "19",
-    location: "Nowhere 🇦🇶",
+    location: "Seattle 🇺🇸",
     gold: false,
   },
   {

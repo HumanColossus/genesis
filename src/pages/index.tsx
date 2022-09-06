@@ -4,11 +4,13 @@ import Mission from "../../public/other/Icon.png";
 import { Main, Container, ScrollableWrapper, BlockContent, BlockWrapper, BuilderStory, LargeBlockContent, Header } from "../components/basics";
 import { signatures } from "../configs/signatures";
 import classNames from "classnames";
+import WillShaded from "../../public/profile-pictures/WillShaded.png";
+import MiguelShaded from "../../public/profile-pictures/MiguelShaded.png";
 
 const Index: NextPage = () => {
   return (
     <Main>
-      <Header link="/sign-in" value="Join The Colossus" />
+      <Header link="/apply" value="Join The Colossus" showBackground={true} />
       <Container title="/ Our Mission">
         <ScrollableWrapper>
           <Link href="/memo">
@@ -29,6 +31,15 @@ const Index: NextPage = () => {
         <ScrollableWrapper>
           <div className="flex flex-col gap-3.5">
             <BuilderStory
+              title="How I built a platform to help Ukrainian refugees find homes."
+              image={signatures[2]?.image}
+              description="do online activism"
+              name="Avi Schiffman"
+              link=""
+            />
+            <BuilderStory title="Releasing on Sepetember 14th." image={WillShaded} description="????? ?? ?????? ??????" name="???? ?????" link="" />
+            <BuilderStory title="Releasing on Sepetember 24th." image={MiguelShaded} description="????? ??? ??????????" name="????? ?????????" link="" />
+            {/* <BuilderStory
               title="How I built Discord analytics for 3m+ community members."
               image={signatures[4]?.image}
               description="build an analytics service"
@@ -41,15 +52,7 @@ const Index: NextPage = () => {
               description="steal the constitution"
               name="Miguel Piedrafita"
               link=""
-            />
-
-            <BuilderStory
-              title="How I built a platform to help Ukrainian refugees find homes."
-              image={signatures[2]?.image}
-              description="do online activism"
-              name="Avi Schiffman"
-              link=""
-            />
+            /> */}
           </div>
         </ScrollableWrapper>
       </Container>
@@ -58,8 +61,8 @@ const Index: NextPage = () => {
         <ScrollableWrapper>
           <div className="flex flex-col gap-4">
             {signatures.map((signature, i) => (
-              <a key={i} href="">
-                <LargeBlockContent image={signature.image} title={signature.name}>
+              <a key={i} href={i > 4 ? undefined : ""}>
+                <LargeBlockContent image={signature.image} title={signature.name} grey={i > 4}>
                   <p className="text-[#747485]">in</p>
                   <p
                     className={classNames({

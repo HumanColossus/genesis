@@ -125,7 +125,7 @@ export const BlockContent: React.FC<{
         <Image src={image} alt="The human colossus logo" width={40} height={40} className="rounded" />
         <div className="mx-3 flex flex-col justify-between">
           <h1 className="text-normal font-semibold leading-5.5 text-[#E9E9EC]">{title}</h1>
-          <div className="mt-0 flex gap-2 font-mono text-xs leading-[16.5px] text-[#BBBBC3]">{children}</div>
+          <div className="mt-0 flex shrink-0 gap-2 font-mono text-xs leading-[16.5px]	text-[#BBBBC3]	">{children}</div>
         </div>
       </div>
     </>
@@ -136,13 +136,14 @@ export const LargeBlockContent: React.FC<{
   image: string | StaticImageData;
   title: string;
   children: JSX.Element | JSX.Element[];
-}> = ({ image, title, children }) => {
+  grey?: boolean;
+}> = ({ image, title, children, grey = false }) => {
   return (
     <>
       <div className="flex shrink-0">
         <Image src={image} alt="The human colossus logo" width={45} height={45} className="rounded-md" />
         <div className="mx-3 flex flex-col justify-between py-[1px]">
-          <h1 className="text-[17px] font-semibold leading-5.5 text-[#E9E9EC]">{title}</h1>
+          <h1 className={"text-[17px] font-semibold leading-5.5 " + (grey ? "text-[#c7c7d1]" : "text-[#E9E9EC]")}>{title}</h1>
           <div className="mt-0 flex gap-2 font-mono text-[13px] leading-[16.5px] text-[#BBBBC3]">{children}</div>
         </div>
       </div>
@@ -248,7 +249,7 @@ export const UpvoteButton: React.FC<{ color: string }> = ({ color }) => {
 
   return (
     <div className={classNames("flex h-[40px] w-[54px] flex-col justify-between rounded border-[0.5px] pt-[5px] pb-[4px] font-mono", additionalColors)}>
-      <Image src={RedUpvote} height="12px" alt="" className="" />
+      <Image src={RedUpvote} height="12px" width="12px" alt="" className="" />
       <h1 className="text-center text-xs tracking-tight	">10 pts</h1>
     </div>
   );
