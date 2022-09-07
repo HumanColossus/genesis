@@ -89,8 +89,8 @@ export const signatures: Array<Signatures> = [
     image: JuanDavidPicture,
     name: "Juan David Campelargo",
     subject: "Learning & Flight",
-    age: "20",
-    location: "Chicago 🇺🇸",
+    age: "19",
+    location: "Venezuela 🇺🇸",
     signature: JuanDavidSignature,
     gold: false,
   },
@@ -352,7 +352,7 @@ export const signatures: Array<Signatures> = [
   {
     image: JackPicture,
     name: "Jack O'Regan Kenney",
-    subject: "Resell Economy",
+    subject: "Stealth / Accelerators",
     age: "19",
     location: "Dublin 🇮🇪",
     gold: false,
@@ -392,3 +392,4 @@ export const signatures: Array<Signatures> = [
 ];
 
 // test
+// jimmy andrew dcbuilder ishaan veekay merkle etasha kevin priya sigil gabriel jz munam
