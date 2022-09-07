@@ -124,6 +124,7 @@ const Index: NextPage = () => {
           YouTube videos, figuring out how to cobble it together. Now it has, hundreds and hundreds of millions of users. That's the power of the internet and
           internet activism.
         </p>
+        {WillSpeaking()}
         <p className=" w-full font-thin leading-6	text-[#D2D2D8]	">Can you just tell me about what that process is like, how did you come up with that idea?</p>
         <p className=" w-full font-thin leading-6	text-[#D2D2D8]	">
           There's always something happening around the world. Even like right now, there's the monkeypox disease, I was thinking I could make a tracker for

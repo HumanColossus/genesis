@@ -6,6 +6,8 @@ import { signatures } from "../configs/signatures";
 import classNames from "classnames";
 import WillShaded from "../../public/profile-pictures/WillShaded.png";
 import MiguelShaded from "../../public/profile-pictures/MiguelShaded.png";
+import TwitterIcon from "../../public/icons/TwitterIconNoBG.png";
+import Image from "next/image";
 
 const Index: NextPage = () => {
   return (
@@ -57,7 +59,21 @@ const Index: NextPage = () => {
         </ScrollableWrapper>
       </Container>
       <div className="p-2">
-        <h1 className="mb-3 text-xl leading-5.5 text-[#E9E9EC] ">Founding Members</h1>
+        <div className="flex justify-between">
+          <h1 className="mb-3 text-xl leading-5.5 text-[#E9E9EC] ">Founding Members</h1>
+          <a href="https://twitter.com/i/lists/1555647915334324224">
+            <div
+              className={
+                "-mt-[3px] flex h-[28px] rounded-md border border-[#0077B5] bg-[#00001C] pt-[3px] pl-3 pr-2 pb-1 align-middle font-button text-[13px] font-light text-[#55ACEC] "
+              }
+            >
+              <div className="mt-[1px] mr-2 h-2">
+                <Image src={TwitterIcon} height={13} width={13} alt="" />
+              </div>
+              Follow Twitter list
+            </div>
+          </a>
+        </div>
         <div className="overflow-hidden rounded pb-1">
           <div className="mt-1 flex flex-col gap-4">
             {signatures.map((signature, i) => (
