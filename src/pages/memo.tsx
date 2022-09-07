@@ -8,6 +8,7 @@ import { signatures } from "../configs/signatures";
 import classNames from "classnames";
 import { usePlausible } from "next-plausible";
 import { MarqueeLayout } from "src/components/basics";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   // Styles places here for easy editing of all elements with className = <nameOfClass>
@@ -25,7 +26,11 @@ const Home: NextPage = () => {
           {/* <hr className={horizonal_rule} /> */}
           <h1 className="mb-4 mt-6 text-4xl font-bold text-white">A worldwide education platform for the self-motivated.</h1>
           <div className="mb-5 flex">
-            <Image src={LogoGroup} alt="The human colossus logo" />
+            <Link href="/">
+              <a>
+                <Image src={LogoGroup} alt="The human colossus logo" />
+              </a>
+            </Link>
             <p className="m-0 ml-2.5 pt-0.5 font-mono text-sm text-[#747485]">/ Jul 12, 2022</p>
             <hr className={horizonal_rule} />
           </div>

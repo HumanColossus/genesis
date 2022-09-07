@@ -126,6 +126,8 @@ const Index: NextPage = () => {
         </p>
         {WillSpeaking()}
         <p className=" w-full font-thin leading-6	text-[#D2D2D8]	">Can you just tell me about what that process is like, how did you come up with that idea?</p>
+        {AviSpeaking()}
+
         <p className=" w-full font-thin leading-6	text-[#D2D2D8]	">
           There's always something happening around the world. Even like right now, there's the monkeypox disease, I was thinking I could make a tracker for
           that, or a few months ago there was the baby formula shortage. I could totally spin up a website that like helps, find where it's available or let
@@ -770,28 +772,32 @@ const Index: NextPage = () => {
         </div>
         <div className="overflow-hidden pb-1">
           <div className="mt-4 flex flex-col gap-4">
-            <LargeBlockContent image={WillPicture} title={"Will DePue"}>
-              <p className="text-[#747485]">in</p>
-              <p>{signatures[4]?.subject}</p>
-              <p className="text-[#747485]">/</p>
-              <p>{signatures[4]?.age}</p>
-              <p className="text-[#747485]">from</p>
-              <p>{signatures[4]?.location}</p>
-            </LargeBlockContent>
-            <LargeBlockContent image={AviPicture} title={"Avi Schiffmann"}>
-              <p className="text-[#747485]">in</p>
-              <p
-                className={classNames({
-                  "text-[#e1b13e]": signatures[2]?.name === "Rhodos",
-                })}
-              >
-                {signatures[2]?.subject}
-              </p>
-              <p className="text-[#747485]">/</p>
-              <p>{signatures[2]?.age}</p>
-              <p className="text-[#747485]">from</p>
-              <p>{signatures[2]?.location}</p>
-            </LargeBlockContent>
+            <a href={"https://twitter.com/willdepue"}>
+              <LargeBlockContent image={WillPicture} title={"Will DePue"}>
+                <p className="text-[#747485]">in</p>
+                <p>{signatures[4]?.subject}</p>
+                <p className="text-[#747485]">/</p>
+                <p>{signatures[4]?.age}</p>
+                <p className="text-[#747485]">from</p>
+                <p>{signatures[4]?.location}</p>
+              </LargeBlockContent>
+            </a>
+            <a href={"https://twitter.com/avischiffmann"}>
+              <LargeBlockContent image={AviPicture} title={"Avi Schiffmann"}>
+                <p className="text-[#747485]">in</p>
+                <p
+                  className={classNames({
+                    "text-[#e1b13e]": signatures[2]?.name === "Rhodos",
+                  })}
+                >
+                  {signatures[2]?.subject}
+                </p>
+                <p className="text-[#747485]">/</p>
+                <p>{signatures[2]?.age}</p>
+                <p className="text-[#747485]">from</p>
+                <p>{signatures[2]?.location}</p>
+              </LargeBlockContent>
+            </a>
           </div>
         </div>
       </div>
@@ -807,7 +813,7 @@ const Index: NextPage = () => {
               <a>
                 <LargeBlockContent image={TwitterIcon} title="Follow Avi Schiffmann on Twitter">
                   <p className="text-[#747485]">via</p>
-                  <p>twitter.com</p>
+                  <p>twitter.com/avischiffmann</p>
                 </LargeBlockContent>
               </a>
             </Link>
@@ -815,7 +821,7 @@ const Index: NextPage = () => {
               <a>
                 <LargeBlockContent image={YoutubeIcon} title="Watch video of this interview">
                   <p className="text-[#747485]">from</p>
-                  <p>will/plagiarism.fyi</p>
+                  <p>"The Human Colossus" Youtube channel</p>
                 </LargeBlockContent>
               </a>
             </Link>
