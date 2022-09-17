@@ -45,6 +45,19 @@ import KaitoPicture from "../../public/profile-pictures/Kaito.jpg";
 import RahulCPicture from "../../public/profile-pictures/RahulC.jpg";
 import AmiPicture from "../../public/profile-pictures/Ami.jpg";
 import SauravPicture from "../../public/profile-pictures/Saurav.jpg";
+import JimmyPicture from "../../public/profile-pictures/Jimmy.jpg";
+import dcbuilder from "../../public/profile-pictures/dcbuilder.jpg";
+import Ishaan from "../../public/profile-pictures/Ishaan.jpg";
+import Vedant from "../../public/profile-pictures/Vedant.jpg";
+import Merkle from "../../public/profile-pictures/Merkle.jpg";
+import Etasha from "../../public/profile-pictures/Etasha.jpg";
+import KevinZhu from "../../public/profile-pictures/KevinZhu.jpg";
+import Priya from "../../public/profile-pictures/Priya.jpg";
+import Sigil from "../../public/profile-pictures/Sigil.jpg";
+import GabrielR from "../../public/profile-pictures/GabrielR.jpg";
+import Jae from "../../public/profile-pictures/Jae.jpg";
+import JZ from "../../public/profile-pictures/JZ.jpg";
+import Carol from "../../public/profile-pictures/Carol.jpg";
 
 import { StaticImageData } from "next/image";
 
@@ -110,6 +123,14 @@ export const signatures: Array<Signatures> = [
     age: "17",
     location: "San Francisco 🇺🇸",
     signature: KevalinSignature,
+    gold: false,
+  },
+  {
+    image: Etasha,
+    name: "Etasha Donthi",
+    subject: "Tech for Good",
+    age: "17",
+    location: "New Jersey 🇺🇸",
     gold: false,
   },
   {
@@ -302,6 +323,14 @@ export const signatures: Array<Signatures> = [
     gold: false,
   },
   {
+    image: Carol,
+    name: "Carol Magalhaes",
+    subject: "Bio / Life Extension",
+    age: "23",
+    location: "California / NYC 🇺🇸",
+    gold: false,
+  },
+  {
     image: SamayPicture,
     name: "Samay Shamdasani",
     subject: "Unlocking Potential",
@@ -350,6 +379,14 @@ export const signatures: Array<Signatures> = [
     gold: false,
   },
   {
+    image: Priya,
+    name: "Priya Ganguly",
+    subject: "Smart Contracts, iOS, zk",
+    age: "23",
+    location: "California / NYC 🇺🇸",
+    gold: false,
+  },
+  {
     image: JackPicture,
     name: "Jack O'Regan Kenney",
     subject: "Stealth / Accelerators",
@@ -389,7 +426,90 @@ export const signatures: Array<Signatures> = [
     location: "San Francisco 🇺🇸",
     gold: false,
   },
+  {
+    image: JimmyPicture,
+    name: "Jimmy Hsu",
+    subject: "Creator Banking",
+    age: "26",
+    location: "Los Angeles 🇺🇸",
+    gold: false,
+  },
+  {
+    image: dcbuilder,
+    name: "dcbuilder",
+    subject: "Ethereum",
+    age: "21",
+    location: "Quadratic Lands 🇺🇸",
+    gold: false,
+  },
+  {
+    image: Ishaan,
+    name: "Ishaan Hiranandani",
+    subject: "Blockchain Research",
+    age: "22",
+    location: "New York 🇺🇸",
+    gold: false,
+  },
+  {
+    image: Vedant,
+    name: "Vedant Karia",
+    subject: "Crypto Gaming",
+    age: "20",
+    location: "India 🇮🇳",
+    gold: false,
+  },
+  {
+    image: Merkle,
+    name: "Merkle",
+    subject: "Crypto Development",
+    age: "20",
+    location: "San Francisco 🇺🇸",
+    gold: false,
+  },
+
+  {
+    image: KevinZhu,
+    name: "Kevin Zhu",
+    subject: "Developer Tools",
+    age: "23",
+    location: "Los Angeles 🇺🇸",
+    gold: false,
+  },
+
+  {
+    image: Sigil,
+    name: "Sigil Wen",
+    subject: "PRMs",
+    age: "19",
+    location: "San Francisco 🇺🇸",
+    gold: false,
+  },
+  {
+    image: GabrielR,
+    name: "Gabriel Romualdo",
+    subject: "Software, ML Research",
+    age: "17",
+    location: "California 🇺🇸",
+    gold: false,
+  },
+  {
+    image: JZ,
+    name: "Justin Zheng",
+    subject: "Digital Economy",
+    age: "21",
+    location: "San Francisco 🇺🇸",
+    gold: false,
+  },
+
+  {
+    image: Jae,
+    name: "Jae Gwan Park",
+    subject: "AGI, Climate, Deep Tech",
+    age: "20",
+    location: "Toronto 🇨🇦",
+    gold: false,
+  },
 ];
 
-// test
-// jimmy andrew dcbuilder ishaan veekay merkle etasha kevin priya sigil gabriel jz munam
+// jimmy andrew dcbuilder ishaan veekay merkle etasha kevin priya sigil gabriel jz munam carol jae
+// jimmy dcbuilder ishaan veekay merkle etasha kevin priya sigil gabriel jz munam carol jae
