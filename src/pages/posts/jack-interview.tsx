@@ -85,7 +85,7 @@ const Index: NextPage = () => {
           </div>
         </div>
         <h1 className="mt-3 text-3xl">
-          How I built a platform to help Ukrainian refugees find homes.
+          How I built a deep tech startup at 18 years old.
         </h1>
         <div className="mt-3 flex gap-3 font-mono text-sm">
           <p className="text-[#747485]">about</p>

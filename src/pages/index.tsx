@@ -1,7 +1,16 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import Mission from "../../public/other/Icon.png";
-import { Main, Container, ScrollableWrapper, BlockContent, BlockWrapper, BuilderStory, LargeBlockContent, Header } from "../components/basics";
+import {
+  Main,
+  Container,
+  ScrollableWrapper,
+  BlockContent,
+  BlockWrapper,
+  BuilderStory,
+  LargeBlockContent,
+  Header,
+} from "../components/basics";
 import { signatures } from "../configs/signatures";
 import classNames from "classnames";
 import WillShaded from "../../public/profile-pictures/WillShaded.png";
@@ -18,11 +27,16 @@ const Index: NextPage = () => {
           <Link href="/memo">
             <a>
               <BlockWrapper>
-                <BlockContent image={Mission} title="The Human Colossus: Founding Memo">
+                <BlockContent
+                  image={Mission}
+                  title="The Human Colossus: Founding Memo"
+                >
                   <p className="text-[#747485]">via</p>
                   <p>colossus.fyi</p>
                   <p className="text-[#747485]">/</p>
-                  <p className="text-[#747485]">Expose ambition. Recruiting young buil...</p>
+                  <p className="text-[#747485]">
+                    Expose ambition. Recruiting young buil...
+                  </p>
                 </BlockContent>
               </BlockWrapper>
             </a>
@@ -39,8 +53,24 @@ const Index: NextPage = () => {
               name="Avi Schiffman"
               link="/posts/avi-interview"
             />
-            <BuilderStory title="Releasing on September 18th." image={WillShaded} description="????? ?? ?????? ??????" name="???? ?????" />
-            <BuilderStory title="Releasing on September 26th." image={MiguelShaded} description="????? ??? ??????????" name="????? ?????????" />
+            <BuilderStory
+              title="How I built a deep tech startup at 18 years old."
+              image={
+                signatures.find((sig) => sig.name === "Jack O'Regan Kenney")
+                  ?.image
+              }
+              description="build hardware"
+              name="Jack O'Regan Kenney"
+              link="/posts/jack-interview"
+            />
+
+            {/* <BuilderStory title="Releasing on September 18th." image={WillShaded} description="????? ?? ?????? ??????" name="???? ?????" /> */}
+            <BuilderStory
+              title="Releasing on September 26th."
+              image={MiguelShaded}
+              description="????? ??? ??????????"
+              name="????? ?????????"
+            />
             {/* <BuilderStory
               title="How I built Discord analytics for 3m+ community members."
               image={signatures[4]?.image}
@@ -60,7 +90,9 @@ const Index: NextPage = () => {
       </Container>
       <div className="p-2">
         <div className="flex justify-between">
-          <h1 className="mb-3 text-xl leading-5.5 text-[#E9E9EC] ">Founding Members</h1>
+          <h1 className="mb-3 text-xl leading-5.5 text-[#E9E9EC] ">
+            Founding Members
+          </h1>
           <a href="https://twitter.com/i/lists/1555647915334324224">
             <div
               className={
@@ -78,7 +110,10 @@ const Index: NextPage = () => {
           <div className="mt-1 flex flex-col gap-4">
             {signatures.map((signature, i) => (
               <a key={i}>
-                <LargeBlockContent image={signature.image} title={signature.name}>
+                <LargeBlockContent
+                  image={signature.image}
+                  title={signature.name}
+                >
                   <p className="text-[#747485]">in</p>
                   <p
                     className={classNames({
