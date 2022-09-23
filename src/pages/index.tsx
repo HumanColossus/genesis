@@ -17,11 +17,20 @@ import WillShaded from "../../public/profile-pictures/WillShaded.png";
 import MiguelShaded from "../../public/profile-pictures/MiguelShaded.png";
 import TwitterIcon from "../../public/icons/TwitterIconNoBG.png";
 import Image from "next/image";
+import { signOut, useSession } from "next-auth/react";
 
 const Index: NextPage = () => {
+  const { data: session, status } = useSession();
+
+  if (status === "loading") return <></>;
+
   return (
     <Main>
-      <Header link="/apply" value="Join The Colossus" showBackground={true} />
+      {session ? (
+        <Header button={signOut} value="Sign Out" showBackground={true} />
+      ) : (
+        <Header link="/apply" value="Join The Colossus" showBackground={true} />
+      )}
       <Container title="/ Our Mission">
         <ScrollableWrapper>
           <Link href="/memo">
@@ -106,30 +115,43 @@ const Index: NextPage = () => {
             </div>
           </a>
         </div>
-        <div className="overflow-hidden rounded pb-1">
-          <div className="mt-1 flex flex-col gap-4">
-            {signatures.map((signature, i) => (
-              <a key={i}>
-                <LargeBlockContent
-                  image={signature.image}
-                  title={signature.name}
-                >
-                  <p className="text-[#747485]">in</p>
-                  <p
-                    className={classNames({
-                      "text-[#e1b13e]": signature.name === "Rhodos",
-                    })}
-                  >
-                    {signature.subject}
-                  </p>
-                  <p className="text-[#747485]">/</p>
-                  <p>{signature.age}</p>
-                  <p className="text-[#747485]">from</p>
-                  <p>{signature.location}</p>
-                </LargeBlockContent>
-              </a>
-            ))}
-          </div>
+
+        <div className="mt-3 flex h-56 flex-col gap-3.5 overflow-auto overflow-x-hidden rounded">
+          {signatures.map((signature, i) => (
+            <div
+              className="static flex h-10 items-center justify-between"
+              key={i}
+            >
+              <div className="flex shrink-0">
+                <Image
+                  src={signature.image}
+                  alt="The human colossus logo"
+                  width={40}
+                  height={40}
+                  className="rounded"
+                />
+                <div className="mx-3 flex flex-col justify-between">
+                  <h1 className="text-normal font-semibold leading-5.5 text-[#E9E9EC]">
+                    {signature.name}
+                  </h1>
+                  <div className="mt-0 flex gap-2 font-mono text-xs leading-[16.5px] text-[#CCCCD2]">
+                    <p className="text-[#747485]">in</p>
+                    <p
+                      className={classNames({
+                        "text-[#e1b13e]": signature.gold,
+                      })}
+                    >
+                      {signature.subject}
+                    </p>
+                    <p>/</p>
+                    <p>{signature.age}</p>
+                    <p className="text-[#747485]">from</p>
+                    <p>{signature.location}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </Main>

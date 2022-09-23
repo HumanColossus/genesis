@@ -29,7 +29,7 @@ const SignIn: NextPageWithAuth = () => {
           <button
             className="bold flex h-9 w-40 cursor-pointer items-center justify-center rounded-md bg-[#5f4bdd] px-2 font-button text-sm font-bold text-black"
             onClick={() => {
-              signIn("email", { email: email, callbackUrl: "/memo" });
+              signIn("email", { email: email, callbackUrl: "/" });
             }}
           >
             Send login link

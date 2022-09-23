@@ -9,6 +9,7 @@ import { AppProps } from "next/app";
 import { useEffect } from "react";
 // import MDXComponents from "./posts/MDXComponents";
 import { MDXProvider } from "@mdx-js/react";
+import { useRouter } from "next/router";
 
 export type NextPageWithAuth = NextPage & {
   auth?: boolean;
@@ -29,14 +30,17 @@ const Auth = ({ children }: { children: any }) => {
     }
   }, [isUser, status]);
 
-  if (isUser) {
+  if (!!session?.user) {
     return <>{children}</>;
   }
 
   return null;
 };
 
-const MyApp = ({ Component, pageProps: { session, ...pageProps } }: AppPropsWithAuth) => {
+const MyApp = ({
+  Component,
+  pageProps: { session, ...pageProps },
+}: AppPropsWithAuth) => {
   LogRocket.init("insilica-labs/colossus");
   return (
     // <MDXProvider components={MDXComponents}>

@@ -2,7 +2,7 @@
 // import { env } from "./src/env/server.mjs";
 
 import { withPlausibleProxy } from "next-plausible";
-import nextMDX from "@next/mdx"
+import nextMDX from "@next/mdx";
 
 /**
  * Don't be scared of the generics here.
@@ -14,42 +14,39 @@ import nextMDX from "@next/mdx"
  */
 
 const withMDX = nextMDX({
-  extension: /\.mdx?$/,
-  options: { providerImportSource: '@mdx-js/react', }
-})
-
-function defineNextConfig(config) {
-  return withMDX({
-    ...config,
-    pageExtensions: ['md', 'mdx', 'tsx', 'ts', 'jsx', 'js'],
-  })
-}
-
-
-export default defineNextConfig({
-  reactStrictMode: true,
-  swcMinify: true,
-  images: {
-    domains: ["pbs.twimg.com"],
-  },
-  async redirects() {
-    return [
-      {
-        source: "/apply",
-        destination: "https://fepmaftot5b.typeform.com/to/YgUcfdxu",
-        permanent: false,
-      },
-      {
-        source: "/twitter",
-        destination: "https://twitter.com/colossusfyi",
-        permanent: false,
-      },
-      {
-        source: "/figma",
-        destination: "https://www.figma.com/file/pxnEjpKyfYBEr9orAVgv11/The-Human-Colossus%3A-Design-%26-Prototyping",
-        permanent: false,
-      },
-    ];
-  },
+    extension: /\.mdx?$/,
+    options: { providerImportSource: "@mdx-js/react" },
 });
 
+function defineNextConfig(config) {
+    return withMDX({
+        ...config,
+        pageExtensions: ["md", "mdx", "tsx", "ts", "jsx", "js"],
+    });
+}
+
+export default defineNextConfig({
+    reactStrictMode: true,
+    swcMinify: true,
+    images: {
+        domains: ["pbs.twimg.com", "cdn.pixabay.com"],
+    },
+    async redirects() {
+        return [{
+                source: "/apply",
+                destination: "https://fepmaftot5b.typeform.com/to/YgUcfdxu",
+                permanent: false,
+            },
+            {
+                source: "/twitter",
+                destination: "https://twitter.com/colossusfyi",
+                permanent: false,
+            },
+            {
+                source: "/figma",
+                destination: "https://www.figma.com/file/pxnEjpKyfYBEr9orAVgv11/The-Human-Colossus%3A-Design-%26-Prototyping",
+                permanent: false,
+            },
+        ];
+    },
+});
