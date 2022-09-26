@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
+import { NextPageWithAuth } from "src/utils/types";
 import { Main, Container, TextWrapper, Header } from "../components/basics";
 
-const CheckEmail: NextPage = () => {
+const CheckEmail: NextPageWithAuth = () => {
   return (
     <Main>
       <Header link="https://twitter.com/colossusfyi" value="Need Help?" />

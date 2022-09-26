@@ -18,12 +18,4 @@ export default NextAuth({
     signIn: "/sign-in",
     verifyRequest: "/check-email",
   },
-  callbacks: {
-    signIn({ user }) {
-      if (!user.name) {
-        return "/new-user";
-      }
-      return true;
-    },
-  },
 });

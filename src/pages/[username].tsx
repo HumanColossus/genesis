@@ -68,8 +68,6 @@ const Profile: NextPage = () => {
     );
   };
 
-  console.log(user.data?.personalSite);
-
   return (
     <Main>
       {authHeader()}
@@ -77,7 +75,7 @@ const Profile: NextPage = () => {
         <Hrline />
         <div className=" flex items-center gap-4">
           <Image
-            src={profImg}
+            src={user.data?.image!}
             alt="The human colossus logo"
             width={45}
             height={45}
@@ -94,11 +92,12 @@ const Profile: NextPage = () => {
           )}
           <div className="flex gap-2">
             <h1 className="text-muted">/</h1>
-            <h1>{user.data?.age}</h1>
-          </div>
-          <div className="flex gap-2">
             <h1 className="text-muted">from</h1>
             <h1>Denver 🇺🇸</h1>
+          </div>
+          <div className="flex gap-2">
+            <h1 className="text-muted">/</h1>
+            <h1>{user.data?.age! === 0 ? "??" : user.data?.age}</h1>
           </div>
           <div className="flex gap-2">
             <h1 className="text-muted">/</h1>
@@ -117,9 +116,7 @@ const Profile: NextPage = () => {
                   text=""
                   textColor="text-[#DDDDE8]"
                   border="border-[#0077B5]"
-                  click={() =>
-                    router.push(`https://twitter.com/${user.data?.twitter}`)
-                  }
+                  click={() => router.push(user.data?.twitter!)}
                 >
                   <Image
                     src={Twitter}

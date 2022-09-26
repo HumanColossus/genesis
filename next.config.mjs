@@ -29,7 +29,11 @@ export default defineNextConfig({
     reactStrictMode: true,
     swcMinify: true,
     images: {
-        domains: ["pbs.twimg.com", "cdn.pixabay.com"],
+        domains: [
+            "pbs.twimg.com",
+            "thehumancolossus.s3.amazonaws.com",
+            "thehumancolossus.s3.us-east-1.amazonaws.com",
+        ],
     },
     async redirects() {
         return [{

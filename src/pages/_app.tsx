@@ -10,10 +10,7 @@ import { useEffect } from "react";
 // import MDXComponents from "./posts/MDXComponents";
 import { MDXProvider } from "@mdx-js/react";
 import { useRouter } from "next/router";
-
-export type NextPageWithAuth = NextPage & {
-  auth?: boolean;
-};
+import { NextPageWithAuth } from "src/utils/types";
 
 type AppPropsWithAuth = AppProps & {
   Component: NextPageWithAuth;
