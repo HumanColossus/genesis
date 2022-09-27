@@ -3,14 +3,11 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import {
-  Box,
   Container,
   Header,
   Hrline,
   ImageButton,
   Main,
-  Organization,
-  ScrollableWrapper,
 } from "src/components/basics";
 import { trpc } from "src/utils/trpc";
 import GoldStar from "../../public/icons/GoldStar.svg";
@@ -18,6 +15,7 @@ import RedStar from "../../public/icons/RedStar.svg";
 import Twitter from "../../public/icons/Twitter.svg";
 import Substack from "../../public/icons/Substack.svg";
 import Site from "../../public/icons/Site.svg";
+import Mission from "../../public/other/Icon.png";
 import { useProfileImg } from "src/hooks/hooks";
 
 const Profile: NextPage = () => {
@@ -27,11 +25,14 @@ const Profile: NextPage = () => {
   const { data: session, status } = useSession();
 
   const user = trpc.proxy.user.user.useQuery({ username: userName });
+  const posts = trpc.proxy.post.posts.useQuery({
+    username: userName,
+  });
 
   const { data: profImg } = useProfileImg(user.data?.username);
 
-  const authHeader = () => {
-    if (status === "loading") {
+  const AuthHeader = () => {
+    if (status === "loading" || user.isLoading) {
       return null;
     }
     if (session?.user?.name === user.data?.name) {
@@ -40,10 +41,6 @@ const Profile: NextPage = () => {
 
     return <Header value="Join the Colossus" link="/" showBackground />;
   };
-
-  if (user.isLoading) {
-    return null;
-  }
 
   const star = () => {
     if (user.data?.level === 999) {
@@ -68,9 +65,13 @@ const Profile: NextPage = () => {
     );
   };
 
+  if (status === "loading") {
+    return <></>;
+  }
+
   return (
     <Main>
-      {authHeader()}
+      <AuthHeader />
       <div className="-mt-4 flex flex-col gap-y-2">
         <Hrline />
         <div className=" flex items-center gap-4">
@@ -158,7 +159,7 @@ const Profile: NextPage = () => {
         <Hrline />
       </div>
 
-      <Box styles="px-4 py-3.5">
+      {/* <Box styles="px-4 py-3.5">
         <div>
           <a href={`/posts/${user.data?.featuredPost?.id}`}>
             <div className="flex h-10 items-center justify-between truncate">
@@ -188,7 +189,41 @@ const Profile: NextPage = () => {
             </div>
           </a>
         </div>
-      </Box>
+      </Box> */}
+
+      <Container
+        title="/ Posts"
+        link={session?.user?.name === user.data?.name ? "Add Post" : ""}
+        linkHref="/add-post"
+      >
+        <div>
+          {posts.data &&
+            posts.data?.map((post, i) => {
+              return (
+                <div
+                  className="border-0.5 my-2 flex items-center rounded border-[#2D304F] p-2"
+                  key={i}
+                >
+                  <Image
+                    src={Mission}
+                    alt="hc logo"
+                    width={40}
+                    height={40}
+                    className="rounded"
+                  />
+                  <div className="ml-2 w-full overflow-hidden">
+                    <h1 className="text-lg">{post.title}</h1>
+                    <div className="flex gap-1 font-mono text-xs">
+                      <h2 className="truncate">{post.subtitle}</h2>
+                      <h2 className="whitespace-nowrap text-muted">from</h2>
+                      <h2 className="whitespace-nowrap">{post.author.name}</h2>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
+      </Container>
 
       {/* <Container title="/ Organizations">
         <ScrollableWrapper>

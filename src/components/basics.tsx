@@ -149,7 +149,7 @@ export const ScrollableWrapper: React.FC<{
 };
 
 export const BlockContent: React.FC<{
-  image: string | StaticImageData;
+  image?: string | StaticImageData;
   title: string;
   children: JSX.Element[];
 }> = ({ image, title, children }) => {

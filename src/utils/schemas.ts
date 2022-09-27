@@ -36,3 +36,9 @@ export const addAdditionalInfo = z.object({
   personalSite: z.string(),
   email: z.string().optional(),
 });
+
+export const createPostSchema = z.object({
+  title: z.string(),
+  subtitle: z.string(),
+  content: z.string(),
+});

@@ -65,12 +65,13 @@ model User {
 model Post {
   id        String   @id @default(cuid())
   title     String
+  subtitle  String
   created   DateTime @default(now())
   heroImage String?
   content   String   @db.LongText()
   authorId  String
   author    User     @relation("posts", fields: [authorId], references: [id])
-  featured  User     @relation("featured", fields: [id], references: [id])
+  featured  User?     @relation("featured", fields: [id], references: [id])
   description String?
   // organization
 }
