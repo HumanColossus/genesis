@@ -87,7 +87,7 @@ export const signatures: Array<Signatures> = [
     name: "Miguel Piedrafita",
     subject: "Web3 & Crypto",
     age: "20",
-    location: "Nowhere 🇦🇶",
+    location: "Spain 🇪🇸",
     gold: false,
   },
   {
