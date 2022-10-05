@@ -29,7 +29,7 @@ export function Main({ children }: { children: React.ReactNode }) {
  */
 
 export const Header: React.FC<{
-  value: string;
+  value?: string;
   button?: () => void;
   link?: string;
   showBackground?: boolean; // False styles this as a link, true styles it as a button
@@ -157,7 +157,7 @@ export const BlockContent: React.FC<{
     <>
       <div className="flex shrink-0">
         <Image
-          src={image}
+          src={LogoGroup}
           alt="The human colossus logo"
           width={40}
           height={40}
@@ -187,7 +187,7 @@ export const LargeBlockContent: React.FC<{
       <div className="static flex h-10">
         <div className="relative flex shrink-0 items-center justify-between">
           <Image
-            src={image}
+            src={LogoGroup}
             alt="The human colossus logo"
             width={45}
             height={45}
