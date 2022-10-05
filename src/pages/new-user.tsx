@@ -24,7 +24,7 @@ const NewUser: NextPageWithAuth = () => {
     const [image, setImage] = useState<File>();
 
     const imageUrl = trpc.proxy.image.getSignedURL.useMutation();
-    const createAccount = trpc.proxy.user.createAccount.useMutation();
+    const createAccount = trpc.proxy.user.updateAccount.useMutation();
 
     type input = z.infer<typeof createAccountSchema>;
     const {
@@ -44,8 +44,8 @@ const NewUser: NextPageWithAuth = () => {
 
       createAccount.mutate({
         ...data,
-        email: session?.user?.email!,
-        image: id,
+        username: session?.user?.username!,
+        // image: id,
       });
 
       setSteps(1);
