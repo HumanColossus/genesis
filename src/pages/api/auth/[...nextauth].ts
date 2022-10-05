@@ -37,6 +37,7 @@ export default NextAuth({
 
       session.user!.id = user.id;
       session.user!.username = userInfo.username!;
+
       return session;
     },
   },
