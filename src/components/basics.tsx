@@ -1,12 +1,12 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import Arrow from "../../public/other/arrow.svg";
-import LogoGroup from "../../public/other/LogoGroup.svg";
 import RedUpvote from "../../public/icons/RedUpvote.svg";
 import React from "react";
 import classNames from "classnames";
 import { Signatures } from "src/configs/signatures";
 import Marquee from "react-fast-marquee";
+import LogoGroup from "../../public/other/LogoGroup.svg";
 
 export function Main({ children }: { children: React.ReactNode }) {
   return (
@@ -157,7 +157,7 @@ export const BlockContent: React.FC<{
     <>
       <div className="flex shrink-0">
         <Image
-          src={LogoGroup}
+          src={image!}
           alt="The human colossus logo"
           width={40}
           height={40}
@@ -187,7 +187,7 @@ export const LargeBlockContent: React.FC<{
       <div className="static flex h-10">
         <div className="relative flex shrink-0 items-center justify-between">
           <Image
-            src={LogoGroup}
+            src={image!}
             alt="The human colossus logo"
             width={45}
             height={45}
