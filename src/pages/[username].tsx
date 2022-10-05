@@ -37,7 +37,9 @@ const Profile: NextPage = () => {
       return null;
     }
     if (session?.user?.name === user.data?.name) {
-      return <Header value="Edit Profile" link="/profile" showBackground />;
+      return (
+        <Header value="Edit Profile" link="/edit-profile" showBackground />
+      );
     }
 
     return <Header value="Join the Colossus" link="/" showBackground />;
@@ -100,7 +102,7 @@ const Profile: NextPage = () => {
           <div className="flex gap-2">
             <h1 className="text-muted">/</h1>
             <h1 className="text-muted">from</h1>
-            <h1>Denver 🇺🇸</h1>
+            <h1>{user.data?.from}</h1>
           </div>
           <div className="flex gap-2">
             <h1 className="text-muted">/</h1>

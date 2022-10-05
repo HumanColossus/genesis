@@ -26,8 +26,8 @@ export const createAccountSchema = z.object({
     })
     .nullable(),
   age: z.number().max(100, { message: "Users must be under 100" }).optional(),
-  email: z.string().optional(),
-  image: z.string().optional(),
+  username: z.string().optional(),
+  // image: z.string().optional(),
 });
 
 export const addAdditionalInfo = z.object({

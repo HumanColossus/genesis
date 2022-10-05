@@ -36,6 +36,15 @@ const AddPost: NextPageWithAuth = () => {
 
     const error = "border-red-500";
 
+    if (status === "unauthenticated") {
+      router.push("/sign-up");
+      return <div></div>;
+    }
+
+    if (status === "loading") {
+      return <div></div>;
+    }
+
     return (
       <Container>
         <h1 className="text-lg font-bold">New Post</h1>

@@ -37,12 +37,12 @@ export const userRouter = t.router({
         },
       });
     }),
-  createAccount: t.procedure
+  updateAccount: t.procedure
     .input(createAccountSchema)
     .mutation(async ({ input, ctx }) => {
       const user = await ctx.prisma.user.update({
         where: {
-          email: input.email,
+          username: input.username,
         },
         data: {
           name: input.name,
@@ -50,7 +50,6 @@ export const userRouter = t.router({
           category: input.discipline ?? "??",
           from: input.from ?? "??",
           age: input.age,
-          image: `${imageUrl}${input.image}`,
         },
       });
 
