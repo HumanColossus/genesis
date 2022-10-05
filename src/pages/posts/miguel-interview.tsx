@@ -852,7 +852,7 @@ const Index: NextPage = () => {
                 <div className="mt-[2px] h-2">
                   <Image src={UpvoteSymbol} height={18} alt="" />
                 </div>
-                45 Upvotes
+                20 Upvotes
               </div>
             </a>
 
