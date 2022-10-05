@@ -4,7 +4,7 @@ import { prisma } from "../../server/db/client";
 
 const examples = async (req: NextApiRequest, res: NextApiResponse) => {
   console.log(process.env.NEXTAUTH_SECRET);
-  console.log(process.env.NEXTAUTH_URL!);
+  console.log("next auth url: ", process.env.NEXTAUTH_URL!);
   res.status(200).json(examples);
 };
 
