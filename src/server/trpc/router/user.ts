@@ -10,6 +10,7 @@ export const userRouter = t.router({
       z.object({
         username: z.string().optional(),
         email: z.string().optional(),
+        id: z.string().optional(),
       })
     )
     .query(({ input, ctx }) => {
@@ -17,7 +18,8 @@ export const userRouter = t.router({
       return ctx.prisma.user.findUnique({
         where: {
           ...(input.username && { username: input.username! }),
-          ...(input.email && { id: input.email! }),
+          ...(input.email && { email: input.email! }),
+          ...(input.id && { id: input.id! }),
         },
         select: {
           featuredPost: true,

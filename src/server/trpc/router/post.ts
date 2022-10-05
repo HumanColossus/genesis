@@ -14,9 +14,21 @@ export const postRouter = t.router({
         where: {
           id: input.id,
         },
+        include: {
+          author: {
+            select: {
+              username: true,
+              name: true,
+              image: true,
+              category: true,
+              age: true,
+              from: true,
+            },
+          },
+        },
       });
     }),
-  posts: t.procedure
+  getUserPosts: t.procedure
     .input(
       z.object({
         username: z.string().optional(),
@@ -44,11 +56,31 @@ export const postRouter = t.router({
             select: {
               username: true,
               name: true,
+              image: true,
+              category: true,
+              age: true,
+              from: true,
             },
           },
         },
       });
     }),
+  posts: t.procedure.input(z.object({})).query(async ({ input, ctx }) => {
+    return ctx.prisma.post.findMany({
+      include: {
+        author: {
+          select: {
+            username: true,
+            name: true,
+            image: true,
+            category: true,
+            age: true,
+            from: true,
+          },
+        },
+      },
+    });
+  }),
   createPost: t.procedure
     .input(
       z.object({
@@ -59,7 +91,7 @@ export const postRouter = t.router({
     .mutation(async ({ input, ctx }) => {
       const user = await ctx.prisma.user.findUnique({
         where: {
-          email: input.author,
+          username: input.author,
         },
       });
 

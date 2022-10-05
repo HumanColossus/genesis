@@ -17,6 +17,7 @@ import Substack from "../../public/icons/Substack.svg";
 import Site from "../../public/icons/Site.svg";
 import Mission from "../../public/other/Icon.png";
 import { useProfileImg } from "src/hooks/hooks";
+import Link from "next/link";
 
 const Profile: NextPage = () => {
   const router = useRouter();
@@ -64,6 +65,11 @@ const Profile: NextPage = () => {
       />
     );
   };
+
+  if (!user.isLoading && !user.data && status !== "loading") {
+    router.push("/404");
+    return <></>;
+  }
 
   if (status === "loading") {
     return <></>;
@@ -200,26 +206,27 @@ const Profile: NextPage = () => {
           {posts.data &&
             posts.data?.map((post, i) => {
               return (
-                <div
-                  className="border-0.5 my-2 flex items-center rounded border-[#2D304F] p-2"
-                  key={i}
-                >
-                  <Image
-                    src={Mission}
-                    alt="hc logo"
-                    width={40}
-                    height={40}
-                    className="rounded"
-                  />
-                  <div className="ml-2 w-full overflow-hidden">
-                    <h1 className="text-lg">{post.title}</h1>
-                    <div className="flex gap-1 font-mono text-xs">
-                      <h2 className="truncate">{post.subtitle}</h2>
-                      <h2 className="whitespace-nowrap text-muted">from</h2>
-                      <h2 className="whitespace-nowrap">{post.author.name}</h2>
+                <Link href={`/posts/${post.id}`} key={i}>
+                  <div className="border-0.5 my-2 flex cursor-pointer items-center rounded border-[#2D304F] p-2">
+                    <Image
+                      src={post.author.image!}
+                      alt="hc logo"
+                      width={40}
+                      height={40}
+                      className="rounded"
+                    />
+                    <div className="ml-2 w-full overflow-hidden">
+                      <h1 className="text-lg">{post.title}</h1>
+                      <div className="flex gap-1 font-mono text-xs">
+                        <h2 className="truncate">{post.subtitle}</h2>
+                        <h2 className="whitespace-nowrap text-muted">from</h2>
+                        <h2 className="whitespace-nowrap">
+                          {post.author.name}
+                        </h2>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               );
             })}
         </div>

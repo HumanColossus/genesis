@@ -18,4 +18,27 @@ export default NextAuth({
     signIn: "/sign-in",
     verifyRequest: "/check-email",
   },
+  callbacks: {
+    async session({ session, token, user }) {
+      // Send properties to the client, like an access_token and user id from a provider.
+
+      const userInfo = await prisma.user.findUnique({
+        where: {
+          id: user.id,
+        },
+        select: {
+          username: true,
+        },
+      });
+
+      if (!userInfo) {
+        return session;
+      }
+
+      session.user!.id = user.id;
+      session.user!.username = userInfo.username!;
+
+      return session;
+    },
+  },
 });

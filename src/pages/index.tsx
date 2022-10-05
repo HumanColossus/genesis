@@ -13,21 +13,29 @@ import {
 } from "../components/basics";
 import { signatures } from "../configs/signatures";
 import classNames from "classnames";
-import WillShaded from "../../public/profile-pictures/WillShaded.png";
 import MiguelShaded from "../../public/profile-pictures/MiguelShaded.png";
 import TwitterIcon from "../../public/icons/TwitterIconNoBG.png";
 import Image from "next/image";
-import { signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
+import { trpc } from "src/utils/trpc";
+import { useRouter } from "next/router";
 
 const Index: NextPage = () => {
   const { data: session, status } = useSession();
+  const router = useRouter();
+
+  const posts = trpc.proxy.post.posts.useQuery({});
 
   if (status === "loading") return <></>;
 
   return (
     <Main>
       {session ? (
-        <Header button={signOut} value="Sign Out" showBackground={true} />
+        <Header
+          link={`/${session.user!.username}`}
+          value="Profile"
+          showBackground={true}
+        />
       ) : (
         <Header link="/apply" value="Join The Colossus" showBackground={true} />
       )}
@@ -96,6 +104,44 @@ const Index: NextPage = () => {
             /> */}
           </div>
         </ScrollableWrapper>
+      </Container>
+      <Container
+        title="/ Posts"
+        link={session ? "Create a post" : ""}
+        linkHref="/add-post"
+      >
+        <div className="mt-3 flex h-56 flex-col gap-3.5 overflow-auto overflow-x-hidden rounded">
+          <div>
+            {posts.data &&
+              posts.data?.map((post, i) => {
+                return (
+                  <div
+                    className="border-0.5 my-2 flex cursor-pointer items-center rounded border-[#2D304F] p-2"
+                    key={i}
+                    onClick={() => router.push(`/posts/${post.id}`)}
+                  >
+                    <Image
+                      src={post.author.image!}
+                      alt="hc logo"
+                      width={40}
+                      height={40}
+                      className="rounded"
+                    />
+                    <div className="ml-2 w-full overflow-hidden">
+                      <h1 className="text-lg">{post.title}</h1>
+                      <div className="flex gap-1 font-mono text-xs">
+                        <h2 className="truncate">{post.subtitle}</h2>
+                        <h2 className="whitespace-nowrap text-muted">from</h2>
+                        <h2 className="whitespace-nowrap">
+                          {post.author.name}
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+          </div>
+        </div>
       </Container>
       <div className="p-2">
         <div className="flex justify-between">

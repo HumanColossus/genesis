@@ -29,7 +29,7 @@ const AddPost: NextPageWithAuth = () => {
     const onSubmit: SubmitHandler<input> = async (data) => {
       const newPost = await createPost.mutateAsync({
         data: data,
-        author: session?.user?.email!,
+        author: session?.user?.username!,
       });
       router.push(`/posts/${newPost.id}`);
     };
