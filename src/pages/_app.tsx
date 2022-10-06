@@ -11,9 +11,11 @@ import { useEffect } from "react";
 import { MDXProvider } from "@mdx-js/react";
 import { useRouter } from "next/router";
 import { NextPageWithAuth } from "src/utils/types";
+import { Session } from "next-auth";
 
 type AppPropsWithAuth = AppProps & {
   Component: NextPageWithAuth;
+  pageProps: any; //sorry
 };
 
 const Auth = ({ children }: { children: any }) => {
