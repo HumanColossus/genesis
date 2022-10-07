@@ -83,10 +83,11 @@ const Index: NextPage = () => {
 
             {/* <BuilderStory title="Releasing on September 18th." image={WillShaded} description="????? ?? ?????? ??????" name="???? ?????" /> */}
             <BuilderStory
-              title="Releasing on September 26th."
-              image={MiguelShaded}
-              description="????? ??? ??????????"
-              name="????? ?????????"
+              title="How I raised $42m in 4 days to buy the constitution."
+              image={signatures[1]?.image}
+              description="steal the constitution"
+              name="Miguel Piedrafita"
+              link="/posts/miguel-interview"
             />
             {/* <BuilderStory
               title="How I built Discord analytics for 3m+ community members."

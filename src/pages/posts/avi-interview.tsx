@@ -48,7 +48,7 @@ const Index: NextPage = () => {
       <Header link="/apply" value="Join The Colossus" showBackground={true} />
       <div>
         <div className="relative">
-          <Image src={PostBackground} alt="Post icon" className="rounded-md opacity-80" />
+          <Image src={PostBackground} alt="Post icon" className="rounded-md opacity-80" height={313} />
           <div className="absolute bottom-3 left-3  p-0">
             <Image src={AviPicture} alt="Post icon" width="60px" height="60px" className="m-0 rounded-md" />
           </div>
