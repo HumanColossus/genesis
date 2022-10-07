@@ -105,15 +105,15 @@ const Index: NextPage = () => {
           </div>
         </ScrollableWrapper>
       </Container>
-      <Container
-        title="/ Posts"
-        link={session ? "More posts" : ""}
-        linkHref="/posts"
-      >
-        <div className="mt-3 flex h-56 flex-col gap-3.5 overflow-auto overflow-x-hidden rounded">
-          <div>
-            {posts.data &&
-              posts.data?.map((post, i) => {
+      {posts.data && (
+        <Container
+          title="/ Posts"
+          link={session ? "More posts" : ""}
+          linkHref="/posts"
+        >
+          <div className="mt-3 flex h-56 flex-col gap-3.5 overflow-auto overflow-x-hidden rounded">
+            <div>
+              {posts.data?.map((post, i) => {
                 return (
                   <div
                     className="border-0.5 my-2 flex cursor-pointer items-center rounded border-[#2D304F] p-2"
@@ -140,9 +140,10 @@ const Index: NextPage = () => {
                   </div>
                 );
               })}
+            </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      )}
       <div className="p-2">
         <div className="flex justify-between">
           <h1 className="mb-3 text-xl leading-5.5 text-[#E9E9EC] ">
