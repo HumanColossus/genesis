@@ -105,7 +105,7 @@ const Index: NextPage = () => {
           </div>
         </ScrollableWrapper>
       </Container>
-      {posts.data && (
+      {posts.data?.length! > 0 && (
         <Container
           title="/ Posts"
           link={session ? "More posts" : ""}
