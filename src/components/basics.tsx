@@ -1,17 +1,19 @@
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import Arrow from "../../public/other/arrow.svg";
-import LogoGroup from "../../public/other/LogoGroup.svg";
 import RedUpvote from "../../public/icons/RedUpvote.svg";
 import React from "react";
 import classNames from "classnames";
-import { Signatures } from "src/configs/signatures";
+import { Signatures } from "../configs/signatures";
 import Marquee from "react-fast-marquee";
+import LogoGroup from "../../public/other/LogoGroup.svg";
 
 export function Main({ children }: { children: React.ReactNode }) {
   return (
     <main>
-      <div className="mx-auto mt-4 flex min-h-[90vh] max-w-custom flex-col gap-y-6 px-4">{children}</div>
+      <div className="mx-auto mt-4 flex min-h-[90vh] max-w-custom flex-col gap-y-6 px-4">
+        {children}
+      </div>
       <Footer />
     </main>
   );
@@ -27,7 +29,7 @@ export function Main({ children }: { children: React.ReactNode }) {
  */
 
 export const Header: React.FC<{
-  value: string;
+  value?: string;
   button?: () => void;
   link?: string;
   showBackground?: boolean; // False styles this as a link, true styles it as a button
@@ -40,11 +42,24 @@ export const Header: React.FC<{
   return (
     <div className="flex justify-between pl-1 pt-1">
       <Link href="/">
-        <Image src={LogoGroup} className="cursor-pointer" height={30} width={180} alt="The human colossus logo" />
+        <Image
+          src={LogoGroup}
+          className="cursor-pointer"
+          height={30}
+          width={180}
+          alt="The human colossus logo"
+        />
       </Link>
       <Hrline />
       <a {...props}>
-        <div className={classNames("rounded-md px-3 pt-1 pb-1 font-button text-sm font-light", { "bg-[#191933]": showBackground })}>{value}</div>
+        <div
+          className={classNames(
+            "cursor-pointer rounded-md px-3 pt-1 pb-1 font-button text-sm font-light",
+            { "bg-[#191933]": showBackground }
+          )}
+        >
+          {value}
+        </div>
       </a>
     </div>
   );
@@ -68,16 +83,18 @@ export const Hrline: React.FC = () => {
 };
 
 export const Container: React.FC<{
-  title: string;
+  title?: string;
   link?: string;
   linkHref?: string;
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 }> = ({ children, title, link, linkHref = "/sign-in" }) => {
   return (
     <Box>
       <div className="px-4 pb-4 pt-1.5">
         <div className="mb-[10px] flex items-center">
-          <h1 className="z-10 w-full bg-[#00001c] pt-1 font-semibold">{title}</h1>
+          <h1 className="z-10 w-full bg-[#00001c] pt-1 font-semibold">
+            {title}
+          </h1>
           {link && (
             <div className="flex gap-x-1">
               <Link
@@ -85,7 +102,9 @@ export const Container: React.FC<{
                   pathname: linkHref,
                 }}
               >
-                <a className="w-36 text-right font-button text-xs font-semibold text-[#D1D1D680]">{link}</a>
+                <a className="w-36 text-right font-button text-xs font-semibold text-[#D1D1D680]">
+                  {link}
+                </a>
               </Link>
               <Image src={Arrow} width="13px" alt="" />
               {/* TODO: Add alt tags for all images */}
@@ -98,54 +117,58 @@ export const Container: React.FC<{
   );
 };
 
-export const Box: React.FC<{ children: JSX.Element; styles?: string }> = ({ children, styles }) => {
-  return <div className={classNames("rounded-lg bg-[#00001c] shadow-custom", styles)}>{children}</div>;
+export const Box: React.FC<{ children: JSX.Element; styles?: string }> = ({
+  children,
+  styles,
+}) => {
+  return (
+    <div
+      className={classNames("rounded-lg bg-[#00001c] shadow-custom", styles)}
+    >
+      {children}
+    </div>
+  );
 };
 
 export const TextWrapper: React.FC<{
   children: JSX.Element | JSX.Element[];
 }> = ({ children }) => {
-  return <div className="rounded border border-[#30303A] p-3 font-mono text-xs text-[#B0B0BE]">{children}</div>;
+  return (
+    <div className="rounded border border-[#30303A] p-3 font-mono text-xs text-[#B0B0BE]">
+      {children}
+    </div>
+  );
 };
 
 export const ScrollableWrapper: React.FC<{
   children: JSX.Element;
 }> = ({ children }) => {
-  return <div className="overflow-y-auto overflow-x-hidden rounded">{children}</div>;
+  return (
+    <div className="overflow-y-auto overflow-x-hidden rounded">{children}</div>
+  );
 };
 
 export const BlockContent: React.FC<{
-  image: string | StaticImageData;
+  image?: string | StaticImageData;
   title: string;
   children: JSX.Element[];
 }> = ({ image, title, children }) => {
   return (
     <>
       <div className="flex shrink-0">
-        <Image src={image} alt="The human colossus logo" width={40} height={40} className="rounded" />
+        <Image
+          src={image!}
+          alt="The human colossus logo"
+          width={40}
+          height={40}
+          className="rounded"
+        />
         <div className="mx-3 flex flex-col justify-between">
-          <h1 className="text-normal font-semibold leading-5.5 text-[#E9E9EC]">{title}</h1>
-          <div className="mt-0 flex shrink-0 gap-2 font-mono text-xs leading-[16.5px]	text-[#BBBBC3]	">{children}</div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export const LargeBlockContent: React.FC<{
-  image: string | StaticImageData;
-  title: string;
-  children: JSX.Element | JSX.Element[];
-  grey?: boolean;
-}> = ({ image, title, children, grey = false }) => {
-  return (
-    <>
-      <div className="static flex h-10">
-        <div className="relative flex shrink-0 items-center justify-between">
-          <Image src={image} alt="The human colossus logo" width={45} height={45} className="rounded-md" />
-          <div className="mx-3 flex flex-col justify-between py-[1px]">
-            <h1 className={"text-[17px] font-semibold leading-5.5 " + (grey ? "text-[#c7c7d1]" : "text-[#E9E9EC]")}>{title}</h1>
-            <div className="mt-[5px] flex gap-2 font-mono text-[13px] leading-[16.5px] text-[#BBBBC3]">{children}</div>
+          <h1 className="text-normal font-semibold leading-5.5 text-[#E9E9EC]">
+            {title}
+          </h1>
+          <div className="mt-0 flex shrink-0 gap-2 font-mono text-xs leading-[16.5px]	text-[#BBBBC3]	">
+            {children}
           </div>
         </div>
       </div>
@@ -153,15 +176,62 @@ export const LargeBlockContent: React.FC<{
   );
 };
 
-export const SignatureContent: React.FC<{ signature: Signatures }> = ({ signature }) => {
+export const LargeBlockContent: React.FC<{
+  image?: string | StaticImageData;
+  title?: string;
+  children: JSX.Element | JSX.Element[];
+  grey?: boolean;
+}> = ({ image, title, children, grey = false }) => {
+  return (
+    <>
+      <div className="static flex h-10">
+        <div className="relative flex shrink-0 items-center justify-between">
+          <Image
+            src={image!}
+            alt="The human colossus logo"
+            width={45}
+            height={45}
+            className="rounded-md"
+          />
+          <div className="mx-3 flex flex-col justify-between py-[1px]">
+            <h1
+              className={
+                "text-[17px] font-semibold leading-5.5 " +
+                (grey ? "text-[#c7c7d1]" : "text-[#E9E9EC]")
+              }
+            >
+              {title}
+            </h1>
+            <div className="mt-[5px] flex gap-2 font-mono text-[13px] leading-[16.5px] text-[#BBBBC3]">
+              {children}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export const SignatureContent: React.FC<{ signature: Signatures }> = ({
+  signature,
+}) => {
   return (
     <>
       {signature.signature ? (
         <div className="flex h-full w-20 items-center justify-center">
-          <Image src={signature.signature} alt="The human colossus logo" className="relative rounded" width={78} height={25} layout="fixed" />
+          <Image
+            src={signature.signature}
+            alt="The human colossus logo"
+            className="relative rounded"
+            width={78}
+            height={25}
+            layout="fixed"
+          />
         </div>
       ) : (
-        <span className="align-middle font-signature text-xl text-[#4C4C60]">{signature.name}</span>
+        <span className="align-middle font-signature text-xl text-[#4C4C60]">
+          {signature.name}
+        </span>
       )}
     </>
   );
@@ -178,7 +248,19 @@ export const BlockWrapper: React.FC<{
   );
 };
 
-export function BuilderStory({ image, title, description, name, link }: { image: any; title: string; description: string; name: string; link?: string }) {
+export function BuilderStory({
+  image,
+  title,
+  description,
+  name,
+  link,
+}: {
+  image: any;
+  title: string;
+  description: string;
+  name: string;
+  link?: string;
+}) {
   return (
     <a href={link}>
       <BlockWrapper>
@@ -225,7 +307,11 @@ export const Organization: React.FC<{
 };
 
 export const ContentLabel: React.FC<{ text: string }> = ({ text }) => {
-  return <div className="rounded-[4px] bg-[#17172B] py-[2px] px-[5px]  text-[#BD68FF]">{text}</div>;
+  return (
+    <div className="rounded-[4px] bg-[#17172B] py-[2px] px-[5px]  text-[#BD68FF]">
+      {text}
+    </div>
+  );
 };
 
 export const ImageButton: React.FC<{
@@ -238,7 +324,12 @@ export const ImageButton: React.FC<{
   return (
     <button
       onClick={click}
-      className={"flex h-7 items-center gap-x-1 rounded-[8px] border-[0.5px] py-[0px] px-[9px] text-[16px] font-medium	" + border + " " + textColor}
+      className={
+        "flex h-7 items-center gap-x-1 rounded-[8px] border-[0.5px] py-[0px] px-[9px] text-[16px] font-medium	" +
+        border +
+        " " +
+        textColor
+      }
     >
       {children}
       {text}
@@ -247,17 +338,27 @@ export const ImageButton: React.FC<{
 };
 
 export const UpvoteButton: React.FC<{ color: string }> = ({ color }) => {
-  const additionalColors = classNames({ "border-[#FF4004] text-[#FF9F81]": color === "red" }, { "border-[#AFA5EE] text-[#5F4BDD]": color !== "red" });
+  const additionalColors = classNames(
+    { "border-[#FF4004] text-[#FF9F81]": color === "red" },
+    { "border-[#AFA5EE] text-[#5F4BDD]": color !== "red" }
+  );
 
   return (
-    <div className={classNames("flex h-[40px] w-[54px] flex-col justify-between rounded border-[0.5px] pt-[5px] pb-[4px] font-mono", additionalColors)}>
+    <div
+      className={classNames(
+        "flex h-[40px] w-[54px] flex-col justify-between rounded border-[0.5px] pt-[5px] pb-[4px] font-mono",
+        additionalColors
+      )}
+    >
       <Image src={RedUpvote} height="12px" width="12px" alt="" className="" />
       <h1 className="text-center text-xs tracking-tight	">10 pts</h1>
     </div>
   );
 };
 
-export const MarqueeLayout: React.FC<{ children: JSX.Element }> = ({ children }) => {
+export const MarqueeLayout: React.FC<{ children: JSX.Element }> = ({
+  children,
+}) => {
   return (
     <>
       <Marquee
@@ -275,7 +376,9 @@ export const MarqueeLayout: React.FC<{ children: JSX.Element }> = ({ children })
             .fill(0)
             .map((_, i) => (
               <Link href="/" key={i}>
-                <a className="m-1 mt-2 mr-12 text-white underline">PLATFORM HAS LAUNCHED</a>
+                <a className="m-1 mt-2 mr-12 text-white underline">
+                  PLATFORM HAS LAUNCHED
+                </a>
               </Link>
             ))}
       </Marquee>
@@ -295,7 +398,9 @@ export const MarqueeLayout: React.FC<{ children: JSX.Element }> = ({ children })
             .fill(0)
             .map((_, i) => (
               <Link href="/" key={i}>
-                <a className="m-1 mt-1 mr-12 text-white underline">PLATFORM HAS LAUNCHED</a>
+                <a className="m-1 mt-1 mr-12 text-white underline">
+                  PLATFORM HAS LAUNCHED
+                </a>
               </Link>
             ))}
       </Marquee>

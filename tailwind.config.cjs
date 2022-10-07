@@ -19,7 +19,7 @@ module.exports = {
                 signature: ["Birthstone", "serif"],
             },
             textColor: {
-                muted: "#747485"
+                muted: "#747485",
             },
             maxWidth: {
                 custom: "550px",
@@ -32,5 +32,5 @@ module.exports = {
             },
         },
     },
-    plugins: [],
+    plugins: [require("@tailwindcss/typography")],
 };

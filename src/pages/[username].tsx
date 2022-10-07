@@ -3,22 +3,20 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import {
-  Box,
   Container,
   Header,
   Hrline,
   ImageButton,
   Main,
-  Organization,
-  ScrollableWrapper,
-} from "src/components/basics";
-import { trpc } from "src/utils/trpc";
+} from "../components/basics";
+import { trpc } from "../utils/trpc";
 import GoldStar from "../../public/icons/GoldStar.svg";
 import RedStar from "../../public/icons/RedStar.svg";
 import Twitter from "../../public/icons/Twitter.svg";
 import Substack from "../../public/icons/Substack.svg";
 import Site from "../../public/icons/Site.svg";
-import { useProfileImg } from "src/hooks/hooks";
+import { useProfileImg } from "../hooks/hooks";
+import Link from "next/link";
 
 const Profile: NextPage = () => {
   const router = useRouter();
@@ -26,24 +24,27 @@ const Profile: NextPage = () => {
   const userName = username as string;
   const { data: session, status } = useSession();
 
-  const user = trpc.proxy.user.user.useQuery({ username: userName });
+  const user = trpc.useQuery(["user.user", { username: userName }]);
+
+  const posts = trpc.useQuery([
+    "post.userPosts",
+    { userId: session?.user?.id! },
+  ]);
 
   const { data: profImg } = useProfileImg(user.data?.username);
 
-  const authHeader = () => {
-    if (status === "loading") {
+  const AuthHeader = () => {
+    if (status === "loading" || user.isLoading) {
       return null;
     }
-    if (session?.user?.name === user.data?.name) {
-      return <Header value="Edit Profile" link="/profile" showBackground />;
+    if (session?.user?.username === user.data?.username) {
+      return (
+        <Header value="Edit Profile" link={`/edit-profile`} showBackground />
+      );
     }
 
     return <Header value="Join the Colossus" link="/" showBackground />;
   };
-
-  if (user.isLoading) {
-    return null;
-  }
 
   const star = () => {
     if (user.data?.level === 999) {
@@ -68,16 +69,23 @@ const Profile: NextPage = () => {
     );
   };
 
-  console.log(user.data?.personalSite);
+  if (!user.isLoading && !user.data && status !== "loading") {
+    router.push("/404");
+    return <></>;
+  }
+
+  if (status === "loading") {
+    return <></>;
+  }
 
   return (
     <Main>
-      {authHeader()}
+      <AuthHeader />
       <div className="-mt-4 flex flex-col gap-y-2">
         <Hrline />
         <div className=" flex items-center gap-4">
           <Image
-            src={profImg}
+            src={user.data?.image!}
             alt="The human colossus logo"
             width={45}
             height={45}
@@ -94,11 +102,12 @@ const Profile: NextPage = () => {
           )}
           <div className="flex gap-2">
             <h1 className="text-muted">/</h1>
-            <h1>{user.data?.age}</h1>
+            <h1 className="text-muted">from</h1>
+            <h1>{user.data?.from}</h1>
           </div>
           <div className="flex gap-2">
-            <h1 className="text-muted">from</h1>
-            <h1>Denver 🇺🇸</h1>
+            <h1 className="text-muted">/</h1>
+            <h1>{user.data?.age! === 0 ? "??" : user.data?.age}</h1>
           </div>
           <div className="flex gap-2">
             <h1 className="text-muted">/</h1>
@@ -117,9 +126,7 @@ const Profile: NextPage = () => {
                   text=""
                   textColor="text-[#DDDDE8]"
                   border="border-[#0077B5]"
-                  click={() =>
-                    router.push(`https://twitter.com/${user.data?.twitter}`)
-                  }
+                  click={() => router.push(user.data?.twitter!)}
                 >
                   <Image
                     src={Twitter}
@@ -161,7 +168,7 @@ const Profile: NextPage = () => {
         <Hrline />
       </div>
 
-      <Box styles="px-4 py-3.5">
+      {/* <Box styles="px-4 py-3.5">
         <div>
           <a href={`/posts/${user.data?.featuredPost?.id}`}>
             <div className="flex h-10 items-center justify-between truncate">
@@ -191,7 +198,42 @@ const Profile: NextPage = () => {
             </div>
           </a>
         </div>
-      </Box>
+      </Box> */}
+
+      <Container
+        title="/ Posts"
+        link={session?.user?.username === user.data?.username ? "Add Post" : ""}
+        linkHref="/add-post"
+      >
+        <div>
+          {posts.data &&
+            posts.data?.map((post, i) => {
+              return (
+                <Link href={`/posts/${post.id}`} key={i}>
+                  <div className="border-0.5 my-2 flex cursor-pointer items-center rounded border-[#2D304F] p-2">
+                    <Image
+                      src={post.author.image!}
+                      alt="hc logo"
+                      width={40}
+                      height={40}
+                      className="rounded"
+                    />
+                    <div className="ml-2 w-full overflow-hidden">
+                      <h1 className="text-lg">{post.title}</h1>
+                      <div className="flex gap-1 font-mono text-xs">
+                        <h2 className="truncate">{post.subtitle}</h2>
+                        <h2 className="whitespace-nowrap text-muted">from</h2>
+                        <h2 className="whitespace-nowrap">
+                          {post.author.name}
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+        </div>
+      </Container>
 
       {/* <Container title="/ Organizations">
         <ScrollableWrapper>
